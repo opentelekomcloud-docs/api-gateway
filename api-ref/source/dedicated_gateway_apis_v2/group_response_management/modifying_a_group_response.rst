@@ -1,0 +1,384 @@
+:original_name: UpdateGatewayResponseV2.html
+
+.. _UpdateGatewayResponseV2:
+
+Modifying a Group Response
+==========================
+
+Function
+--------
+
+This API is used to modify a response of an API group.
+
+URI
+---
+
+PUT /v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}/gateway-responses/{response_id}
+
+.. table:: **Table 1** Path Parameters
+
+   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                                           |
+   +=============+===========+========+=======================================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
+   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
+   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   | group_id    | Yes       | String | API group ID.                                                                                                         |
+   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   | response_id | Yes       | String | Response ID.                                                                                                          |
+   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+
+Request Parameters
+------------------
+
+.. table:: **Table 2** Request header parameters
+
+   +--------------+-----------+--------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter    | Mandatory | Type   | Description                                                                                                                                        |
+   +==============+===========+========+====================================================================================================================================================+
+   | X-Auth-Token | Yes       | String | User token. It can be obtained by calling the IAM API used to obtain a user token. The value of X-Subject-Token in the response header is a token. |
+   +--------------+-----------+--------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: **Table 3** Request body parameters
+
+   +-----------------+-----------------+-----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type                                                                              | Description                                                                                |
+   +=================+=================+===================================================================================+============================================================================================+
+   | name            | No              | String                                                                            | Response name.                                                                             |
+   +-----------------+-----------------+-----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   | responses       | No              | Map<String,\ :ref:`ResponseInfo <updategatewayresponsev2__request_responseinfo>`> | Response type definition, which includes a key and value. Options of the key:              |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  AUTH_FAILURE: Authentication failed.                                                    |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  AUTH_HEADER_MISSING: The identity source is missing.                                    |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  AUTHORIZER_FAILURE: Custom authentication failed.                                       |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  AUTHORIZER_CONF_FAILURE: There has been a custom authorizer error.                      |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  AUTHORIZER_IDENTITIES_FAILURE: The identity source of the custom authorizer is invalid. |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  BACKEND_UNAVAILABLE: The backend service is unavailable.                                |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  BACKEND_TIMEOUT: Communication with the backend service timed out.                      |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  THROTTLED: The request was rejected due to request throttling.                          |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  UNAUTHORIZED: The app you are using has not been authorized to call the API.            |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  ACCESS_DENIED: Access denied.                                                           |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  NOT_FOUND: No API is found.                                                             |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  REQUEST_PARAMETERS_FAILURE: The request parameters are incorrect.                       |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  DEFAULT_4XX: Another 4XX error occurred.                                                |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | -  DEFAULT_5XX: Another 5XX error occurred.                                                |
+   |                 |                 |                                                                                   |                                                                                            |
+   |                 |                 |                                                                                   | Each error type is in JSON format.                                                         |
+   +-----------------+-----------------+-----------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+
+.. _updategatewayresponsev2__request_responseinfo:
+
+.. table:: **Table 4** ResponseInfo
+
+   ========= ========= ======= =================================
+   Parameter Mandatory Type    Description
+   ========= ========= ======= =================================
+   status    No        Integer HTTP status code of the response.
+   body      No        String  Response body template.
+   ========= ========= ======= =================================
+
+Response Parameters
+-------------------
+
+**Status code: 200**
+
+.. table:: **Table 5** Response body parameters
+
+   +-----------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   | Parameter             | Type                                                                                       | Description                                                                                |
+   +=======================+============================================================================================+============================================================================================+
+   | name                  | String                                                                                     | Response name.                                                                             |
+   +-----------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   | responses             | Map<String,\ :ref:`ResponseInfoResp <updategatewayresponsev2__response_responseinforesp>`> | Response type definition, which includes a key and value. Options of the key:              |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  AUTH_FAILURE: Authentication failed.                                                    |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  AUTH_HEADER_MISSING: The identity source is missing.                                    |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  AUTHORIZER_FAILURE: Custom authentication failed.                                       |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  AUTHORIZER_CONF_FAILURE: There has been a custom authorizer error.                      |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  AUTHORIZER_IDENTITIES_FAILURE: The identity source of the custom authorizer is invalid. |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  BACKEND_UNAVAILABLE: The backend service is unavailable.                                |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  BACKEND_TIMEOUT: Communication with the backend service timed out.                      |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  THROTTLED: The request was rejected due to request throttling.                          |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  UNAUTHORIZED: The app you are using has not been authorized to call the API.            |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  ACCESS_DENIED: Access denied.                                                           |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  NOT_FOUND: No API is found.                                                             |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  REQUEST_PARAMETERS_FAILURE: The request parameters are incorrect.                       |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  DEFAULT_4XX: Another 4XX error occurred.                                                |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | -  DEFAULT_5XX: Another 5XX error occurred.                                                |
+   |                       |                                                                                            |                                                                                            |
+   |                       |                                                                                            | Each error type is in JSON format.                                                         |
+   +-----------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   | id                    | String                                                                                     | Response ID.                                                                               |
+   +-----------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   | default               | Boolean                                                                                    | Indicates whether the group response is the default response.                              |
+   +-----------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   | create_time           | String                                                                                     | Creation time.                                                                             |
+   +-----------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   | update_time           | String                                                                                     | Update time.                                                                               |
+   +-----------------------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+
+.. _updategatewayresponsev2__response_responseinforesp:
+
+.. table:: **Table 6** ResponseInfoResp
+
+   +-----------+---------+---------------------------------------------------------+
+   | Parameter | Type    | Description                                             |
+   +===========+=========+=========================================================+
+   | status    | Integer | HTTP status code of the response.                       |
+   +-----------+---------+---------------------------------------------------------+
+   | body      | String  | Response body template.                                 |
+   +-----------+---------+---------------------------------------------------------+
+   | default   | Boolean | Indicates whether the response is the default response. |
+   +-----------+---------+---------------------------------------------------------+
+
+**Status code: 400**
+
+.. table:: **Table 7** Response body parameters
+
+   ========== ====== ==============
+   Parameter  Type   Description
+   ========== ====== ==============
+   error_code String Error code.
+   error_msg  String Error message.
+   ========== ====== ==============
+
+**Status code: 401**
+
+.. table:: **Table 8** Response body parameters
+
+   ========== ====== ==============
+   Parameter  Type   Description
+   ========== ====== ==============
+   error_code String Error code.
+   error_msg  String Error message.
+   ========== ====== ==============
+
+**Status code: 403**
+
+.. table:: **Table 9** Response body parameters
+
+   ========== ====== ==============
+   Parameter  Type   Description
+   ========== ====== ==============
+   error_code String Error code.
+   error_msg  String Error message.
+   ========== ====== ==============
+
+**Status code: 404**
+
+.. table:: **Table 10** Response body parameters
+
+   ========== ====== ==============
+   Parameter  Type   Description
+   ========== ====== ==============
+   error_code String Error code.
+   error_msg  String Error message.
+   ========== ====== ==============
+
+**Status code: 500**
+
+.. table:: **Table 11** Response body parameters
+
+   ========== ====== ==============
+   Parameter  Type   Description
+   ========== ====== ==============
+   error_code String Error code.
+   error_msg  String Error message.
+   ========== ====== ==============
+
+Example Requests
+----------------
+
+.. code-block::
+
+   {
+     "name" : "response_demo"
+   }
+
+Example Responses
+-----------------
+
+**Status code: 200**
+
+OK
+
+.. code-block::
+
+   {
+     "create_time" : "2020-08-12T06:52:02Z",
+     "update_time" : "2020-08-12T15:22:21.929863859+08:00",
+     "default" : false,
+     "id" : "e839b367e10f4ab19d1c5008e476b83a",
+     "name" : "response_demo",
+     "responses" : {
+       "ACCESS_DENIED" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 403
+       },
+       "AUTHORIZER_CONF_FAILURE" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 500
+       },
+       "AUTHORIZER_FAILURE" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 500
+       },
+       "AUTHORIZER_IDENTITIES_FAILURE" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 401
+       },
+       "AUTH_FAILURE" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 401
+       },
+       "AUTH_HEADER_MISSING" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 401
+       },
+       "BACKEND_TIMEOUT" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 504
+       },
+       "BACKEND_UNAVAILABLE" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 502
+       },
+       "DEFAULT_4XX" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true
+       },
+       "DEFAULT_5XX" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true
+       },
+       "NOT_FOUND" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 404
+       },
+       "REQUEST_PARAMETERS_FAILURE" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 400
+       },
+       "THROTTLED" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 429
+       },
+       "UNAUTHORIZED" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 401
+       }
+     }
+   }
+
+**Status code: 400**
+
+Bad Request
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.2011",
+     "error_msg" : "Invalid parameter value,parameterName:name. Please refer to the support documentation"
+   }
+
+**Status code: 401**
+
+Unauthorized
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.1002",
+     "error_msg" : "Incorrect token or token resolution failed"
+   }
+
+**Status code: 403**
+
+Forbidden
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.1005",
+     "error_msg" : "No permissions to request this method"
+   }
+
+**Status code: 404**
+
+Not Found
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.3001",
+     "error_msg" : "API group c77f5e81d9cb4424bf704ef2b0ac7600 does not exist"
+   }
+
+**Status code: 500**
+
+Internal Server Error
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.9999",
+     "error_msg" : "System error"
+   }
+
+Status Codes
+------------
+
+=========== =====================
+Status Code Description
+=========== =====================
+200         OK
+400         Bad Request
+401         Unauthorized
+403         Forbidden
+404         Not Found
+500         Internal Server Error
+=========== =====================
+
+Error Codes
+-----------
+
+See :ref:`Error Codes <errorcode>`.
