@@ -1,6 +1,6 @@
-:original_name: UpdateSignatureKeyV2.html
+:original_name: UpdateSignatureKeyV2_1.html
 
-.. _UpdateSignatureKeyV2:
+.. _UpdateSignatureKeyV2_1:
 
 Modifying a Signature Key
 =========================
@@ -17,15 +17,15 @@ PUT /v2/{project_id}/apigw/instances/{instance_id}/signs/{sign_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | sign_id     | Yes       | String | Signature key ID.                                                                                                     |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | sign_id     | Yes       | String | Signature key ID.                                                                                       |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -87,13 +87,13 @@ Request Parameters
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_secret     | No              | String          | Signature secret.                                                                                                                                                                                                                                                                                                                |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
-   |                 |                 |                 | -  hmac: The value contains 16 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a value is automatically generated.                                                                                                                  |
+   |                 |                 |                 | -  hmac: The value contains 16 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
-   |                 |                 |                 | -  basic: The value contains 8 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a value is automatically generated.                                                                                                                  |
+   |                 |                 |                 | -  basic: The value contains 8 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
-   |                 |                 |                 | -  public_key: The value contains 15 to 2048 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a value is automatically generated.                                                                              |
+   |                 |                 |                 | -  public_key: The value can contain 16 to 2048 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                             |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
-   |                 |                 |                 | -  aes: The value contains 16 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a value is automatically generated.                                                                                             |
+   |                 |                 |                 | -  aes: The value contains 16 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                                               |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_algorithm  | No              | String          | Signature algorithm. Specify a signature algorithm only when using an AES signature key. By default, no algorithm is used.                                                                                                                                                                                                       |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
@@ -158,13 +158,13 @@ Response Parameters
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_secret           | String                | Signature secret.                                                                                                                                                                                                                                                                                                                |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
-   |                       |                       | -  hmac: The value contains 16 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a value is automatically generated.                                                                                                                  |
+   |                       |                       | -  hmac: The value contains 16 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
-   |                       |                       | -  basic: The value contains 8 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a value is automatically generated.                                                                                                                  |
+   |                       |                       | -  basic: The value contains 8 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
-   |                       |                       | -  public_key: The value contains 15 to 2048 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a value is automatically generated.                                                                              |
+   |                       |                       | -  public_key: The value can contain 16 to 2048 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                             |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
-   |                       |                       | -  aes: The value contains 16 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a value is automatically generated.                                                                                             |
+   |                       |                       | -  aes: The value contains 16 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                                               |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_algorithm        | String                | Signature algorithm. Specify a signature algorithm only when using an AES signature key. By default, no algorithm is used.                                                                                                                                                                                                       |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
@@ -239,6 +239,8 @@ Response Parameters
 Example Requests
 ----------------
 
+Creating a signature key
+
 .. code-block::
 
    {
@@ -255,7 +257,7 @@ OK
 .. code-block::
 
    {
-     "sign_secret" : "dc02fc5f30714d6bb21888389419e2b3",
+     "sign_secret" : "dc0************2b3",
      "update_time" : "2020-08-03T03:50:14.989785802Z",
      "create_time" : "2020-08-03T03:39:38Z",
      "name" : "signature_demo",

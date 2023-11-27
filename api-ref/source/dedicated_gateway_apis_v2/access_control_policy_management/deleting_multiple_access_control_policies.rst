@@ -1,6 +1,6 @@
-:original_name: BatchDeleteAclV2.html
+:original_name: BatchDeleteAclV2_1.html
 
-.. _BatchDeleteAclV2:
+.. _BatchDeleteAclV2_1:
 
 Deleting Multiple Access Control Policies
 =========================================
@@ -19,13 +19,13 @@ PUT /v2/{project_id}/apigw/instances/{instance_id}/acls
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 2** Query Parameters
 
@@ -61,15 +61,15 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   +---------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-   | Parameter     | Type                                                                                                     | Description                                                            |
-   +===============+==========================================================================================================+========================================================================+
-   | success_count | Integer                                                                                                  | Number of access control policies that have been successfully deleted. |
-   +---------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-   | failure       | Array of :ref:`AclBatchResultFailureResp <batchdeleteaclv2__response_aclbatchresultfailureresp>` objects | Error message and access control policies that fail to be deleted.     |
-   +---------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   +---------------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   | Parameter     | Type                                                                                                       | Description                                                            |
+   +===============+============================================================================================================+========================================================================+
+   | success_count | Integer                                                                                                    | Number of access control policies that have been successfully deleted. |
+   +---------------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   | failure       | Array of :ref:`AclBatchResultFailureResp <batchdeleteaclv2_1__response_aclbatchresultfailureresp>` objects | Error message and access control policies that fail to be deleted.     |
+   +---------------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
 
-.. _batchdeleteaclv2__response_aclbatchresultfailureresp:
+.. _batchdeleteaclv2_1__response_aclbatchresultfailureresp:
 
 .. table:: **Table 6** AclBatchResultFailureResp
 
@@ -142,6 +142,8 @@ Response Parameters
 
 Example Requests
 ----------------
+
+Deleting multiple access control policies
 
 .. code-block::
 

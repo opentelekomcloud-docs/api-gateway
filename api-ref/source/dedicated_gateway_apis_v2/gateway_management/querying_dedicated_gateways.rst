@@ -1,6 +1,6 @@
-:original_name: ListInstancesV2.html
+:original_name: ListInstancesV2_1.html
 
-.. _ListInstancesV2:
+.. _ListInstancesV2_1:
 
 Querying Dedicated Gateways
 ===========================
@@ -17,11 +17,11 @@ GET /v2/{project_id}/apigw/instances
 
 .. table:: **Table 1** Path Parameters
 
-   +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Type   | Description                                                                                                           |
-   +============+===========+========+=======================================================================================================================+
-   | project_id | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Type   | Description                                                                                             |
+   +============+===========+========+=========================================================================================================+
+   | project_id | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 2** Query Parameters
 
@@ -47,141 +47,75 @@ GET /v2/{project_id}/apigw/instances
    | status          | No              | String          | Gateway status.                                                                                                                                                                     |
    |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Creating                                                                                                                                                                         |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  CreateSuccess                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  CreateFail                                                                                                                                                                       |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Initing                                                                                                                                                                          |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Registering                                                                                                                                                                      |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Running                                                                                                                                                                          |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  InitingFailed                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  RegisterFailed                                                                                                                                                                   |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Installing                                                                                                                                                                       |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  InstallFailed                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Updating                                                                                                                                                                         |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  UpdateFailed                                                                                                                                                                     |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Rollbacking                                                                                                                                                                      |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  RollbackSuccess                                                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  RollbackFailed                                                                                                                                                                   |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Deleting                                                                                                                                                                         |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  DeleteFailed                                                                                                                                                                     |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Unregistering                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  UnRegisterFailed                                                                                                                                                                 |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  CreateTimeout                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  InitTimeout                                                                                                                                                                      |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  RegisterTimeout                                                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  InstallTimeout                                                                                                                                                                   |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  UpdateTimeout                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  RollbackTimeout                                                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  DeleteTimeout                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  UnregisterTimeout                                                                                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Starting                                                                                                                                                                         |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Freezing                                                                                                                                                                         |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Frozen                                                                                                                                                                           |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Restarting                                                                                                                                                                       |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  RestartFail                                                                                                                                                                      |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  Unhealthy                                                                                                                                                                        |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  RestartTimeout                                                                                                                                                                   |
    |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | Enumeration values:                                                                                                                                                                 |
    |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Creating**                                                                                                                                                                     |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **CreateSuccess**                                                                                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **CreateFail**                                                                                                                                                                   |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Initing**                                                                                                                                                                      |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Registering**                                                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Running**                                                                                                                                                                      |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **InitingFailed**                                                                                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **RegisterFailed**                                                                                                                                                               |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Installing**                                                                                                                                                                   |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **InstallFailed**                                                                                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Updating**                                                                                                                                                                     |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **UpdateFailed**                                                                                                                                                                 |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Rollbacking**                                                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **RollbackSuccess**                                                                                                                                                              |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **RollbackFailed**                                                                                                                                                               |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Deleting**                                                                                                                                                                     |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **DeleteFailed**                                                                                                                                                                 |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Unregistering**                                                                                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **UnRegisterFailed**                                                                                                                                                             |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **CreateTimeout**                                                                                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **InitTimeout**                                                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **RegisterTimeout**                                                                                                                                                              |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **InstallTimeout**                                                                                                                                                               |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **UpdateTimeout**                                                                                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **RollbackTimeout**                                                                                                                                                              |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **DeleteTimeout**                                                                                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **UnregisterTimeout**                                                                                                                                                            |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Starting**                                                                                                                                                                     |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Freezing**                                                                                                                                                                     |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Frozen**                                                                                                                                                                       |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Restarting**                                                                                                                                                                   |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **RestartFail**                                                                                                                                                                  |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **Unhealthy**                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                     |
    |                 |                 |                 | -  **RestartTimeout**                                                                                                                                                               |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -203,17 +137,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+---------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                  | Description                                          |
-   +===========+=======================================================================================+======================================================+
-   | size      | Integer                                                                               | Length of the returned resource list.                |
-   +-----------+---------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                  | Number of resources that match the query conditions. |
-   +-----------+---------------------------------------------------------------------------------------+------------------------------------------------------+
-   | instances | Array of :ref:`RespInstanceBase <listinstancesv2__response_respinstancebase>` objects | Gateway list.                                        |
-   +-----------+---------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+-----------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                    | Description                                          |
+   +===========+=========================================================================================+======================================================+
+   | size      | Integer                                                                                 | Length of the returned resource list.                |
+   +-----------+-----------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                    | Number of resources that match the query conditions. |
+   +-----------+-----------------------------------------------------------------------------------------+------------------------------------------------------+
+   | instances | Array of :ref:`RespInstanceBase <listinstancesv2_1__response_respinstancebase>` objects | Gateway list.                                        |
+   +-----------+-----------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listinstancesv2__response_respinstancebase:
+.. _listinstancesv2_1__response_respinstancebase:
 
 .. table:: **Table 5** RespInstanceBase
 
@@ -226,285 +160,165 @@ Response Parameters
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------+
    | instance_name         | String                | Gateway name.                                                                             |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------+
-   | status                | String                | Gateway status.                                                                           |
+   | status                | String                | Instance status:                                                                          |
    |                       |                       |                                                                                           |
-   |                       |                       | -  Creating                                                                               |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  CreateSuccess                                                                          |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  CreateFail                                                                             |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Initing                                                                                |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Registering                                                                            |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Running                                                                                |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  InitingFailed                                                                          |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  RegisterFailed                                                                         |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Installing                                                                             |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  InstallFailed                                                                          |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Updating                                                                               |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  UpdateFailed                                                                           |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Rollbacking                                                                            |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  RollbackSuccess                                                                        |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  RollbackFailed                                                                         |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Deleting                                                                               |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  DeleteFailed                                                                           |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Unregistering                                                                          |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  UnRegisterFailed                                                                       |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  CreateTimeout                                                                          |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  InitTimeout                                                                            |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  RegisterTimeout                                                                        |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  InstallTimeout                                                                         |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  UpdateTimeout                                                                          |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  RollbackTimeout                                                                        |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  DeleteTimeout                                                                          |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  UnregisterTimeout                                                                      |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Starting                                                                               |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Freezing                                                                               |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Frozen                                                                                 |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Restarting                                                                             |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  RestartFail                                                                            |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  Unhealthy                                                                              |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  RestartTimeout                                                                         |
+   |                       |                       | -  Creating: The instance is being created.                                               |
+   |                       |                       | -  CreateSuccess: The instance is created successfully.                                   |
+   |                       |                       | -  CreateFail: The instance fails to be created.                                          |
+   |                       |                       | -  Initing: The instance is being initialized.                                            |
+   |                       |                       | -  Registering: The instance is being registered.                                         |
+   |                       |                       | -  Running: The instance is running.                                                      |
+   |                       |                       | -  InitingFailed: The instance fails to be initialized.                                   |
+   |                       |                       | -  RegisterFailed: The instance fails to be registered.                                   |
+   |                       |                       | -  Installing: The instance is being installed.                                           |
+   |                       |                       | -  InstallFailed: The instance fails to be installed.                                     |
+   |                       |                       | -  Updating: The instance is being upgraded.                                              |
+   |                       |                       | -  UpdateFailed: The instance fails to be upgraded.                                       |
+   |                       |                       | -  Rollbacking: The instance is being rolled back.                                        |
+   |                       |                       | -  RollbackSuccess: The instance is rolled back successfully.                             |
+   |                       |                       | -  RollbackFailed: The instance fails to be rolled back.                                  |
+   |                       |                       | -  Deleting: The instance is being deleted.                                               |
+   |                       |                       | -  DeleteFailed: The instance fails to be deleted.                                        |
+   |                       |                       | -  Unregistering: The instance is being deregistered.                                     |
+   |                       |                       | -  UnRegisterFailed: The instance fails to be deregistered.                               |
+   |                       |                       | -  CreateTimeout: Creation of the instance times out.                                     |
+   |                       |                       | -  InitTimeout: Initialization of the instance times out.                                 |
+   |                       |                       | -  RegisterTimeout: Registration of the instance times out.                               |
+   |                       |                       | -  InstallTimeout: Installation of the instance times out.                                |
+   |                       |                       | -  UpdateTimeout: Upgrading of the instance times out.                                    |
+   |                       |                       | -  RollbackTimeout: Rollback of the instance times out.                                   |
+   |                       |                       | -  DeleteTimeout: Deletion of the instance times out.                                     |
+   |                       |                       | -  UnregisterTimeout: Deregistration of the instance times out.                           |
+   |                       |                       | -  Starting: The instance is being started.                                               |
+   |                       |                       | -  Freezing: The instance is being frozen.                                                |
+   |                       |                       | -  Frozen: The instance is frozen.                                                        |
+   |                       |                       | -  Restarting: The instance is being restarted.                                           |
+   |                       |                       | -  RestartFail: The instance fails to be restarted.                                       |
+   |                       |                       | -  Unhealthy: The instance is abnormal.                                                   |
+   |                       |                       | -  RestartTimeout: Restart of the instance times out.                                     |
+   |                       |                       | -  Resizing: The instance specification is changing.                                      |
+   |                       |                       | -  ResizeFailed: The instance specification fails to be changed.                          |
+   |                       |                       | -  ResizeTimeout: The instance specification change times out.                            |
    |                       |                       |                                                                                           |
    |                       |                       | Enumeration values:                                                                       |
    |                       |                       |                                                                                           |
    |                       |                       | -  **Creating**                                                                           |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **CreateSuccess**                                                                      |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **CreateFail**                                                                         |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Initing**                                                                            |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Registering**                                                                        |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Running**                                                                            |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **InitingFailed**                                                                      |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **RegisterFailed**                                                                     |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Installing**                                                                         |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **InstallFailed**                                                                      |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Updating**                                                                           |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **UpdateFailed**                                                                       |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Rollbacking**                                                                        |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **RollbackSuccess**                                                                    |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **RollbackFailed**                                                                     |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Deleting**                                                                           |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **DeleteFailed**                                                                       |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Unregistering**                                                                      |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **UnRegisterFailed**                                                                   |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **CreateTimeout**                                                                      |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **InitTimeout**                                                                        |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **RegisterTimeout**                                                                    |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **InstallTimeout**                                                                     |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **UpdateTimeout**                                                                      |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **RollbackTimeout**                                                                    |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **DeleteTimeout**                                                                      |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **UnregisterTimeout**                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Starting**                                                                           |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Freezing**                                                                           |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Frozen**                                                                             |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Restarting**                                                                         |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **RestartFail**                                                                        |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **Unhealthy**                                                                          |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **RestartTimeout**                                                                     |
+   |                       |                       | -  **Resizing**                                                                           |
+   |                       |                       | -  **ResizeFailed**                                                                       |
+   |                       |                       | -  **ResizeTimeout**                                                                      |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------+
-   | instance_status       | Integer               | Gateway status ID.                                                                        |
+   | instance_status       | Integer               | Instance status ID:                                                                       |
    |                       |                       |                                                                                           |
    |                       |                       | -  1: Creating                                                                            |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  2: Created                                                                             |
-   |                       |                       |                                                                                           |
+   |                       |                       | -  2: Created successfully                                                                |
    |                       |                       | -  3: Creation failed                                                                     |
-   |                       |                       |                                                                                           |
    |                       |                       | -  4: Initializing                                                                        |
-   |                       |                       |                                                                                           |
    |                       |                       | -  5: Registering                                                                         |
-   |                       |                       |                                                                                           |
    |                       |                       | -  6: Running                                                                             |
-   |                       |                       |                                                                                           |
    |                       |                       | -  7: Initialization failed                                                               |
-   |                       |                       |                                                                                           |
    |                       |                       | -  8: Registration failed                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  10: Installing                                                                         |
-   |                       |                       |                                                                                           |
    |                       |                       | -  11: Installation failed                                                                |
-   |                       |                       |                                                                                           |
    |                       |                       | -  12: Upgrading                                                                          |
-   |                       |                       |                                                                                           |
    |                       |                       | -  13: Upgrade failed                                                                     |
-   |                       |                       |                                                                                           |
    |                       |                       | -  20: Rolling back                                                                       |
-   |                       |                       |                                                                                           |
    |                       |                       | -  21: Rolled back                                                                        |
-   |                       |                       |                                                                                           |
    |                       |                       | -  22: Rollback failed                                                                    |
-   |                       |                       |                                                                                           |
    |                       |                       | -  23: Deleting                                                                           |
-   |                       |                       |                                                                                           |
    |                       |                       | -  24: Deletion failed                                                                    |
-   |                       |                       |                                                                                           |
    |                       |                       | -  25: Deregistering                                                                      |
-   |                       |                       |                                                                                           |
    |                       |                       | -  26: Deregistration failed                                                              |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  27: Creation timeout                                                                   |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  28: Initialization timeout                                                             |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  29: Registration timeout                                                               |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  30: Installation timeout                                                               |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  31: Upgrade timeout                                                                    |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  32: Rollback timeout                                                                   |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  33: Deletion timeout                                                                   |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  34: Deregistration timeout                                                             |
-   |                       |                       |                                                                                           |
+   |                       |                       | -  27: Creation timed out                                                                 |
+   |                       |                       | -  28: Initialization timed out                                                           |
+   |                       |                       | -  29: Registration timed out                                                             |
+   |                       |                       | -  30: Installation timed out                                                             |
+   |                       |                       | -  31: Upgrade timed out                                                                  |
+   |                       |                       | -  32: Rollback timed out                                                                 |
+   |                       |                       | -  33: Deletion timed out                                                                 |
+   |                       |                       | -  34: Deregistration timed out                                                           |
    |                       |                       | -  35: Starting                                                                           |
-   |                       |                       |                                                                                           |
    |                       |                       | -  36: Freezing                                                                           |
-   |                       |                       |                                                                                           |
    |                       |                       | -  37: Frozen                                                                             |
-   |                       |                       |                                                                                           |
    |                       |                       | -  38: Restarting                                                                         |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  39: Restarting failed                                                                  |
-   |                       |                       |                                                                                           |
+   |                       |                       | -  39: Restart failed                                                                     |
    |                       |                       | -  40: Abnormal                                                                           |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  41: Restarting timeout                                                                 |
+   |                       |                       | -  41: Restart timed out                                                                  |
+   |                       |                       | -  42: Changing specification                                                             |
+   |                       |                       | -  43: Specification change failed                                                        |
+   |                       |                       | -  44: Specification change timed out                                                     |
    |                       |                       |                                                                                           |
    |                       |                       | Enumeration values:                                                                       |
    |                       |                       |                                                                                           |
    |                       |                       | -  **1**                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **2**                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **3**                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **4**                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **5**                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **6**                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **7**                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **8**                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **10**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **11**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **12**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **13**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **20**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **21**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **22**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **23**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **24**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **25**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **26**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **27**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **28**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **29**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **30**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **31**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **32**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **33**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **34**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **35**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **36**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **37**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **38**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **39**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **40**                                                                                 |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **41**                                                                                 |
+   |                       |                       | -  **42**                                                                                 |
+   |                       |                       | -  **43**                                                                                 |
+   |                       |                       | -  **44**                                                                                 |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------+
    | type                  | String                | Gateway type.                                                                             |
    |                       |                       |                                                                                           |
@@ -513,38 +327,16 @@ Response Parameters
    | spec                  | String                | Gateway edition.                                                                          |
    |                       |                       |                                                                                           |
    |                       |                       | -  BASIC                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  PROFESSIONAL                                                                           |
-   |                       |                       |                                                                                           |
    |                       |                       | -  ENTERPRISE                                                                             |
-   |                       |                       |                                                                                           |
    |                       |                       | -  PLATINUM                                                                               |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  BASIC_IPV6                                                                             |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  PROFESSIONAL_IPV6                                                                      |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  ENTERPRISE_IPV6                                                                        |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  PLATINUM_IPV6                                                                          |
    |                       |                       |                                                                                           |
    |                       |                       | Enumeration values:                                                                       |
    |                       |                       |                                                                                           |
    |                       |                       | -  **BASIC**                                                                              |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **PROFESSIONAL**                                                                       |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **ENTERPRISE**                                                                         |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **PLATINUM**                                                                           |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  **BASIC_IPV6**                                                                         |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  **PROFESSIONAL_IPV6**                                                                  |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  **ENTERPRISE_IPV6**                                                                    |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  **PLATINUM_IPV6**                                                                      |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------+
    | create_time           | Long                  | Time when the gateway is created. The time is in the Unix timestamp format.               |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------+
@@ -555,30 +347,16 @@ Response Parameters
    | charging_mode         | Integer               | Billing mode of the gateway.                                                              |
    |                       |                       |                                                                                           |
    |                       |                       | -  0: pay-per-use                                                                         |
-   |                       |                       |                                                                                           |
    |                       |                       | -  1: This parameter is not used currently.                                               |
    |                       |                       |                                                                                           |
    |                       |                       | Enumeration values:                                                                       |
    |                       |                       |                                                                                           |
    |                       |                       | -  **0**                                                                                  |
-   |                       |                       |                                                                                           |
    |                       |                       | -  **1**                                                                                  |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------+
-   | cbc_metadata          | String                | This parameter is not used currently.                                                     |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------+
    | loadbalancer_provider | String                | Type of the load balancer used by the gateway.                                            |
    |                       |                       |                                                                                           |
-   |                       |                       | -  LVS                                                                                    |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  ELB (available only in certain regions)                                                |
-   |                       |                       |                                                                                           |
-   |                       |                       | Default: **lvs**                                                                          |
-   |                       |                       |                                                                                           |
-   |                       |                       | Enumeration values:                                                                       |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  **lvs**                                                                                |
-   |                       |                       |                                                                                           |
-   |                       |                       | -  **elb**                                                                                |
+   |                       |                       | -  ELB                                                                                    |
    +-----------------------+-----------------------+-------------------------------------------------------------------------------------------+
 
 **Status code: 401**
@@ -632,10 +410,9 @@ OK
      "total" : 2,
      "size" : 2,
      "instances" : [ {
-       "cbc_metadata" : "CS2006301043A28NF:00301-734023-0--0",
        "charging_mode" : 1,
        "create_time" : 1585302825070,
-       "eip_address" : "100.95.155.221",
+       "eip_address" : "198.162.155.221",
        "enterprise_project_id" : "0",
        "id" : "eddc4d25480b4cd6b512f270a1b8b341",
        "instance_name" : "apig-Enterprise_Project_Pay-per-Use",
@@ -647,7 +424,7 @@ OK
      }, {
        "charging_mode" : 0,
        "create_time" : 1594370987422,
-       "eip_address" : "100.95.147.95",
+       "eip_address" : "198.162.147.95",
        "enterprise_project_id" : "0",
        "id" : "2e2d613c64094a4a94ad38e7ca30adee",
        "instance_name" : "apig-autotest-apitest-nodelete",

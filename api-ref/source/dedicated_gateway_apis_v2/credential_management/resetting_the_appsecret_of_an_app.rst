@@ -1,31 +1,31 @@
-:original_name: UpdateAppV2.html
+:original_name: ResettingAppSecretV2_1.html
 
-.. _UpdateAppV2:
+.. _ResettingAppSecretV2_1:
 
-Modifying an App
-================
+Resetting the AppSecret of an App
+=================================
 
 Function
 --------
 
-This API is used to modify the information about an app. Only the name and remark parameters can be modified. If the function of customizing keys and secrets is enabled, app_key and app_secret can also be modified.
+This API is used to reset the AppSecret of an app.
 
 URI
 ---
 
-PUT /v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}
+PUT /v2/{project_id}/apigw/instances/{instance_id}/apps/secret/{app_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | app_id      | Yes       | String | App ID.                                                                                                               |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | app_id      | Yes       | String | App ID.                                                                                                 |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -40,22 +40,16 @@ Request Parameters
 
 .. table:: **Table 3** Request body parameters
 
-   +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Type   | Description                                                                                                                                                     |
-   +============+===========+========+=================================================================================================================================================================+
-   | name       | Yes       | String | App name. It can contain 3 to 64 characters, starting with a letter. Only letters, digits, and underscores (_) are allowed.                                     |
-   +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | remark     | No        | String | App description. It cannot exceed 255 characters.                                                                                                               |
-   +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | app_key    | No        | String | AppKey. It can contain 8 to 64 characters, starting with a letter or digit. Only letters, digits, hyphens (-), and underscores (_) are allowed.                 |
-   +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | app_secret | No        | String | AppSecret. It can contain 8 to 64 characters, starting with a letter or digit. Only letters, digits, and the following special characters are allowed: \_-!@#$% |
-   +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Type   | Description                                                                                                                                                                                                |
+   +============+===========+========+============================================================================================================================================================================================================+
+   | app_secret | No        | String | Secret, which can contain 8 to 128 characters, starting with a letter or digit. Only letters, digits, and special characters ``(_-!@#$%).`` To define an AppSecret, first enable the app_secret parameter. |
+   +------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
 
-**Status code: 201**
+**Status code: 200**
 
 .. table:: **Table 4** Response body parameters
 
@@ -179,17 +173,18 @@ Response Parameters
 Example Requests
 ----------------
 
+Resetting secret
+
 .. code-block::
 
    {
-     "name" : "app_demo",
-     "remark" : "Demo app"
+     "app_secret" : "1ff************9a4"
    }
 
 Example Responses
 -----------------
 
-**Status code: 201**
+**Status code: 200**
 
 OK
 
@@ -197,13 +192,13 @@ OK
 
    {
      "creator" : "USER",
-     "update_time" : "2020-08-03T13:21:48.381148828Z",
+     "update_time" : "2020-08-03T14:12:43.038171689Z",
      "app_key" : "ee8f878c252747028f07eb116c2cd91b",
      "name" : "app_demo",
      "remark" : "Demo app",
      "id" : "356de8eb7a8742168586e5daf5339965",
-     "app_secret" : "416b6b2a1d394111b9bc1df0e6842ab8",
-     "register_time" : "2020-08-03T13:09:13",
+     "app_secret" : "1ff************9a4",
+     "register_time" : "2020-08-03T13:09:13Z",
      "status" : 1,
      "app_type" : "apig"
    }
@@ -269,7 +264,7 @@ Status Codes
 =========== =====================
 Status Code Description
 =========== =====================
-201         OK
+200         OK
 400         Bad Request
 401         Unauthorized
 403         Forbidden

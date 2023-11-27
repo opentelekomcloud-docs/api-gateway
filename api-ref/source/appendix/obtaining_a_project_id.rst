@@ -1,6 +1,6 @@
-:original_name: apig-en-api-180713009.html
+:original_name: apig-api-180713009.html
 
-.. _apig-en-api-180713009:
+.. _apig-api-180713009:
 
 Obtaining a Project ID
 ======================

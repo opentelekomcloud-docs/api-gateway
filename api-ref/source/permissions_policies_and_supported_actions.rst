@@ -9,7 +9,8 @@ This chapter describes fine-grained permissions management for your APIG.
 
 .. note::
 
-   If your account does not require individual IAM users, skip this section.
+   -  If your account does not require individual IAM users, skip this section.
+   -  Only **dedicated** gateways support fine-grained permissions management.
 
 By default, new IAM users do not have permissions assigned. You need to add a user to one or more groups, and attach permissions policies or roles (in JSON format) to these groups. Users inherit permissions from the groups to which they are added and can perform specified operations on cloud services based on the permissions.
 

@@ -1,6 +1,6 @@
-:original_name: ExportApiDefinitionsV2.html
+:original_name: ExportApiDefinitionsV2_1.html
 
-.. _ExportApiDefinitionsV2:
+.. _ExportApiDefinitionsV2_1:
 
 Exporting APIs
 ==============
@@ -17,13 +17,13 @@ POST /v2/{project_id}/apigw/instances/{instance_id}/openapi/export
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 2** Query Parameters
 
@@ -103,18 +103,17 @@ Request Parameters
 Response Parameters
 -------------------
 
-**Status code: 400**
+**Status code: 200**
 
 .. table:: **Table 5** Response body parameters
 
-   ========== ====== ==============
-   Parameter  Type   Description
-   ========== ====== ==============
-   error_code String Error code.
-   error_msg  String Error message.
-   ========== ====== ==============
+   ========= ==== ===========
+   Parameter Type Description
+   ========= ==== ===========
+   ``-``     File OK
+   ========= ==== ===========
 
-**Status code: 401**
+**Status code: 400**
 
 .. table:: **Table 6** Response body parameters
 
@@ -125,7 +124,7 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
-**Status code: 403**
+**Status code: 401**
 
 .. table:: **Table 7** Response body parameters
 
@@ -136,7 +135,7 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
-**Status code: 404**
+**Status code: 403**
 
 .. table:: **Table 8** Response body parameters
 
@@ -147,7 +146,7 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
-**Status code: 500**
+**Status code: 404**
 
 .. table:: **Table 9** Response body parameters
 
@@ -158,8 +157,21 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
+**Status code: 500**
+
+.. table:: **Table 10** Response body parameters
+
+   ========== ====== ==============
+   Parameter  Type   Description
+   ========== ====== ==============
+   error_code String Error code.
+   error_msg  String Error message.
+   ========== ====== ==============
+
 Example Requests
 ----------------
+
+Exporting APIs
 
 .. code-block::
 

@@ -9,4 +9,4 @@ API Gateway (APIG) is a high-performance, high-availability, and high-security A
 
 This document describes how to use REST APIs to perform operations on APIG, such as creating, deleting, and modify your own APIs.
 
-If you plan to access APIG through APIs, ensure that you are familiar with APIG concepts. For details, see the *User Guide*.
+If you plan to access APIG through APIs, ensure that you are familiar with APIG concepts. For details, see the *API Gateway User Guide*.

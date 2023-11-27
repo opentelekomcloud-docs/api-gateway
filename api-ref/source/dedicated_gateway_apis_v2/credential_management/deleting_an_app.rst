@@ -1,33 +1,33 @@
-:original_name: DeleteAppCodeV2.html
+:original_name: DeleteAppV2_1.html
 
-.. _DeleteAppCodeV2:
+.. _DeleteAppV2_1:
 
-Deleting an AppCode
-===================
+Deleting an App
+===============
 
 Function
 --------
 
-This API is used to delete an AppCode. Deleted AppCodes cannot be used for simple authentication.
+This API is used to delete an app.
+
+Deleted apps cannot call APIs.
 
 URI
 ---
 
-DELETE /v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes/{app_code_id}
+DELETE /v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | app_id      | Yes       | String | App ID.                                                                                                               |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | app_code_id | Yes       | String | AppCode ID.                                                                                                           |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | app_id      | Yes       | String | App ID.                                                                                                 |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -114,7 +114,7 @@ Bad Request
 
    {
      "error_code" : "APIG.2012",
-     "error_msg" : "Invalid parameter value,parameterName:app_id. Please refer to the support documentation"
+     "error_msg" : "Invalid parameter value,parameterName:id. Please refer to the support documentation"
    }
 
 **Status code: 401**
@@ -146,8 +146,8 @@ Not Found
 .. code-block::
 
    {
-     "error_code" : "APIG.3004",
-     "error_msg" : "App 9ed8b7fe84224de681e7d7a5587e76dc does not exist"
+     "error_code" : "APIG.3002",
+     "error_msg" : "App 356de8eb7a8742168586e5daf5339965 does not exist"
    }
 
 **Status code: 500**

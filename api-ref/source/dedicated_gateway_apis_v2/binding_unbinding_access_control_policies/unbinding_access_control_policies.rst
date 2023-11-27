@@ -1,6 +1,6 @@
-:original_name: BatchDeleteApiAclBindingV2.html
+:original_name: BatchDeleteApiAclBindingV2_1.html
 
-.. _BatchDeleteApiAclBindingV2:
+.. _BatchDeleteApiAclBindingV2_1:
 
 Unbinding Access Control Policies
 =================================
@@ -17,13 +17,13 @@ PUT /v2/{project_id}/apigw/instances/{instance_id}/acl-bindings
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 2** Query Parameters
 
@@ -59,15 +59,15 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   +---------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-   | Parameter     | Type                                                                                                         | Description                                                            |
-   +===============+==============================================================================================================+========================================================================+
-   | success_count | Integer                                                                                                      | Number of access control policies that have been successfully unbound. |
-   +---------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-   | failure       | Array of :ref:`AclBindingBatchFailure <batchdeleteapiaclbindingv2__response_aclbindingbatchfailure>` objects | Error message and access control policies that fail to be unbound.     |
-   +---------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   +---------------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   | Parameter     | Type                                                                                                           | Description                                                            |
+   +===============+================================================================================================================+========================================================================+
+   | success_count | Integer                                                                                                        | Number of access control policies that have been successfully unbound. |
+   +---------------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   | failure       | Array of :ref:`AclBindingBatchFailure <batchdeleteapiaclbindingv2_1__response_aclbindingbatchfailure>` objects | Error message and access control policies that fail to be unbound.     |
+   +---------------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
 
-.. _batchdeleteapiaclbindingv2__response_aclbindingbatchfailure:
+.. _batchdeleteapiaclbindingv2_1__response_aclbindingbatchfailure:
 
 .. table:: **Table 6** AclBindingBatchFailure
 
@@ -142,6 +142,8 @@ Response Parameters
 
 Example Requests
 ----------------
+
+Unbinding multiple access control policies from APIs
 
 .. code-block::
 

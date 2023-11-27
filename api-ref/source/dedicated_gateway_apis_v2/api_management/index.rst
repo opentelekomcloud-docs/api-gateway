@@ -1,29 +1,29 @@
-:original_name: topic_300000004.html
+:original_name: ApiManagement_1.html
 
-.. _topic_300000004:
+.. _ApiManagement_1:
 
 API Management
 ==============
 
--  :ref:`Registering an API <createapiv2>`
--  :ref:`Modifying an API <updateapiv2>`
--  :ref:`Deleting an API <deleteapiv2>`
--  :ref:`Publishing an API or Taking an API Offline <createordeletepublishrecordforapiv2>`
--  :ref:`Querying API Details <showdetailsofapiv2>`
--  :ref:`Querying APIs <listapisv2>`
--  :ref:`Debugging an API <debugapiv2>`
--  :ref:`Publishing APIs or Taking APIs Offline <batchpublishorofflineapiv2>`
--  :ref:`Querying Historical Versions of an API <listapiversionsv2>`
--  :ref:`Switching the Version of an API <changeapiversionv2>`
--  :ref:`Querying the Runtime Definition of an API <listapiruntimedefinitionv2>`
--  :ref:`Querying API Version Details <listapiversiondetailv2>`
--  :ref:`Taking an API Version Offline <deleteapibyversionidv2>`
+-  :ref:`Creating an API <createapiv2_1>`
+-  :ref:`Modifying an API <updateapiv2_1>`
+-  :ref:`Deleting an API <deleteapiv2_1>`
+-  :ref:`Publishing an API or Taking an API Offline <createordeletepublishrecordforapiv2_1>`
+-  :ref:`Querying API Details <showdetailsofapiv2_1>`
+-  :ref:`Querying APIs <listapisv2_1>`
+-  :ref:`Debugging an API <debugapiv2_1>`
+-  :ref:`Publishing APIs or Taking APIs Offline <batchpublishorofflineapiv2_1>`
+-  :ref:`Querying Historical Versions of an API <listapiversionsv2_1>`
+-  :ref:`Switching the Version of an API <changeapiversionv2_1>`
+-  :ref:`Querying the Runtime Definition of an API <listapiruntimedefinitionv2_1>`
+-  :ref:`Querying API Version Details <listapiversiondetailv2_1>`
+-  :ref:`Taking an API Version Offline <deleteapibyversionidv2_1>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   registering_an_api
+   creating_an_api
    modifying_an_api
    deleting_an_api
    publishing_an_api_or_taking_an_api_offline

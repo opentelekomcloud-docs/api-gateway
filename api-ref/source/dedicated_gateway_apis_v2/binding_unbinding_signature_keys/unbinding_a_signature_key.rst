@@ -1,6 +1,6 @@
-:original_name: DisassociateSignatureKeyV2.html
+:original_name: DisassociateSignatureKeyV2_1.html
 
-.. _DisassociateSignatureKeyV2:
+.. _DisassociateSignatureKeyV2_1:
 
 Unbinding a Signature Key
 =========================
@@ -17,15 +17,15 @@ DELETE /v2/{project_id}/apigw/instances/{instance_id}/sign-bindings/{sign_bindin
 
 .. table:: **Table 1** Path Parameters
 
-   +------------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter        | Mandatory | Type   | Description                                                                                                           |
-   +==================+===========+========+=======================================================================================================================+
-   | project_id       | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +------------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id      | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +------------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | sign_bindings_id | Yes       | String | Signature key binding record ID.                                                                                      |
-   +------------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +------------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter        | Mandatory | Type   | Description                                                                                             |
+   +==================+===========+========+=========================================================================================================+
+   | project_id       | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +------------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id      | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +------------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | sign_bindings_id | Yes       | String | Signature key binding record ID.                                                                        |
+   +------------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------

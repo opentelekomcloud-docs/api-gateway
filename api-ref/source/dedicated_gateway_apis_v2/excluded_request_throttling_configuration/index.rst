@@ -1,14 +1,14 @@
-:original_name: topic_300000008.html
+:original_name: SpecialThrottlingSetting_0.html
 
-.. _topic_300000008:
+.. _SpecialThrottlingSetting_0:
 
 Excluded Request Throttling Configuration
 =========================================
 
--  :ref:`Creating an Excluded Request Throttling Configuration <createspecialthrottlingconfigurationv2>`
--  :ref:`Modifying an Excluded Request Throttling Configuration <updatespecialthrottlingconfigurationv2>`
--  :ref:`Deleting an Excluded Request Throttling Configuration <deletespecialthrottlingconfigurationv2>`
--  :ref:`Querying Excluded Request Throttling Configurations <listspecialthrottlingconfigurationsv2>`
+-  :ref:`Creating an Excluded Request Throttling Configuration <createspecialthrottlingconfigurationv2_0>`
+-  :ref:`Modifying an Excluded Request Throttling Configuration <updatespecialthrottlingconfigurationv2_0>`
+-  :ref:`Deleting an Excluded Request Throttling Configuration <deletespecialthrottlingconfigurationv2_0>`
+-  :ref:`Querying Excluded Request Throttling Configurations <listspecialthrottlingconfigurationsv2_0>`
 
 .. toctree::
    :maxdepth: 1

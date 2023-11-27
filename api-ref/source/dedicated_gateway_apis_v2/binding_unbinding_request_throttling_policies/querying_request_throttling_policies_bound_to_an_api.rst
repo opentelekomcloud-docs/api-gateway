@@ -1,6 +1,6 @@
-:original_name: ListRequestThrottlingPoliciesBindedToApiV2.html
+:original_name: ListRequestThrottlingPoliciesBindedToApiV2_1.html
 
-.. _ListRequestThrottlingPoliciesBindedToApiV2:
+.. _ListRequestThrottlingPoliciesBindedToApiV2_1:
 
 Querying Request Throttling Policies Bound to an API
 ====================================================
@@ -17,13 +17,13 @@ GET /v2/{project_id}/apigw/instances/{instance_id}/throttle-bindings/binded-thro
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 2** Query Parameters
 
@@ -69,17 +69,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                                         | Description                                          |
-   +===========+==============================================================================================================+======================================================+
-   | size      | Integer                                                                                                      | Length of the returned resource list.                |
-   +-----------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                                         | Number of resources that match the query conditions. |
-   +-----------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | throttles | Array of :ref:`ThrottleForApi <listrequestthrottlingpoliciesbindedtoapiv2__response_throttleforapi>` objects | Request throttling policy list.                      |
-   +-----------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                                           | Description                                          |
+   +===========+================================================================================================================+======================================================+
+   | size      | Integer                                                                                                        | Length of the returned resource list.                |
+   +-----------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                                           | Number of resources that match the query conditions. |
+   +-----------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | throttles | Array of :ref:`ThrottleForApi <listrequestthrottlingpoliciesbindedtoapiv2_1__response_throttleforapi>` objects | Request throttling policy list.                      |
+   +-----------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listrequestthrottlingpoliciesbindedtoapiv2__response_throttleforapi:
+.. _listrequestthrottlingpoliciesbindedtoapiv2_1__response_throttleforapi:
 
 .. table:: **Table 5** ThrottleForApi
 

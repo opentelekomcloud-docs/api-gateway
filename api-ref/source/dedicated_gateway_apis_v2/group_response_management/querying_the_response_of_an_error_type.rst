@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfGatewayResponseTypeV2.html
+:original_name: ShowDetailsOfGatewayResponseTypeV2_1.html
 
-.. _ShowDetailsOfGatewayResponseTypeV2:
+.. _ShowDetailsOfGatewayResponseTypeV2_1:
 
 Querying the Response of an Error Type
 ======================================
@@ -17,49 +17,51 @@ GET /v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}/gateway
 
 .. table:: **Table 1** Path Parameters
 
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                           |
-   +=================+=================+=================+=======================================================================================================================+
-   | project_id      | Yes             | String          | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id     | Yes             | String          | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
-   | group_id        | Yes             | String          | API group ID.                                                                                                         |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
-   | response_id     | Yes             | String          | Response ID.                                                                                                          |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
-   | response_type   | Yes             | String          | Error type.                                                                                                           |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | Enumeration values:                                                                                                   |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **AUTH_FAILURE**                                                                                                   |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **AUTH_HEADER_MISSING**                                                                                            |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **AUTHORIZER_FAILURE**                                                                                             |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **AUTHORIZER_CONF_FAILURE**                                                                                        |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **AUTHORIZER_IDENTITIES_FAILURE**                                                                                  |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **BACKEND_UNAVAILABLE**                                                                                            |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **BACKEND_TIMEOUT**                                                                                                |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **THROTTLED**                                                                                                      |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **UNAUTHORIZED**                                                                                                   |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **ACCESS_DENIED**                                                                                                  |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **NOT_FOUND**                                                                                                      |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **REQUEST_PARAMETERS_FAILURE**                                                                                     |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **DEFAULT_4XX**                                                                                                    |
-   |                 |                 |                 |                                                                                                                       |
-   |                 |                 |                 | -  **DEFAULT_5XX**                                                                                                    |
-   +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                              |
+   +=================+=================+=================+==========================================================================================================================================+
+   | project_id      | Yes             | String          | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`.                                  |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | instance_id     | Yes             | String          | Gateway ID, which can be obtained from the gateway information on the APIG console.                                                      |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | group_id        | Yes             | String          | API group ID.                                                                                                                            |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | response_id     | Yes             | String          | Response ID.                                                                                                                             |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | response_type   | Yes             | String          | Error type. Options:                                                                                                                     |
+   |                 |                 |                 |                                                                                                                                          |
+   |                 |                 |                 | -  AUTH_FAILURE: IAM or app authentication failed.                                                                                       |
+   |                 |                 |                 | -  AUTH_HEADER_MISSING: The identity source is missing.                                                                                  |
+   |                 |                 |                 | -  AUTHORIZER_FAILURE: Custom authentication failed.                                                                                     |
+   |                 |                 |                 | -  AUTHORIZER_CONF_FAILURE: A custom authorizer error has occurred. For example, communication failed or an error response was returned. |
+   |                 |                 |                 | -  AUTHORIZER_IDENTITIES_FAILURE: The identity source of the frontend custom authorizer is missing or invalid.                           |
+   |                 |                 |                 | -  BACKEND_UNAVAILABLE: The backend is unavailable due to communication error.                                                           |
+   |                 |                 |                 | -  BACKEND_TIMEOUT: Communication with the backend timed out.                                                                            |
+   |                 |                 |                 | -  THROTTLED: The request was rejected due to throttling.                                                                                |
+   |                 |                 |                 | -  UNAUTHORIZED: The credential you use is not authorized to call the API.                                                               |
+   |                 |                 |                 | -  ACCESS_DENIED: Access denied. For example, the access control policy is triggered or an attack is detected.                           |
+   |                 |                 |                 | -  NOT_FOUND: No API is matched.                                                                                                         |
+   |                 |                 |                 | -  REQUEST_PARAMETERS_FAILURE: Invalid request parameter or unsupported HTTP method.                                                     |
+   |                 |                 |                 | -  DEFAULT_4XX: Another 4XX error occurred.                                                                                              |
+   |                 |                 |                 | -  DEFAULT_5XX: Another 5XX error occurred.                                                                                              |
+   |                 |                 |                 |                                                                                                                                          |
+   |                 |                 |                 | Enumeration values:                                                                                                                      |
+   |                 |                 |                 |                                                                                                                                          |
+   |                 |                 |                 | -  **AUTH_FAILURE**                                                                                                                      |
+   |                 |                 |                 | -  **AUTH_HEADER_MISSING**                                                                                                               |
+   |                 |                 |                 | -  **AUTHORIZER_FAILURE**                                                                                                                |
+   |                 |                 |                 | -  **AUTHORIZER_CONF_FAILURE**                                                                                                           |
+   |                 |                 |                 | -  **AUTHORIZER_IDENTITIES_FAILURE**                                                                                                     |
+   |                 |                 |                 | -  **BACKEND_UNAVAILABLE**                                                                                                               |
+   |                 |                 |                 | -  **BACKEND_TIMEOUT**                                                                                                                   |
+   |                 |                 |                 | -  **THROTTLED**                                                                                                                         |
+   |                 |                 |                 | -  **UNAUTHORIZED**                                                                                                                      |
+   |                 |                 |                 | -  **ACCESS_DENIED**                                                                                                                     |
+   |                 |                 |                 | -  **NOT_FOUND**                                                                                                                         |
+   |                 |                 |                 | -  **REQUEST_PARAMETERS_FAILURE**                                                                                                        |
+   |                 |                 |                 | -  **DEFAULT_4XX**                                                                                                                       |
+   |                 |                 |                 | -  **DEFAULT_5XX**                                                                                                                       |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -79,13 +81,13 @@ Response Parameters
 
 .. table:: **Table 3** Response body parameters
 
-   +--------------------+-------------------------------------------------------------------------------------------------------+-------------+
-   | Parameter          | Type                                                                                                  | Description |
-   +====================+=======================================================================================================+=============+
-   | {User defined key} | Map<String,\ :ref:`ResponseInfoResp <showdetailsofgatewayresponsetypev2__response_responseinforesp>`> | OK          |
-   +--------------------+-------------------------------------------------------------------------------------------------------+-------------+
+   +--------------------+---------------------------------------------------------------------------------------------------------+-------------+
+   | Parameter          | Type                                                                                                    | Description |
+   +====================+=========================================================================================================+=============+
+   | {User defined key} | Map<String,\ :ref:`ResponseInfoResp <showdetailsofgatewayresponsetypev2_1__response_responseinforesp>`> | OK          |
+   +--------------------+---------------------------------------------------------------------------------------------------------+-------------+
 
-.. _showdetailsofgatewayresponsetypev2__response_responseinforesp:
+.. _showdetailsofgatewayresponsetypev2_1__response_responseinforesp:
 
 .. table:: **Table 4** ResponseInfoResp
 

@@ -1,6 +1,6 @@
-:original_name: ListSignatureKeysBindedToApiV2.html
+:original_name: ListSignatureKeysBindedToApiV2_1.html
 
-.. _ListSignatureKeysBindedToApiV2:
+.. _ListSignatureKeysBindedToApiV2_1:
 
 Querying Signature Keys Bound to an API
 =======================================
@@ -17,13 +17,13 @@ GET /v2/{project_id}/apigw/instances/{instance_id}/sign-bindings/binded-signs
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 2** Query Parameters
 
@@ -69,17 +69,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                                     | Description                                          |
-   +===========+==========================================================================================================+======================================================+
-   | size      | Integer                                                                                                  | Length of the returned resource list.                |
-   +-----------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                                     | Number of resources that match the query conditions. |
-   +-----------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | bindings  | Array of :ref:`SignApiBindingInfo <listsignaturekeysbindedtoapiv2__response_signapibindinginfo>` objects | APIs bound to the signature key.                     |
-   +-----------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                                       | Description                                          |
+   +===========+============================================================================================================+======================================================+
+   | size      | Integer                                                                                                    | Length of the returned resource list.                |
+   +-----------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                                       | Number of resources that match the query conditions. |
+   +-----------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | bindings  | Array of :ref:`SignApiBindingInfo <listsignaturekeysbindedtoapiv2_1__response_signapibindinginfo>` objects | APIs bound to the signature key.                     |
+   +-----------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listsignaturekeysbindedtoapiv2__response_signapibindinginfo:
+.. _listsignaturekeysbindedtoapiv2_1__response_signapibindinginfo:
 
 .. table:: **Table 5** SignApiBindingInfo
 
@@ -113,31 +113,22 @@ Response Parameters
    | sign_key              | String                | Signature key.                                                                                                                                                                                                                                                                                                                   |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  hmac: The value contains 8 to 32 characters, including letters, digits, underscores (_), and hyphens (-). It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                           |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  basic: The value contains 4 to 32 characters, including letters, digits, underscores (_), and hyphens (-). It must start with a letter. If not specified, a key is automatically generated.                                                                                                                                   |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  public_key: The value contains 8 to 512 characters, including letters, digits, and special characters ``(_-+/=).`` It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                                       |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  aes: The value contains 16 characters if the aes-128-cfb algorithm is used, or 32 characters if the aes-256-cfb algorithm is used. Letters, digits, and special characters (``_-!@#$%+/=``) are allowed. It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated. |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_secret           | String                | Signature secret.                                                                                                                                                                                                                                                                                                                |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  hmac: The value contains 16 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a value is automatically generated.                                                                                                                  |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  basic: The value contains 8 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a value is automatically generated.                                                                                                                  |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  public_key: The value contains 15 to 2048 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a value is automatically generated.                                                                              |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  aes: The value contains 16 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a value is automatically generated.                                                                                             |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_type             | String                | Signature key type.                                                                                                                                                                                                                                                                                                              |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  hmac                                                                                                                                                                                                                                                                                                                          |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  basic                                                                                                                                                                                                                                                                                                                         |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  public_key                                                                                                                                                                                                                                                                                                                    |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  aes                                                                                                                                                                                                                                                                                                                           |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | To use a basic signature key, ensure that your gateway version supports it. If your gateway does not support this type of signature key, contact technical support to upgrade your gateway.                                                                                                                                      |
@@ -149,11 +140,8 @@ Response Parameters
    |                       |                       | Enumeration values:                                                                                                                                                                                                                                                                                                              |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **hmac**                                                                                                                                                                                                                                                                                                                      |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **basic**                                                                                                                                                                                                                                                                                                                     |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **public_key**                                                                                                                                                                                                                                                                                                                |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **aes**                                                                                                                                                                                                                                                                                                                       |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -238,7 +226,7 @@ OK
        "sign_id" : "0b0e8f456b8742218af75f945307173c",
        "sign_name" : "signature_demo",
        "sign_key" : "a071a20d460a4f639a636c3d7e3d8163",
-       "sign_secret" : "dc02fc5f30714d6bb21888389419e2b3",
+       "sign_secret" : "dc0************2b3",
        "api_type" : 1,
        "api_name" : "Api_http",
        "id" : "25082bd52f74442bb1d273993d567938",
