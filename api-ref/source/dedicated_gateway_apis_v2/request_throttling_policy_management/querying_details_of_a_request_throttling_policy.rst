@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfRequestThrottlingPolicyV2.html
+:original_name: ShowDetailsOfRequestThrottlingPolicyV2_1.html
 
-.. _ShowDetailsOfRequestThrottlingPolicyV2:
+.. _ShowDetailsOfRequestThrottlingPolicyV2_1:
 
 Querying Details of a Request Throttling Policy
 ===============================================
@@ -17,15 +17,15 @@ GET /v2/{project_id}/apigw/instances/{instance_id}/throttles/{throttle_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | throttle_id | Yes       | String | Request throttling policy ID.                                                                                         |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | throttle_id | Yes       | String | Request throttling policy ID.                                                                           |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------

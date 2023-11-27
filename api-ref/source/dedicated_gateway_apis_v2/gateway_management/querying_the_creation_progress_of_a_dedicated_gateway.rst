@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfInstanceProgressV2.html
+:original_name: ShowDetailsOfInstanceProgressV2_1.html
 
-.. _ShowDetailsOfInstanceProgressV2:
+.. _ShowDetailsOfInstanceProgressV2_1:
 
 Querying the Creation Progress of a Dedicated Gateway
 =====================================================
@@ -17,13 +17,13 @@ GET /v2/{project_id}/apigw/instances/{instance_id}/progress
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -143,70 +143,70 @@ Example Responses
 
 OK
 
-Gateway created.
+-  Gateway created.
 
-.. code-block::
+   .. code-block::
 
-   {
-     "end_time" : 1597390224911,
-     "error_code" : null,
-     "error_msg" : null,
-     "progress" : 100,
-     "start_time" : 1597389901161,
-     "status" : "success"
-   }
+      {
+        "end_time" : 1597390224911,
+        "error_code" : null,
+        "error_msg" : null,
+        "progress" : 100,
+        "start_time" : 1597389901161,
+        "status" : "success"
+      }
 
-Gateway is being created.
+-  Gateway is being created.
 
-.. code-block::
+   .. code-block::
 
-   {
-     "end_time" : 1597390224911,
-     "error_code" : null,
-     "error_msg" : null,
-     "progress" : 50,
-     "start_time" : 1597389901161,
-     "status" : "creating"
-   }
+      {
+        "end_time" : 1597390224911,
+        "error_code" : null,
+        "error_msg" : null,
+        "progress" : 50,
+        "start_time" : 1597389901161,
+        "status" : "creating"
+      }
 
-Gateway creation failed due to insufficient quota.
+-  Gateway creation failed due to insufficient quota.
 
-.. code-block::
+   .. code-block::
 
-   {
-     "end_time" : 1597390224911,
-     "error_code" : "APIC.9218",
-     "error_msg" : "create failed...",
-     "progress" : 0,
-     "start_time" : 1597389901161,
-     "status" : "failed"
-   }
+      {
+        "end_time" : 1597390224911,
+        "error_code" : "APIC.9218",
+        "error_msg" : "create failed...",
+        "progress" : 0,
+        "start_time" : 1597389901161,
+        "status" : "failed"
+      }
 
-Gateway creation failed due to insufficient resources.
+-  Gateway creation failed due to insufficient resources.
 
-.. code-block::
+   .. code-block::
 
-   {
-     "end_time" : 1597390224911,
-     "error_code" : "APIC.9219",
-     "error_msg" : "create failed...",
-     "progress" : 0,
-     "start_time" : 1597389901161,
-     "status" : "failed"
-   }
+      {
+        "end_time" : 1597390224911,
+        "error_code" : "APIC.9219",
+        "error_msg" : "create failed...",
+        "progress" : 0,
+        "start_time" : 1597389901161,
+        "status" : "failed"
+      }
 
-Gateway creation failed due to other reasons.
+-  Gateway creation failed due to other reasons.
 
-.. code-block::
+   .. code-block::
 
-   {
-     "end_time" : 1597390224911,
-     "error_code" : "APIC.9206",
-     "error_msg" : "create failed...",
-     "progress" : 0,
-     "start_time" : 1597389901161,
-     "status" : "failed"
-   }
+      {
+        "end_time" : 1597390224911,
+        "error_code" : "APIC.9206",
+        "error_msg" : "create failed...",
+        "progress" : 0,
+        "start_time" : 1597389901161,
+        "status" : "failed"
+      }
 
 **Status code: 401**
 

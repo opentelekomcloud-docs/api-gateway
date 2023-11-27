@@ -1,6 +1,6 @@
-:original_name: CreateApiAclBindingV2.html
+:original_name: CreateApiAclBindingV2_1.html
 
-.. _CreateApiAclBindingV2:
+.. _CreateApiAclBindingV2_1:
 
 Binding an Access Control Policy to an API
 ==========================================
@@ -19,13 +19,13 @@ POST /v2/{project_id}/apigw/instances/{instance_id}/acl-bindings
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -54,13 +54,13 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +--------------+-----------------------------------------------------------------------------------------------+----------------------------------------+
-   | Parameter    | Type                                                                                          | Description                            |
-   +==============+===============================================================================================+========================================+
-   | acl_bindings | Array of :ref:`AclApiBindingInfo <createapiaclbindingv2__response_aclapibindinginfo>` objects | Access control policy binding records. |
-   +--------------+-----------------------------------------------------------------------------------------------+----------------------------------------+
+   +--------------+-------------------------------------------------------------------------------------------------+----------------------------------------+
+   | Parameter    | Type                                                                                            | Description                            |
+   +==============+=================================================================================================+========================================+
+   | acl_bindings | Array of :ref:`AclApiBindingInfo <createapiaclbindingv2_1__response_aclapibindinginfo>` objects | Access control policy binding records. |
+   +--------------+-------------------------------------------------------------------------------------------------+----------------------------------------+
 
-.. _createapiaclbindingv2__response_aclapibindinginfo:
+.. _createapiaclbindingv2_1__response_aclapibindinginfo:
 
 .. table:: **Table 5** AclApiBindingInfo
 
@@ -131,6 +131,8 @@ Response Parameters
 
 Example Requests
 ----------------
+
+Binding an access control policy to an API
 
 .. code-block::
 

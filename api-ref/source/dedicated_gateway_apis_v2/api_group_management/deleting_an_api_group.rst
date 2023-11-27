@@ -1,6 +1,6 @@
-:original_name: DeleteApiGroupV2.html
+:original_name: DeleteApiGroupV2_1.html
 
-.. _DeleteApiGroupV2:
+.. _DeleteApiGroupV2_1:
 
 Deleting an API Group
 =====================
@@ -8,7 +8,11 @@ Deleting an API Group
 Function
 --------
 
-This API is used to delete an API group.If the group to delete contains APIs, take the APIs offline and delete them.This operation will also delete all resources associated with the API group, including independent domain names and SSL certificates. It will unbind the external domain names from the subdomain name based on the CNAME resolution mode.
+This API is used to delete an API group.
+
+If the group to delete contains APIs, take the APIs offline and delete them.
+
+All resources (independent domain names and SSL certificates) directly or indirectly associated with the group will be deleted. The operation will also unbind the external domain names from the subdomain name based on the CNAME resolution mode.
 
 URI
 ---
@@ -17,15 +21,15 @@ DELETE /v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | group_id    | Yes       | String | API group ID.                                                                                                         |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | group_id    | Yes       | String | API group ID.                                                                                           |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------

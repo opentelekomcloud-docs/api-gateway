@@ -1,19 +1,19 @@
-:original_name: topic_300000017.html
+:original_name: VpcChannelManagement_1.html
 
-.. _topic_300000017:
+.. _VpcChannelManagement_1:
 
 VPC Channel Management
 ======================
 
--  :ref:`Creating a VPC Channel <createvpcchannelv2>`
--  :ref:`Updating a VPC Channel <updatevpcchannelv2>`
--  :ref:`Deleting a VPC Channel <deletevpcchannelv2>`
--  :ref:`Querying VPC Channel Details <showdetailsofvpcchannelv2>`
--  :ref:`Querying VPC Channels <listvpcchannelsv2>`
--  :ref:`Adding or Updating Backend Instances <addingbackendinstancesv2>`
--  :ref:`Querying Backend Servers of a VPC Channel <listbackendinstancesv2>`
--  :ref:`Updating Backend Instances <updatebackendinstancesv2>`
--  :ref:`Removing a Backend Server <deletebackendinstancev2>`
+-  :ref:`Creating a VPC Channel <createvpcchannelv2_1>`
+-  :ref:`Updating a VPC Channel <updatevpcchannelv2_1>`
+-  :ref:`Deleting a VPC Channel <deletevpcchannelv2_1>`
+-  :ref:`Querying VPC Channel Details <showdetailsofvpcchannelv2_1>`
+-  :ref:`Querying VPC Channels <listvpcchannelsv2_1>`
+-  :ref:`Adding or Updating Backend Instances <addingbackendinstancesv2_1>`
+-  :ref:`Querying Backend Servers of a VPC Channel <listbackendinstancesv2_1>`
+-  :ref:`Updating Backend Instances <updatebackendinstancesv2_1>`
+-  :ref:`Removing a Backend Server <deletebackendinstancev2_1>`
 
 .. toctree::
    :maxdepth: 1

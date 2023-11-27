@@ -1,6 +1,6 @@
-:original_name: UpdateSpecialThrottlingConfigurationV2.html
+:original_name: UpdateSpecialThrottlingConfigurationV2_0.html
 
-.. _UpdateSpecialThrottlingConfigurationV2:
+.. _UpdateSpecialThrottlingConfigurationV2_0:
 
 Modifying an Excluded Request Throttling Configuration
 ======================================================
@@ -17,17 +17,17 @@ PUT /v2/{project_id}/apigw/instances/{instance_id}/throttles/{throttle_id}/throt
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | throttle_id | Yes       | String | Request throttling policy ID.                                                                                         |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | strategy_id | Yes       | String | Excluded configuration ID.                                                                                            |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | throttle_id | Yes       | String | Request throttling policy ID.                                                                           |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | strategy_id | Yes       | String | Excluded configuration ID.                                                                              |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -134,6 +134,8 @@ Response Parameters
 
 Example Requests
 ----------------
+
+Modifying an excluded configuration of a request throttling policy
 
 .. code-block::
 

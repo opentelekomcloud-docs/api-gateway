@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfEnvironmentVariableV2.html
+:original_name: ShowDetailsOfEnvironmentVariableV2_1.html
 
-.. _ShowDetailsOfEnvironmentVariableV2:
+.. _ShowDetailsOfEnvironmentVariableV2_1:
 
 Querying Variable Details
 =========================
@@ -17,15 +17,15 @@ GET /v2/{project_id}/apigw/instances/{instance_id}/env-variables/{env_variable_i
 
 .. table:: **Table 1** Path Parameters
 
-   +-----------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory | Type   | Description                                                                                                           |
-   +=================+===========+========+=======================================================================================================================+
-   | project_id      | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-----------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id     | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-----------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | env_variable_id | Yes       | String | Environment variable ID.                                                                                              |
-   +-----------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory | Type   | Description                                                                                             |
+   +=================+===========+========+=========================================================================================================+
+   | project_id      | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-----------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id     | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-----------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | env_variable_id | Yes       | String | Environment variable ID.                                                                                |
+   +-----------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------

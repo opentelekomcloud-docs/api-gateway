@@ -1,31 +1,31 @@
-:original_name: ResettingAppSecretV2.html
+:original_name: ShowDetailsOfAppV2_1.html
 
-.. _ResettingAppSecretV2:
+.. _ShowDetailsOfAppV2_1:
 
-Resetting the AppSecret of an App
-=================================
+Querying App Details
+====================
 
 Function
 --------
 
-This API is used to reset the AppSecret of an app.
+This API is used to query the details of an app.
 
 URI
 ---
 
-PUT /v2/{project_id}/apigw/instances/{instance_id}/apps/secret/{app_id}
+GET /v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | app_id      | Yes       | String | App ID.                                                                                                               |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | app_id      | Yes       | String | App ID.                                                                                                 |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -38,20 +38,12 @@ Request Parameters
    | X-Auth-Token | Yes       | String | User token. It can be obtained by calling the IAM API used to obtain a user token. The value of X-Subject-Token in the response header is a token. |
    +--------------+-----------+--------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. table:: **Table 3** Request body parameters
-
-   +------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Type   | Description                                                                                                                                                                                                                           |
-   +============+===========+========+=======================================================================================================================================================================================================================================+
-   | app_secret | No        | String | An AppSecret consists of 8 to 64 characters, starting with a letter or digit. Only letters, digits, and special characters ``(_-!@#$%)`` are allowed. To customize AppSecrets, ensure that AppSecret authentication has been enabled. |
-   +------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
 Response Parameters
 -------------------
 
 **Status code: 200**
 
-.. table:: **Table 4** Response body parameters
+.. table:: **Table 3** Response body parameters
 
    +-----------------------+-----------------------+---------------------------------------------------------------------+
    | Parameter             | Type                  | Description                                                         |
@@ -117,7 +109,7 @@ Response Parameters
 
 **Status code: 400**
 
-.. table:: **Table 5** Response body parameters
+.. table:: **Table 4** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -128,7 +120,7 @@ Response Parameters
 
 **Status code: 401**
 
-.. table:: **Table 6** Response body parameters
+.. table:: **Table 5** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -139,7 +131,7 @@ Response Parameters
 
 **Status code: 403**
 
-.. table:: **Table 7** Response body parameters
+.. table:: **Table 6** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -150,7 +142,7 @@ Response Parameters
 
 **Status code: 404**
 
-.. table:: **Table 8** Response body parameters
+.. table:: **Table 7** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -161,7 +153,7 @@ Response Parameters
 
 **Status code: 500**
 
-.. table:: **Table 9** Response body parameters
+.. table:: **Table 8** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -173,11 +165,7 @@ Response Parameters
 Example Requests
 ----------------
 
-.. code-block::
-
-   {
-     "app_secret" : "1ff226f0d2b54ac48c2d298c52ba49a4"
-   }
+None
 
 Example Responses
 -----------------
@@ -190,12 +178,12 @@ OK
 
    {
      "creator" : "USER",
-     "update_time" : "2020-08-03T14:12:43.038171689Z",
+     "update_time" : "2020-08-03T13:09:13Z",
      "app_key" : "ee8f878c252747028f07eb116c2cd91b",
      "name" : "app_demo",
      "remark" : "Demo app",
      "id" : "356de8eb7a8742168586e5daf5339965",
-     "app_secret" : "1ff226f0d2b54ac48c2d298c52ba49a4",
+     "app_secret" : "416************ab8",
      "register_time" : "2020-08-03T13:09:13Z",
      "status" : 1,
      "app_type" : "apig"

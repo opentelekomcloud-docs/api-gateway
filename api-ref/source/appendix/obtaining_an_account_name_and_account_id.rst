@@ -1,6 +1,6 @@
-:original_name: apig-en-api-180713005.html
+:original_name: apig-api-180713005.html
 
-.. _apig-en-api-180713005:
+.. _apig-api-180713005:
 
 Obtaining an Account Name and Account ID
 ========================================

@@ -1,6 +1,6 @@
-:original_name: AssociateCertificateV2.html
+:original_name: AssociateCertificateV2_1.html
 
-.. _AssociateCertificateV2:
+.. _AssociateCertificateV2_1:
 
 Adding a Certificate to a Domain Name
 =====================================
@@ -19,17 +19,17 @@ POST /v2/{project_id}/apigw/instances/{instance_id}/api-groups/{group_id}/domain
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | group_id    | Yes       | String | API group ID.                                                                                                         |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | domain_id   | Yes       | String | Domain ID.                                                                                                            |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | group_id    | Yes       | String | API group ID.                                                                                           |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | domain_id   | Yes       | String | Domain ID.                                                                                              |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -161,12 +161,14 @@ Response Parameters
 Example Requests
 ----------------
 
+Binding a certificate to a domain name
+
 .. code-block::
 
    {
      "name" : "cert_demo",
-     "private_key" : "'-----BEGIN CERTIFICATE-----\\nMIIEcDCCAtigAwIBAgIRAKUYqTtQbsPhVauuteGD8kMwDQYJKoZIhvcNAQELBQAw\\ngZMxHjAcBgNVBAoTFW1rY2VydCBkZXZlbG9wbWVudCBDQTE0MDIGA1UECwwrQ0hJ\\nTkFcbDAwNDk1MzA1QERFU0tUT1AtTDJURk9GSCAobGl1cnVpeHVlKTE7MDkGA1UE\\nAwwybWtjZXJ0IENISU5BXGwwMDQ5NTMwNUBERVNLVE9QLUwyVEZPRkggKGxpdXJ1\\naXh1ZSkwHhcNMTkwNjAxMDAwMDAwWhcNMzAwODA0MDc0MTE5WjBfMScwJQYDVQQK\\nEx5ta2NlcnQgZGV2ZWxvcG1lbnQgY2VydGlmaWNhdGUxNDAyBgNVBAsMK0NISU5B\\nXGwwMDQ5NTMwNUBERVNLVE9QLUwyVEZPRkggKGxpdXJ1aXh1ZSkwggEiMA0GCSqG\\nSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDYvPx9H8ZY9iUf5A8hT8s/gTThEOa3nswW\\njxxU58+dIiwvzdIioc+CaggMz/rjT3bt9jRilKvzkJjryUxLNOe3JsdJogm0OSxc\\nSJWOhdZd/vScImWajM5t3M/M7xgt1g813PNEVJ/uTaEwm6K3sAlqGJfgiU/ep6pb\\nI4S9i1c3VYLTfGF2ND5kTaysp69/mXl4IUDWn82n0TpjB4BvoiYD9ORMcvBBGCBh\\nnU2x497Uyo0X/MkreoxLxLEO2s4/TZfpZ0Ezsi/yHwjTRQ0ut53IKbSZDoBf3HLE\\nPw1Y4q2s4qjN6ImZmkYX+Qvx5MxdHCNsfPsDFTYX2rl+vCpqtDW/AgMBAAGjcjBw\\nMA4GA1UdDwEB/wQEAwIFoDATBgNVHSUEDDAKBggrBgEFBQcDATAMBgNVHRMBAf8E\\nAjAAMB8GA1UdIwQYMBaAFEV9QNgV6FDCbMBoI4uT/JL/8ZHjMBoGA1UdEQQTMBGC\\nD3d3dy5jb21wYW55LmNvbTANBgkqhkiG9w0BAQsFAAOCAYEAXkrRlJ2z0xEGBiE3\\ncvGtePxERVm0cdU1fI7qoQRd8bg0KJwvCvFfJZoCWD41saZnXcfwn+1eAD6txWsV\\nkgq784DeTltqC5tU6l6kpXyU1lkTm9U7/Qbb8QGB8GaRAP9VJTLfOzjieZrj/55L\\nyrSkK84hvo6XSaEhqaBUWQN1qr8MY9/P0sZ2H0S9uu3Ezu9r/jx849aYDKeN4Zdf\\nxda1iXz+6UYUQKo5cveGKu+HmIW5V+sVVUfBCbr1FrUgaSbeZDnKdm6xlQZ70los\\nn4yLrpdbL0r5x41es94PaLSZC9+UANLf7fqGKpYlYdUU3YigUs3ed9Cn1f1ScI6V\\nJgR5tyK0dAb1n5tJwM2FA0cu56L3h2h71Jxgs4mEvBlqy+h6wVOIboj4UzQRnm+t\\n1Um4rYopw240iy4oRTYqB3dcsA3y3KYcTzA+LCUOcnWcaZSFiL9kEKqCWljZs51A\\nuux1UisF8p/iMNyZPoPYIBQnO+oN2GJ72krI2pmMJgEkag38\\n-----END CERTIFICATE-----\\n'",
-     "cert_content" : "'-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDYvPx9H8ZY9iUf\\n5A8hT8s/gTThEOa3nswWjxxU58+dIiwvzdIioc+CaggMz/rjT3bt9jRilKvzkJjr\\nyUxLNOe3JsdJogm0OSxcSJWOhdZd/vScImWajM5t3M/M7xgt1g813PNEVJ/uTaEw\\nm6K3sAlqGJfgiU/ep6pbI4S9i1c3VYLTfGF2ND5kTaysp69/mXl4IUDWn82n0Tpj\\nB4BvoiYD9ORMcvBBGCBhnU2x497Uyo0X/MkreoxLxLEO2s4/TZfpZ0Ezsi/yHwjT\\nRQ0ut53IKbSZDoBf3HLEPw1Y4q2s4qjN6ImZmkYX+Qvx5MxdHCNsfPsDFTYX2rl+\\nvCpqtDW/AgMBAAECggEBAMJGvOiHp+qsUODCM5G/jcdR0Q2Bcd3b+MKr61BsLdyC\\n+iqripXCh1g2JRse/pvs6gUpsRFAhNWhooGQAdRUCvRQTUjCd4JV0V6zLWQAsgO1\\nepvN9VdQqeUujhH7q6fCfgXhFSoF1QnuCfOhPnz6zaWNf+4kBzTlA74IG38vvLD6\\nTccgvXNrJEWMM+AN6uCndEMkPG2VtCor9VDaN5iuBN9NsAxTGZu9wgrZzg1W0rVZ\\nC/Psh2U2gwXHBzsiygB3n08R+7MSwulpsvUone2E4IT+VDURWIIIcVQZtT6SxuRt\\npFEy7E/PfKV1VRvEvyGtZSSLkt0WxqHPENrj3LuW77kCgYEA4X+iRh6jTSmJ1fHl\\n0qhCSFWXjp1B+cajNs62N2kFcRkOtD5BvWihlDbuLaq/eYfErKET6Z8jnbRyQCJV\\n/ePqRIZ30gjTPRr55X8ZXb+hCficHnK5LZah6HwyRL337FzejTxs3J7C1rVmYq/n\\nCjfa3bJQ6zUtxRO+B2BlCgES9q0CgYEA9g4ByVyydao8ZEC9Qbn9Pzd/LsIbBOAG\\nPg7Ib0vwHyRv9oPHTc7dla+YBTfNVuFOt2e/KKf0meZnM6OiW/r38zgwLMwzHHcs\\nryMNGgwffSwmDXgrswkXu5ICuoc1+2s3GGNFkjg7IrfcHlEpVAn/ttJTCmbvTMGo\\nHM+oJPpGp5sCgYAopHx27ua37ZiuOt8VTMZFi0e5qJZPkoGwSymEayVT8RQ5YE8w\\n+D7HG+9pw7CnEtVb19xi6w/cSL2e2ZFuJToAB8xoyrZn+Qi5WGMWBofb6DcbNcoy\\ncUfVQy08PpEExOhHxHBKg0LSt/cwKkwWB2MnOhBjlD4fmyNQ6QrM9syYMQKBgH+8\\nv9Kwq/kH+rg1H8uKad2yyvUUUgCS6Mq40/drneoc+X8p5IMRXNnDwhEbah+rcjkm\\nxAewQfzPr04Qqk5EGQsMZX4sOHCTsf/uG3QlTQenrs2ZUF5u3wJCh+YcIbs3au/f\\nQZPqW1Dn0H9wtRrq4fUgdXnV/G+FreffKjSgNaP3AoGAT8wX6ZszA5HrIGSo4pi7\\nDnbMNuYe1cpcyoAi178YVklom6uGutIiafngapViESKZ0Y8X/lYzU6ELclimqJPB\\nXD4nSD64YVvi+TjzwLK61tEUuAnYlWrtXQORWPQ5tHGlhCZPrciO2QH5P9cxoU3Z\\npGfmyACUF4Od9tdq4t4S9j4=\\n-----END PRIVATE KEY-----\\n'"
+     "private_key" : "'-----BEGIN PRIVATE KEY-----THIS IS YOUR PRIVATE KEY-----END PRIVATE KEY-----\\n'",
+     "cert_content" : "'-----BEGIN CERTIFICATE-----THIS IS YOUR CERT CONTENT-----END CERTIFICATE-----\\n'"
    }
 
 Example Responses

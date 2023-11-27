@@ -1,14 +1,14 @@
-:original_name: topic_300000002.html
+:original_name: EnvVariableManagement_1.html
 
-.. _topic_300000002:
+.. _EnvVariableManagement_1:
 
 Environment Variable Management
 ===============================
 
--  :ref:`Creating a Variable <createenvironmentvariablev2>`
--  :ref:`Deleting a Variable <deleteenvironmentvariablev2>`
--  :ref:`Querying Variable Details <showdetailsofenvironmentvariablev2>`
--  :ref:`Querying Environment Variables <listenvironmentvariablesv2>`
+-  :ref:`Creating a Variable <createenvironmentvariablev2_1>`
+-  :ref:`Deleting a Variable <deleteenvironmentvariablev2_1>`
+-  :ref:`Querying Variable Details <showdetailsofenvironmentvariablev2_1>`
+-  :ref:`Querying Environment Variables <listenvironmentvariablesv2_1>`
 
 .. toctree::
    :maxdepth: 1

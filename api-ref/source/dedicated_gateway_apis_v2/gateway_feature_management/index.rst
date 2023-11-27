@@ -1,12 +1,12 @@
-:original_name: topic_300000021.html
+:original_name: InstanceFeatureManagement_1.html
 
-.. _topic_300000021:
+.. _InstanceFeatureManagement_1:
 
 Gateway Feature Management
 ==========================
 
--  :ref:`Configuring a Feature for a Gateway <createfeaturev2>`
--  :ref:`Querying Gateway Features <listfeaturesv2>`
+-  :ref:`Configuring a Feature for a Gateway <createfeaturev2_1>`
+-  :ref:`Querying Gateway Features <listfeaturesv2_1>`
 
 .. toctree::
    :maxdepth: 1

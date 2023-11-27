@@ -10,8 +10,8 @@ Appendix
 -  :ref:`HTTP Status Codes <apig-en-api-180713206>`
 -  :ref:`Error Codes <errorcode>`
 -  :ref:`Supported Features <apig-api-20210402>`
--  :ref:`Obtaining a Project ID <apig-en-api-180713009>`
--  :ref:`Obtaining an Account Name and Account ID <apig-en-api-180713005>`
+-  :ref:`Obtaining a Project ID <apig-api-180713009>`
+-  :ref:`Obtaining an Account Name and Account ID <apig-api-180713005>`
 
 .. toctree::
    :maxdepth: 1

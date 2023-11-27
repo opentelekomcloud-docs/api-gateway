@@ -1,31 +1,33 @@
-:original_name: CheckAppV2.html
+:original_name: DeleteAppCodeV2_1.html
 
-.. _CheckAppV2:
+.. _DeleteAppCodeV2_1:
 
-Verifying an App
-================
+Deleting an AppCode
+===================
 
 Function
 --------
 
-This API is provided for users (excluding app owner) to check whether an app exists. Only the basic information, such as ID, name, and remark, of the app is displayed.
+This API is used to delete an AppCode. Deleted AppCodes cannot be used for simple authentication.
 
 URI
 ---
 
-GET /v2/{project_id}/apigw/instances/{instance_id}/apps/validation/{app_id}
+DELETE /v2/{project_id}/apigw/instances/{instance_id}/apps/{app_id}/app-codes/{app_code_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | app_id      | Yes       | String | App ID.                                                                                                               |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | app_id      | Yes       | String | App ID.                                                                                                 |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | app_code_id | Yes       | String | AppCode ID.                                                                                             |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -41,21 +43,9 @@ Request Parameters
 Response Parameters
 -------------------
 
-**Status code: 200**
-
-.. table:: **Table 3** Response body parameters
-
-   ========= ====== ============
-   Parameter Type   Description
-   ========= ====== ============
-   id        String ID.
-   name      String Name.
-   remark    String Description.
-   ========= ====== ============
-
 **Status code: 400**
 
-.. table:: **Table 4** Response body parameters
+.. table:: **Table 3** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -66,7 +56,7 @@ Response Parameters
 
 **Status code: 401**
 
-.. table:: **Table 5** Response body parameters
+.. table:: **Table 4** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -77,7 +67,7 @@ Response Parameters
 
 **Status code: 403**
 
-.. table:: **Table 6** Response body parameters
+.. table:: **Table 5** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -88,7 +78,7 @@ Response Parameters
 
 **Status code: 404**
 
-.. table:: **Table 7** Response body parameters
+.. table:: **Table 6** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -99,7 +89,7 @@ Response Parameters
 
 **Status code: 500**
 
-.. table:: **Table 8** Response body parameters
+.. table:: **Table 7** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -116,18 +106,6 @@ None
 Example Responses
 -----------------
 
-**Status code: 200**
-
-OK
-
-.. code-block::
-
-   {
-     "name" : "app_demo",
-     "remark" : "Demo app",
-     "id" : "356de8eb7a8742168586e5daf5339965"
-   }
-
 **Status code: 400**
 
 Bad Request
@@ -136,7 +114,7 @@ Bad Request
 
    {
      "error_code" : "APIG.2012",
-     "error_msg" : "Invalid parameter value,parameterName:id. Please refer to the support documentation"
+     "error_msg" : "Invalid parameter value,parameterName:app_id. Please refer to the support documentation"
    }
 
 **Status code: 401**
@@ -168,8 +146,8 @@ Not Found
 .. code-block::
 
    {
-     "error_code" : "APIG.3002",
-     "error_msg" : "App 356de8eb7a8742168586e5daf5339965 does not exist"
+     "error_code" : "APIG.3004",
+     "error_msg" : "App 9ed8b7fe84224de681e7d7a5587e76dc does not exist"
    }
 
 **Status code: 500**
@@ -189,7 +167,7 @@ Status Codes
 =========== =====================
 Status Code Description
 =========== =====================
-200         OK
+204         No Content
 400         Bad Request
 401         Unauthorized
 403         Forbidden

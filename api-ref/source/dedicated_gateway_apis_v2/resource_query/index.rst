@@ -1,13 +1,13 @@
-:original_name: topic_300000010.html
+:original_name: ResourceQuery_1.html
 
-.. _topic_300000010:
+.. _ResourceQuery_1:
 
 Resource Query
 ==============
 
--  :ref:`Querying API Quantities <listapiquantitiesv2>`
--  :ref:`Querying API Group Quantities <listapigroupsquantitiesv2>`
--  :ref:`Querying App Quantities <listappquantitiesv2>`
+-  :ref:`Querying API Quantities <listapiquantitiesv2_1>`
+-  :ref:`Querying API Group Quantities <listapigroupsquantitiesv2_1>`
+-  :ref:`Querying App Quantities <listappquantitiesv2_1>`
 
 .. toctree::
    :maxdepth: 1

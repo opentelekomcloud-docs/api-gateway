@@ -1,6 +1,6 @@
-:original_name: DebugApiV2.html
+:original_name: DebugApiV2_1.html
 
-.. _DebugApiV2:
+.. _DebugApiV2_1:
 
 Debugging an API
 ================
@@ -17,15 +17,15 @@ POST /v2/{project_id}/apigw/instances/{instance_id}/apis/debug/{api_id}
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | api_id      | Yes       | String | API ID.                                                                                                               |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | api_id      | Yes       | String | API ID.                                                                                                 |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -211,6 +211,8 @@ Response Parameters
 Example Requests
 ----------------
 
+Debugging an API
+
 .. code-block::
 
    {
@@ -230,8 +232,8 @@ OK
 .. code-block::
 
    {
-     "request" : "GET /test/mock HTTP/1.1\r\nHost: c77f5e81d9cb4424bf704ef2b0ac7600.apic.****.com\r\nUser-Agent: APIGatewayDebugClient/1.0\r\nX-Apig-Mode: debug\r\n\r\n",
-     "response" : "HTTP/1.1 200 OK\r\nTransfer-Encoding: chunked\r\nConnection: keep-alive\r\nContent-Type: application/json\r\nDate: Mon, 03 Aug 2020 02:51:22 GMT\r\nServer: api-gateway\r\nX-Apig-Latency: 0\r\nX-Apig-Ratelimit-Api: remain:99,limit:100,time:1 minute\r\nX-Apig-Ratelimit-Api-Allenv: remain:14999,limit:15000,time:1 second\r\nX-Request-Id: d4ec6e33148bdeffe8f55b43472d1251\r\n\r\nmock success",
+     "request" : "GET /test/mock HTTP/1.1\nHost: c77f5e81d9cb4424bf704ef2b0ac7600.apic.****.com\nUser-Agent: APIGatewayDebugClient/1.0\nX-Apig-Mode: debug\n\n",
+     "response" : "HTTP/1.1 200 OK\nTransfer-Encoding: chunked\nConnection: keep-alive\nContent-Type: application/json\nDate: Mon, 03 Aug 2020 02:51:22 GMT\nServer: api-gateway\nX-Apig-Latency: 0\nX-Apig-Ratelimit-Api: remain:99,limit:100,time:1 minute\nX-Apig-Ratelimit-Api-Allenv: remain:14999,limit:15000,time:1 second\nX-Request-Id: d4ec6e33148bdeffe8f55b43472d1251\n\nmock success",
      "latency" : 5,
      "log" : ""
    }

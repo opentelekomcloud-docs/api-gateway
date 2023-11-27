@@ -1,6 +1,6 @@
-:original_name: AssociateRequestThrottlingPolicyV2.html
+:original_name: AssociateRequestThrottlingPolicyV2_1.html
 
-.. _AssociateRequestThrottlingPolicyV2:
+.. _AssociateRequestThrottlingPolicyV2_1:
 
 Binding a Request Throttling Policy
 ===================================
@@ -8,7 +8,11 @@ Binding a Request Throttling Policy
 Function
 --------
 
-The request throttling policy bound to an API will control access of all users to the API.If the number of API calls within a specified period reaches the limit, subsequent access will be rejected, protecting the backend API from abnormal traffic and ensuring stable service running.This API is used to bind a request throttling policy to an API that has been published in an environment. You can bind different request throttling policies to an API in different environments, but can bind only one request throttling policy to the API in each environment.
+The request throttling policy bound to an API will control access of all users to the API.
+
+If the number of API calls within a specified period reaches the limit, subsequent access will be rejected, protecting the backend API from abnormal traffic and ensuring stable service running.
+
+This API is used to bind a request throttling policy to an API that has been published in an environment. You can bind different request throttling policies to an API in different environments, but can bind only one request throttling policy to the API in each environment.
 
 URI
 ---
@@ -17,13 +21,13 @@ POST /v2/{project_id}/apigw/instances/{instance_id}/throttle-bindings
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -57,13 +61,13 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------+
-   | Parameter       | Type                                                                                                         | Description                                |
-   +=================+==============================================================================================================+============================================+
-   | throttle_applys | Array of :ref:`ThrottleApiBinding <associaterequestthrottlingpolicyv2__response_throttleapibinding>` objects | Request throttling policy binding records. |
-   +-----------------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------+
+   +-----------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------+
+   | Parameter       | Type                                                                                                           | Description                                |
+   +=================+================================================================================================================+============================================+
+   | throttle_applys | Array of :ref:`ThrottleApiBinding <associaterequestthrottlingpolicyv2_1__response_throttleapibinding>` objects | Request throttling policy binding records. |
+   +-----------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------+
 
-.. _associaterequestthrottlingpolicyv2__response_throttleapibinding:
+.. _associaterequestthrottlingpolicyv2_1__response_throttleapibinding:
 
 .. table:: **Table 5** ThrottleApiBinding
 
@@ -143,6 +147,8 @@ Response Parameters
 
 Example Requests
 ----------------
+
+Binding a request throttling policy to an API
 
 .. code-block::
 

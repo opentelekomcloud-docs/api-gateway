@@ -1,11 +1,11 @@
-:original_name: topic_300000020.html
+:original_name: ApigTagManagement_1.html
 
-.. _topic_300000020:
+.. _ApigTagManagement_1:
 
 Tag Management
 ==============
 
--  :ref:`Querying Tags <listtagsv2>`
+-  :ref:`Querying Tags <listtagsv2_1>`
 
 .. toctree::
    :maxdepth: 1

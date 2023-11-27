@@ -1,6 +1,6 @@
-:original_name: ListSignatureKeysV2.html
+:original_name: ListSignatureKeysV2_1.html
 
-.. _ListSignatureKeysV2:
+.. _ListSignatureKeysV2_1:
 
 Querying Signature Keys
 =======================
@@ -17,13 +17,13 @@ GET /v2/{project_id}/apigw/instances/{instance_id}/signs
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 2** Query Parameters
 
@@ -67,17 +67,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                              | Description                                          |
-   +===========+===================================================================================================+======================================================+
-   | size      | Integer                                                                                           | Length of the returned resource list.                |
-   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                              | Number of resources that match the query conditions. |
-   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | signs     | Array of :ref:`SignatureWithBindNum <listsignaturekeysv2__response_signaturewithbindnum>` objects | Signature key list.                                  |
-   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                                | Description                                          |
+   +===========+=====================================================================================================+======================================================+
+   | size      | Integer                                                                                             | Length of the returned resource list.                |
+   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                                | Number of resources that match the query conditions. |
+   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | signs     | Array of :ref:`SignatureWithBindNum <listsignaturekeysv2_1__response_signaturewithbindnum>` objects | Signature key list.                                  |
+   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listsignaturekeysv2__response_signaturewithbindnum:
+.. _listsignaturekeysv2_1__response_signaturewithbindnum:
 
 .. table:: **Table 5** SignatureWithBindNum
 
@@ -128,13 +128,13 @@ Response Parameters
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_secret           | String                | Signature secret.                                                                                                                                                                                                                                                                                                                |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
-   |                       |                       | -  hmac: The value contains 16 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a value is automatically generated.                                                                                                                  |
+   |                       |                       | -  hmac: The value contains 16 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
-   |                       |                       | -  basic: The value contains 8 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a value is automatically generated.                                                                                                                  |
+   |                       |                       | -  basic: The value contains 8 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
-   |                       |                       | -  public_key: The value contains 15 to 2048 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a value is automatically generated.                                                                              |
+   |                       |                       | -  public_key: The value can contain 16 to 2048 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                             |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
-   |                       |                       | -  aes: The value contains 16 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a value is automatically generated.                                                                                             |
+   |                       |                       | -  aes: The value contains 16 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                                               |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_algorithm        | String                | Signature algorithm. Specify a signature algorithm only when using an AES signature key. By default, no algorithm is used.                                                                                                                                                                                                       |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
@@ -219,7 +219,7 @@ OK
      "total" : 2,
      "size" : 2,
      "signs" : [ {
-       "sign_secret" : "signsecretsignsecretsignsecretsignsecret",
+       "sign_secret" : "sig************ret",
        "update_time" : "2018-02-07T02:00:27.964766Z",
        "create_time" : "2018-02-06T12:17:36Z",
        "name" : "signature_demo",
@@ -229,7 +229,7 @@ OK
        "bind_num" : 0,
        "ldapi_bind_num" : 0
      }, {
-       "sign_secret" : "9ce16b029034464898ee33540c42e16a",
+       "sign_secret" : "9ce************16a",
        "update_time" : "2020-07-30T03:56:58Z",
        "create_time" : "2020-07-30T03:56:58Z",
        "name" : "Signature_udlu",

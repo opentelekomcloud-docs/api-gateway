@@ -1,6 +1,6 @@
-:original_name: CreateEnvironmentV2.html
+:original_name: CreateEnvironmentV2_1.html
 
-.. _CreateEnvironmentV2:
+.. _CreateEnvironmentV2_1:
 
 Creating an Environment
 =======================
@@ -8,7 +8,11 @@ Creating an Environment
 Function
 --------
 
-API providers can publish an API in different environments, such as the development, testing, and production environments.API information, such as the version, request address, and even request message, varies depending on the environment in which an API is published. For example, v1.0 of an API is published in the production environment, v1.1 in the testing environment, and v1.2 in the development environment.APIG provides environment management, enabling you to access APIG in different scenarios at minimal cost.
+API providers can publish an API in different environments, such as the development, test, and production environments.
+
+API information, such as the version, request address, and even request message, varies depending on the environment in which an API is published. For example, v1.0 of an API is published in the production environment, v1.1 in the test environment, and v1.2 in the development environment.
+
+APIG provides environment management, enabling you to access APIG in different scenarios at minimal costs.
 
 URI
 ---
@@ -17,13 +21,13 @@ POST /v2/{project_id}/apigw/instances/{instance_id}/envs
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -115,6 +119,8 @@ Response Parameters
 Example Requests
 ----------------
 
+Creating an environment
+
 .. code-block::
 
    {
@@ -135,7 +141,7 @@ Created
      "create_time" : "2020-07-31T06:41:43.511347628Z",
      "name" : "DEV",
      "remark" : "Development environment",
-     "env_id" : "7a1ad0c350844ee69479b47df9a881cb"
+     "id" : "7a1ad0c350844ee69479b47df9a881cb"
    }
 
 **Status code: 400**

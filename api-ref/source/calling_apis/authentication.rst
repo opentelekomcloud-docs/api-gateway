@@ -115,7 +115,7 @@ AK: access key ID, which is a unique identifier used in conjunction with a secre
 
       Specify **region**, **serviceName**, **ak/sk**, and **url** as the actual values. In this demo, the URLs for accessing VPC resources are used.
 
-      To obtain the project ID in the URLs, see :ref:`Obtaining a Project ID <apig-en-api-180713009>`.
+      To obtain the project ID in the URLs, see :ref:`Obtaining a Project ID <apig-api-180713009>`.
 
       Obtain the endpoint from the enterprise administrator.
 

@@ -1,15 +1,15 @@
-:original_name: topic_300000000.html
+:original_name: ApiGroupManagement_1.html
 
-.. _topic_300000000:
+.. _ApiGroupManagement_1:
 
 API Group Management
 ====================
 
--  :ref:`Creating an API Group <createapigroupv2>`
--  :ref:`Modifying an API Group <updateapigroupv2>`
--  :ref:`Deleting an API Group <deleteapigroupv2>`
--  :ref:`Querying API Group Details <showdetailsofapigroupv2>`
--  :ref:`Querying API Groups <listapigroupsv2>`
+-  :ref:`Creating an API Group <createapigroupv2_1>`
+-  :ref:`Modifying an API Group <updateapigroupv2_1>`
+-  :ref:`Deleting an API Group <deleteapigroupv2_1>`
+-  :ref:`Querying API Group Details <showdetailsofapigroupv2_1>`
+-  :ref:`Querying API Groups <listapigroupsv2_1>`
 
 .. toctree::
    :maxdepth: 1

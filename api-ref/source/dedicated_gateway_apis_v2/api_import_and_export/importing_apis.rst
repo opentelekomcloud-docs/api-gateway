@@ -1,6 +1,6 @@
-:original_name: ImportApiDefinitionsV2.html
+:original_name: ImportApiDefinitionsV2_1.html
 
-.. _ImportApiDefinitionsV2:
+.. _ImportApiDefinitionsV2_1:
 
 Importing APIs
 ==============
@@ -17,13 +17,13 @@ POST /v2/{project_id}/apigw/instances/{instance_id}/openapi/import
 
 .. table:: **Table 1** Path Parameters
 
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                                           |
-   +=============+===========+========+=======================================================================================================================+
-   | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see "Appendix" > "Obtaining a Project ID" in this document. |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                                   |
-   +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | Parameter   | Mandatory | Type   | Description                                                                                             |
+   +=============+===========+========+=========================================================================================================+
+   | project_id  | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Obtaining a Project ID <apig-api-180713009>`. |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
+   | instance_id | Yes       | String | Gateway ID, which can be obtained from the gateway information on the APIG console.                     |
+   +-------------+-----------+--------+---------------------------------------------------------------------------------------------------------+
 
 Request Parameters
 ------------------
@@ -93,23 +93,23 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
-   | Parameter             | Type                                                                       | Description                                 |
-   +=======================+============================================================================+=============================================+
-   | success               | Array of :ref:`Success <importapidefinitionsv2__response_success>` objects | Import success information.                 |
-   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
-   | failure               | Array of :ref:`Failure <importapidefinitionsv2__response_failure>` objects | Import failure information.                 |
-   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
-   | swagger               | :ref:`Swagger <importapidefinitionsv2__response_swagger>` object           | Swagger file import result.                 |
-   |                       |                                                                            |                                             |
-   |                       |                                                                            | Currently, this parameter is not supported. |
-   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
-   | group_id              | String                                                                     | API group ID.                               |
-   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
-   | ignore                | Array of :ref:`Ignore <importapidefinitionsv2__response_ignore>` objects   | APIs that are not imported.                 |
-   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
+   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
+   | Parameter             | Type                                                                         | Description                                 |
+   +=======================+==============================================================================+=============================================+
+   | success               | Array of :ref:`Success <importapidefinitionsv2_1__response_success>` objects | Import success information.                 |
+   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
+   | failure               | Array of :ref:`Failure <importapidefinitionsv2_1__response_failure>` objects | Import failure information.                 |
+   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
+   | swagger               | :ref:`Swagger <importapidefinitionsv2_1__response_swagger>` object           | Swagger file import result.                 |
+   |                       |                                                                              |                                             |
+   |                       |                                                                              | Currently, this parameter is not supported. |
+   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
+   | group_id              | String                                                                       | API group ID.                               |
+   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
+   | ignore                | Array of :ref:`Ignore <importapidefinitionsv2_1__response_ignore>` objects   | APIs that are not imported.                 |
+   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
 
-.. _importapidefinitionsv2__response_success:
+.. _importapidefinitionsv2_1__response_success:
 
 .. table:: **Table 5** Success
 
@@ -135,7 +135,7 @@ Response Parameters
    | id                    | String                | ID of a successfully imported API.                   |
    +-----------------------+-----------------------+------------------------------------------------------+
 
-.. _importapidefinitionsv2__response_failure:
+.. _importapidefinitionsv2_1__response_failure:
 
 .. table:: **Table 6** Failure
 
@@ -148,7 +148,7 @@ Response Parameters
    error_code String Error code displayed for an import failure.
    ========== ====== ==============================================
 
-.. _importapidefinitionsv2__response_swagger:
+.. _importapidefinitionsv2_1__response_swagger:
 
 .. table:: **Table 7** Swagger
 
@@ -159,7 +159,7 @@ Response Parameters
    result    String Import result description.
    ========= ====== ==========================
 
-.. _importapidefinitionsv2__response_ignore:
+.. _importapidefinitionsv2_1__response_ignore:
 
 .. table:: **Table 8** Ignore
 
@@ -228,6 +228,8 @@ Response Parameters
 Example Requests
 ----------------
 
+Importing APIs
+
 .. code-block::
 
    {
@@ -259,8 +261,10 @@ OK
        "action" : "create",
        "id" : "8ae6bcafab6f49d78242bff26ad8a4f0"
      } ],
-     "swagger_id" : "412488ba965041f9838a5266a5f8e574",
-     "result" : "Success"
+     "swagger" : {
+       "id" : "e2ea8a7c1cfc49b3830437cb79d7fd59",
+       "result" : "Success"
+     }
    }
 
 **Status code: 400**

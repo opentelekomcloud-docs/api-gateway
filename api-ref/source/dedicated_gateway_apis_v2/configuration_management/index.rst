@@ -1,12 +1,12 @@
-:original_name: topic_300000022.html
+:original_name: ConfigManagement_1.html
 
-.. _topic_300000022:
+.. _ConfigManagement_1:
 
 Configuration Management
 ========================
 
--  :ref:`Querying Resource Configurations of a Gateway <listprojectcofigsv2>`
--  :ref:`Querying Gateway Configurations <listinstanceconfigsv2>`
+-  :ref:`Querying Resource Configurations of a Gateway <listprojectcofigsv2_1>`
+-  :ref:`Querying Gateway Configurations <listinstanceconfigsv2_1>`
 
 .. toctree::
    :maxdepth: 1

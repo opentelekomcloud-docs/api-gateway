@@ -1,12 +1,12 @@
-:original_name: topic_300000018.html
+:original_name: MonitoringInfoQuerying_1.html
 
-.. _topic_300000018:
+.. _MonitoringInfoQuerying_1:
 
 Monitoring Information Query
 ============================
 
--  :ref:`Querying API Calls Within a Period <listlatelyapistatisticsv2>`
--  :ref:`Querying API Calls Under an API Group in the Last One Hour <listlatelygroupstatisticsv2>`
+-  :ref:`Querying API Calls Within a Period <listlatelyapistatisticsv2_1>`
+-  :ref:`Querying API Calls Under an API Group in the Last One Hour <listlatelygroupstatisticsv2_1>`
 
 .. toctree::
    :maxdepth: 1
