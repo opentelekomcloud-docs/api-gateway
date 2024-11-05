@@ -1,12 +1,12 @@
-:original_name: apig-en-faq-180919015.html
+:original_name: apig-faq-180919015.html
 
-.. _apig-en-faq-180919015:
+.. _apig-faq-180919015:
 
 API Security
 ============
 
--  :ref:`How Can I Protect My APIs? <apig-en-faq-180307003>`
--  :ref:`How Do I Ensure the Security of Backend Services Invoked by APIG? <apig-en-faq-180307009>`
+-  :ref:`How Can I Protect My APIs? <apig-faq-180307003>`
+-  :ref:`How Do I Ensure the Security of Backend Services Invoked by APIG? <apig-faq-180307009>`
 -  :ref:`Can I Control Access to the Private IP Addresses of the ECSs in a VPC Channel (or Load Balance Channel)? <apig-faq-191201>`
 
 .. toctree::

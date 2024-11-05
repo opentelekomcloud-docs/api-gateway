@@ -1,6 +1,6 @@
-:original_name: apig-en-faq-180307006.html
+:original_name: apig-faq-180307006.html
 
-.. _apig-en-faq-180307006:
+.. _apig-faq-180307006:
 
 Can I Upload Files Using the POST Method?
 =========================================

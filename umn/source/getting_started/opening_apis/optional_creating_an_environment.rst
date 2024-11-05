@@ -1,11 +1,11 @@
-:original_name: apig-en-ug-180307004.html
+:original_name: apig-ug-180307004.html
 
-.. _apig-en-ug-180307004:
+.. _apig-ug-180307004:
 
 (Optional) Creating an Environment
 ==================================
 
-#. In the navigation pane, choose **API Publishing** > **Environments**.
+#. In the navigation pane, choose **API Management** > **API Policies**. Then click the **Environments** tab.
 #. Click **Create Environment** and set the environment information.
 
    .. table:: **Table 1** Environment information

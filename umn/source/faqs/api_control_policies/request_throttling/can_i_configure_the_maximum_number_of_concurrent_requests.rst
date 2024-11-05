@@ -5,4 +5,6 @@
 Can I Configure the Maximum Number of Concurrent Requests?
 ==========================================================
 
-No, but you can limit the maximum number of API calls allowed within a specific period of time.
+No,
+
+but you can limit the maximum number of API calls allowed within a specific period of time.

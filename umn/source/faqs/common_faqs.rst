@@ -1,6 +1,6 @@
-:original_name: apig-faq-190803.html
+:original_name: index.html
 
-.. _apig-faq-190803:
+.. _index:
 
 Common FAQs
 ===========
@@ -20,8 +20,8 @@ API Calling
 -  :ref:`What Are the Possible Causes for an API Calling Failure? <apig-faq-2005010>`
 -  :ref:`What Should I Do If an Error Code Is Returned During API Calling? <apig-faq-2005012>`
 -  :ref:`What Should I Do If "The API does not exist or has not been published in the environment." Is Displayed? <apig-faq-19123002>`
--  :ref:`Why Am I Seeing the Message "No backend available"? <apig-en-faq-181016018>`
--  :ref:`What Are the Possible Causes If the Message "Backend unavailable" or "Backend timeout" Is Displayed? <en-us_topic_0087908599>`
+-  :ref:`Why Am I Seeing the Message "No backend available"? <apig-faq-181016018>`
+-  :ref:`What Are the Possible Causes If the Message "Backend unavailable" or "Backend timeout" Is Displayed? <apig_0087908599>`
 
 API Authentication
 ------------------
@@ -33,7 +33,7 @@ API Control Policies
 --------------------
 
 -  :ref:`Can I Configure the Maximum Number of Concurrent Requests? <apig-faq-2005026>`
--  :ref:`Does APIG Has Bandwidth Limits? <apig-faq-19122002>`
+-  :ref:`Does APIG Have Bandwidth Limits? <apig-faq-19122002>`
 -  :ref:`How Do I Provide an Open API to Specific Users? <apig-faq-2005008>`
 -  :ref:`How Do I Exclude a Specific IP Address for Identity Authentication of an API? <apig-faq-2005023>`
 

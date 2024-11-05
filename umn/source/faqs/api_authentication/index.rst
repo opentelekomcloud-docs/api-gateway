@@ -11,6 +11,7 @@ API Authentication
 -  :ref:`Does APIG Support Custom Authentication? <apig-faq-2005016>`
 -  :ref:`Will the Request Body Be Signed for Security Authentication? <apig-faq-2005018>`
 -  :ref:`Common Errors Related to IAM Authentication Information <apig-faq-0003>`
+-  :ref:`What Should I Do If the App Authentication Information Is Incorrect? <apig-faq-0009>`
 
 .. toctree::
    :maxdepth: 1
@@ -22,3 +23,4 @@ API Authentication
    does_apig_support_custom_authentication
    will_the_request_body_be_signed_for_security_authentication
    common_errors_related_to_iam_authentication_information
+   what_should_i_do_if_the_app_authentication_information_is_incorrect

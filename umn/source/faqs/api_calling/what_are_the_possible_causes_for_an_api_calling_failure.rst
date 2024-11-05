@@ -19,7 +19,13 @@ API calling failures may occur in three scenarios: within a VPC, between VPCs, a
 -  On a public network:
 
    -  The API is not bound with an EIP and does not have a valid address for public network access.
+
+      Bind an EIP to the API and try again. For details, see section "Creating a Gateway" in the *API Gateway User Guide*.
+
    -  The inbound rules are incorrectly configured.
+
+      For details about how to configure inbound rules, see section "Creating a Gateway" in the *API Gateway User Guide*.
+
    -  The request header "host:*Group domain name*" is not added when you call the API. Add the request header and try again.
 
 Domain Name
@@ -27,7 +33,7 @@ Domain Name
 
 -  Check whether the domain name bound to the API group to which the API belongs has been successfully licensed and can be resolved.
 -  Check whether the domain name has been bound to the correct API group.
--  The subdomain name automatically allocated to the API group is accessed too many times. The subdomain name can be accessed only 1000 times a day. It is unique and cannot be modified. Add independent domain names for the group to make the APIs in the group accessible.
+-  The subdomain name (debugging domain name) automatically allocated to the API group is accessed too many times. The subdomain name can be accessed only 1000 times a day. It is unique and cannot be modified. Add independent domain names for the group to make the APIs in the group accessible.
 
 API Publishing
 --------------
@@ -43,4 +49,4 @@ API Control Policies
 --------------------
 
 -  Check whether the access control policy bound to the API is correct.
--  Check whether the request throttling limit of the API has been reached. If no request throttling policy is created for an API, the API can be accessed 200 times per second by default. To change this limit, go to the **Gateway Information** page, click the **Configuration Parameters** tab, and modify the **ratelimit_api_limits** parameter.
+-  Check whether the request throttling limit of the API has been reached. If no request throttling policy is created for an API, the API can be accessed 200 times per second by default. To change this limit of dedicated gateways, go to the **Gateway Information** page, click the **Parameters** tab, and modify the **ratelimit_api_limits** parameter.
