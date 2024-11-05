@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfDomainNameCertificateV2_1.html
+:original_name: ShowDetailsOfDomainNameCertificateV2.html
 
-.. _ShowDetailsOfDomainNameCertificateV2_1:
+.. _ShowDetailsOfDomainNameCertificateV2:
 
 Querying Details of the Certificate Bound to a Domain Name
 ==========================================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the details of the certificate bound to a domain name.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

@@ -1,6 +1,6 @@
-:original_name: DeleteSignatureKeyV2_1.html
+:original_name: DeleteSignatureKeyV2.html
 
-.. _DeleteSignatureKeyV2_1:
+.. _DeleteSignatureKeyV2:
 
 Deleting a Signature Key
 ========================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete a signature key. This operation will invalidate the signature key and unbind it from the APIs to which it was bound.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

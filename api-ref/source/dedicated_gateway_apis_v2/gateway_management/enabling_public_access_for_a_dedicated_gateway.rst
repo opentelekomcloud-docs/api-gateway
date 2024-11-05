@@ -1,6 +1,6 @@
-:original_name: AddEngressEipV2_1.html
+:original_name: AddEngressEipV2.html
 
-.. _AddEngressEipV2_1:
+.. _AddEngressEipV2:
 
 Enabling Public Access for a Dedicated Gateway
 ==============================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to enable public access for a dedicated gateway.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -41,7 +46,7 @@ Request Parameters
    +-------------------------+-----------------+-----------------+-------------------------------------------------------+
    | Parameter               | Mandatory       | Type            | Description                                           |
    +=========================+=================+=================+=======================================================+
-   | bandwidth_size          | No              | String          | Outbound access bandwidth.                            |
+   | bandwidth_size          | Yes             | String          | Outbound access bandwidth.                            |
    |                         |                 |                 |                                                       |
    |                         |                 |                 | Unit: Mbit/s                                          |
    +-------------------------+-----------------+-----------------+-------------------------------------------------------+
@@ -49,15 +54,11 @@ Request Parameters
    |                         |                 |                 |                                                       |
    |                         |                 |                 | -  bandwidth: billed by bandwidth                     |
    |                         |                 |                 |                                                       |
-   |                         |                 |                 | -  traffic: billed by traffic                         |
-   |                         |                 |                 |                                                       |
    |                         |                 |                 | Default: **bandwidth**                                |
    |                         |                 |                 |                                                       |
    |                         |                 |                 | Enumeration values:                                   |
    |                         |                 |                 |                                                       |
    |                         |                 |                 | -  **bandwidth**                                      |
-   |                         |                 |                 |                                                       |
-   |                         |                 |                 | -  **traffic**                                        |
    +-------------------------+-----------------+-----------------+-------------------------------------------------------+
 
 Response Parameters
@@ -127,7 +128,7 @@ Enabling public access for a gateway
 
    {
      "bandwidth_size" : "5",
-     "bandwidth_charging_mode" : "traffic"
+     "bandwidth_charging_mode" : "bandwidth"
    }
 
 Example Responses

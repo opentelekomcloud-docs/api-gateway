@@ -1,6 +1,6 @@
-:original_name: ListApiQuantitiesV2_1.html
+:original_name: ListApiQuantitiesV2.html
 
-.. _ListApiQuantitiesV2_1:
+.. _ListApiQuantitiesV2:
 
 Querying API Quantities
 =======================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the number of APIs that have been published in the RELEASE environment and the number of APIs that have not been published in this environment.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

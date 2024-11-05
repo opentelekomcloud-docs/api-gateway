@@ -1,6 +1,6 @@
-:original_name: CreateAclStrategyV2_1.html
+:original_name: CreateAclStrategyV2.html
 
-.. _CreateAclStrategyV2_1:
+.. _CreateAclStrategyV2:
 
 Creating an Access Control Policy
 =================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to create an access control policy to allow or deny API access from certain IP addresses or tenants. The acl_value value of a domain is a tenant name rather than a domain name (such as www.exampleDomain.com).
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

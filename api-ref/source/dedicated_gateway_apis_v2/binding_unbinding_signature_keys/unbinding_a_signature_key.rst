@@ -1,6 +1,6 @@
-:original_name: DisassociateSignatureKeyV2_1.html
+:original_name: DisassociateSignatureKeyV2.html
 
-.. _DisassociateSignatureKeyV2_1:
+.. _DisassociateSignatureKeyV2:
 
 Unbinding a Signature Key
 =========================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to unbind a signature key from an API.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

@@ -1,6 +1,6 @@
-:original_name: ListApiVersionsV2_1.html
+:original_name: ListApiVersionsV2.html
 
-.. _ListApiVersionsV2_1:
+.. _ListApiVersionsV2:
 
 Querying Historical Versions of an API
 ======================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the historical versions of an API. APIG retains a maximum of 10 historical versions for each API in an environment.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -67,17 +72,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +--------------+---------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter    | Type                                                                                  | Description                                          |
-   +==============+=======================================================================================+======================================================+
-   | size         | Integer                                                                               | Length of the returned resource list.                |
-   +--------------+---------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total        | Long                                                                                  | Number of resources that match the query conditions. |
-   +--------------+---------------------------------------------------------------------------------------+------------------------------------------------------+
-   | api_versions | Array of :ref:`ApiVersionResp <listapiversionsv2_1__response_apiversionresp>` objects | Historical version list.                             |
-   +--------------+---------------------------------------------------------------------------------------+------------------------------------------------------+
+   +--------------+-------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter    | Type                                                                                | Description                                          |
+   +==============+=====================================================================================+======================================================+
+   | size         | Integer                                                                             | Length of the returned resource list.                |
+   +--------------+-------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total        | Long                                                                                | Number of resources that match the query conditions. |
+   +--------------+-------------------------------------------------------------------------------------+------------------------------------------------------+
+   | api_versions | Array of :ref:`ApiVersionResp <listapiversionsv2__response_apiversionresp>` objects | Historical version list.                             |
+   +--------------+-------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listapiversionsv2_1__response_apiversionresp:
+.. _listapiversionsv2__response_apiversionresp:
 
 .. table:: **Table 5** ApiVersionResp
 

@@ -1,6 +1,6 @@
-:original_name: ListProjectCofigsV2_1.html
+:original_name: ListProjectCofigsV2.html
 
-.. _ListProjectCofigsV2_1:
+.. _ListProjectCofigsV2:
 
 Querying Resource Configurations of a Gateway
 =============================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the resource configurations and usage of a gateway.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -61,17 +66,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+-------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                    | Description                                          |
-   +===========+=========================================================================+======================================================+
-   | size      | Integer                                                                 | Length of the returned resource list.                |
-   +-----------+-------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                    | Number of resources that match the query conditions. |
-   +-----------+-------------------------------------------------------------------------+------------------------------------------------------+
-   | configs   | Array of :ref:`Config <listprojectcofigsv2_1__response_config>` objects | Quota list.                                          |
-   +-----------+-------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+-----------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                  | Description                                          |
+   +===========+=======================================================================+======================================================+
+   | size      | Integer                                                               | Length of the returned resource list.                |
+   +-----------+-----------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                  | Number of resources that match the query conditions. |
+   +-----------+-----------------------------------------------------------------------+------------------------------------------------------+
+   | configs   | Array of :ref:`Config <listprojectcofigsv2__response_config>` objects | Quota list.                                          |
+   +-----------+-----------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listprojectcofigsv2_1__response_config:
+.. _listprojectcofigsv2__response_config:
 
 .. table:: **Table 5** Config
 

@@ -1,15 +1,16 @@
-:original_name: ApiGroupManagement_1.html
+:original_name: ApiGroupManagement.html
 
-.. _ApiGroupManagement_1:
+.. _ApiGroupManagement:
 
 API Group Management
 ====================
 
--  :ref:`Creating an API Group <createapigroupv2_1>`
--  :ref:`Modifying an API Group <updateapigroupv2_1>`
--  :ref:`Deleting an API Group <deleteapigroupv2_1>`
--  :ref:`Querying API Group Details <showdetailsofapigroupv2_1>`
--  :ref:`Querying API Groups <listapigroupsv2_1>`
+-  :ref:`Creating an API Group <createapigroupv2>`
+-  :ref:`Modifying an API Group <updateapigroupv2>`
+-  :ref:`Deleting an API Group <deleteapigroupv2>`
+-  :ref:`Querying API Group Details <showdetailsofapigroupv2>`
+-  :ref:`Querying API Groups <listapigroupsv2>`
+-  :ref:`Verifying an API Group Name <checkapigroupsv2>`
 
 .. toctree::
    :maxdepth: 1
@@ -20,3 +21,4 @@ API Group Management
    deleting_an_api_group
    querying_api_group_details
    querying_api_groups
+   verifying_an_api_group_name

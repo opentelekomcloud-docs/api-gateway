@@ -1,6 +1,6 @@
-:original_name: CreateAnAppV2_1.html
+:original_name: CreateAnAppV2.html
 
-.. _CreateAnAppV2_1:
+.. _CreateAnAppV2:
 
 Creating an App
 ===============
@@ -11,6 +11,11 @@ Function
 An app is an identity for accessing an API. An app can call the APIs to which it has been authorized.
 
 This API is used to create an app.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

@@ -1,6 +1,6 @@
-:original_name: CreateAppCodeAutoV2_1.html
+:original_name: CreateAppCodeAutoV2.html
 
-.. _CreateAppCodeAutoV2_1:
+.. _CreateAppCodeAutoV2:
 
 Generating an AppCode
 =====================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to generate a random AppCode.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

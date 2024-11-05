@@ -1,6 +1,6 @@
-:original_name: UpdateEngressEipV2_1.html
+:original_name: UpdateEngressEipV2.html
 
-.. _UpdateEngressEipV2_1:
+.. _UpdateEngressEipV2:
 
 Updating the Outbound Access Bandwidth of a Dedicated Gateway
 =============================================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to update the outbound access bandwidth of a dedicated gateway.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -49,15 +54,11 @@ Request Parameters
    |                         |                 |                 |                                                       |
    |                         |                 |                 | -  bandwidth: billed by bandwidth                     |
    |                         |                 |                 |                                                       |
-   |                         |                 |                 | -  traffic: billed by traffic                         |
-   |                         |                 |                 |                                                       |
    |                         |                 |                 | Default: **bandwidth**                                |
    |                         |                 |                 |                                                       |
    |                         |                 |                 | Enumeration values:                                   |
    |                         |                 |                 |                                                       |
    |                         |                 |                 | -  **bandwidth**                                      |
-   |                         |                 |                 |                                                       |
-   |                         |                 |                 | -  **traffic**                                        |
    +-------------------------+-----------------+-----------------+-------------------------------------------------------+
 
 Response Parameters
@@ -127,7 +128,7 @@ Updating the outbound access bandwidth of a gateway
 
    {
      "bandwidth_size" : 5,
-     "bandwidth_charging_mode" : "traffic"
+     "bandwidth_charging_mode" : "bandwidth"
    }
 
 Example Responses

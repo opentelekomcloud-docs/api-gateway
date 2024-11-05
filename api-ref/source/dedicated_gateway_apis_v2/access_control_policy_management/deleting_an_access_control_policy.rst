@@ -1,6 +1,6 @@
-:original_name: DeleteAclV2_1.html
+:original_name: DeleteAclV2.html
 
-.. _DeleteAclV2_1:
+.. _DeleteAclV2:
 
 Deleting an Access Control Policy
 =================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete an access control policy. Access control policies bound to APIs cannot be deleted.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

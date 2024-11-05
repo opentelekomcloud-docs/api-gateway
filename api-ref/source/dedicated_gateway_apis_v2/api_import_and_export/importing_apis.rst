@@ -1,6 +1,6 @@
-:original_name: ImportApiDefinitionsV2_1.html
+:original_name: ImportApiDefinitionsV2.html
 
-.. _ImportApiDefinitionsV2_1:
+.. _ImportApiDefinitionsV2:
 
 Importing APIs
 ==============
@@ -8,7 +8,12 @@ Importing APIs
 Function
 --------
 
-This API is used to import APIs. The content of the imported file must comply with the Swagger standard. For details about the custom extended fields, see section "Importing and Exporting APIs: Extended Definition" in the Developer Guide.
+This API is used to import APIs. The content of the imported file must comply with the Swagger standard. For details about the custom extended fields of APIG, see section "Extended Definition" in the User Guide.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -50,7 +55,6 @@ Request Parameters
    | extend_mode     | No              | String          | Import mode of extended information.                                          |
    |                 |                 |                 |                                                                               |
    |                 |                 |                 | -  merge: Retain the original extended information if a conflict occurs.      |
-   |                 |                 |                 |                                                                               |
    |                 |                 |                 | -  override: Override the original extended information if a conflict occurs. |
    |                 |                 |                 |                                                                               |
    |                 |                 |                 | Default: **merge**                                                            |
@@ -58,7 +62,6 @@ Request Parameters
    |                 |                 |                 | Enumeration values:                                                           |
    |                 |                 |                 |                                                                               |
    |                 |                 |                 | -  **merge**                                                                  |
-   |                 |                 |                 |                                                                               |
    |                 |                 |                 | -  **override**                                                               |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------+
    | simple_mode     | No              | Boolean         | Specifies whether to enable fast import.                                      |
@@ -72,7 +75,6 @@ Request Parameters
    | api_mode        | No              | String          | Import mode.                                                                  |
    |                 |                 |                 |                                                                               |
    |                 |                 |                 | -  merge: Retain the original API information if a conflict occurs.           |
-   |                 |                 |                 |                                                                               |
    |                 |                 |                 | -  override: Override the original API information if a conflict occurs.      |
    |                 |                 |                 |                                                                               |
    |                 |                 |                 | Default: **merge**                                                            |
@@ -80,7 +82,6 @@ Request Parameters
    |                 |                 |                 | Enumeration values:                                                           |
    |                 |                 |                 |                                                                               |
    |                 |                 |                 | -  **merge**                                                                  |
-   |                 |                 |                 |                                                                               |
    |                 |                 |                 | -  **override**                                                               |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------+
    | file_name       | Yes             | File            | Request body in JSON or YAML format for importing APIs.                       |
@@ -93,23 +94,23 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
-   | Parameter             | Type                                                                         | Description                                 |
-   +=======================+==============================================================================+=============================================+
-   | success               | Array of :ref:`Success <importapidefinitionsv2_1__response_success>` objects | Import success information.                 |
-   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
-   | failure               | Array of :ref:`Failure <importapidefinitionsv2_1__response_failure>` objects | Import failure information.                 |
-   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
-   | swagger               | :ref:`Swagger <importapidefinitionsv2_1__response_swagger>` object           | Swagger file import result.                 |
-   |                       |                                                                              |                                             |
-   |                       |                                                                              | Currently, this parameter is not supported. |
-   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
-   | group_id              | String                                                                       | API group ID.                               |
-   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
-   | ignore                | Array of :ref:`Ignore <importapidefinitionsv2_1__response_ignore>` objects   | APIs that are not imported.                 |
-   +-----------------------+------------------------------------------------------------------------------+---------------------------------------------+
+   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
+   | Parameter             | Type                                                                       | Description                                 |
+   +=======================+============================================================================+=============================================+
+   | success               | Array of :ref:`Success <importapidefinitionsv2__response_success>` objects | Import success information.                 |
+   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
+   | failure               | Array of :ref:`Failure <importapidefinitionsv2__response_failure>` objects | Import failure information.                 |
+   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
+   | swagger               | :ref:`Swagger <importapidefinitionsv2__response_swagger>` object           | Swagger file import result.                 |
+   |                       |                                                                            |                                             |
+   |                       |                                                                            | Currently, this parameter is not supported. |
+   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
+   | group_id              | String                                                                     | API group ID.                               |
+   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
+   | ignore                | Array of :ref:`Ignore <importapidefinitionsv2__response_ignore>` objects   | APIs that are not imported.                 |
+   +-----------------------+----------------------------------------------------------------------------+---------------------------------------------+
 
-.. _importapidefinitionsv2_1__response_success:
+.. _importapidefinitionsv2__response_success:
 
 .. table:: **Table 5** Success
 
@@ -123,19 +124,17 @@ Response Parameters
    | action                | String                | Import type. Options:                                |
    |                       |                       |                                                      |
    |                       |                       | -  update: Update the APIs to an existing API group. |
-   |                       |                       |                                                      |
    |                       |                       | -  create: Create APIs for a new API group.          |
    |                       |                       |                                                      |
    |                       |                       | Enumeration values:                                  |
    |                       |                       |                                                      |
    |                       |                       | -  **update**                                        |
-   |                       |                       |                                                      |
    |                       |                       | -  **create**                                        |
    +-----------------------+-----------------------+------------------------------------------------------+
    | id                    | String                | ID of a successfully imported API.                   |
    +-----------------------+-----------------------+------------------------------------------------------+
 
-.. _importapidefinitionsv2_1__response_failure:
+.. _importapidefinitionsv2__response_failure:
 
 .. table:: **Table 6** Failure
 
@@ -148,7 +147,7 @@ Response Parameters
    error_code String Error code displayed for an import failure.
    ========== ====== ==============================================
 
-.. _importapidefinitionsv2_1__response_swagger:
+.. _importapidefinitionsv2__response_swagger:
 
 .. table:: **Table 7** Swagger
 
@@ -159,7 +158,7 @@ Response Parameters
    result    String Import result description.
    ========= ====== ==========================
 
-.. _importapidefinitionsv2_1__response_ignore:
+.. _importapidefinitionsv2__response_ignore:
 
 .. table:: **Table 8** Ignore
 

@@ -1,13 +1,13 @@
-:original_name: apig-en-api-180713206.html
+:original_name: apig-api-180713206.html
 
-.. _apig-en-api-180713206:
+.. _apig-api-180713206:
 
 HTTP Status Codes
 =================
 
-:ref:`Table 1 <apig-en-api-180713206__table11812530035>` describes common status codes.
+:ref:`Table 1 <apig-api-180713206__en-us_topic_0172449737_table11812530035>` describes common status codes.
 
-.. _apig-en-api-180713206__table11812530035:
+.. _apig-api-180713206__en-us_topic_0172449737_table11812530035:
 
 .. table:: **Table 1** HTTP status codes
 
@@ -49,7 +49,7 @@ HTTP Status Codes
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
    | 502 Bad Gateway                   | The server, while acting as a gateway or proxy, received an invalid response from the upstream server it accessed in attempting to fulfill the request. |
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | 503 Service Unavailable           | The server is currently unable to handle the request due to a temporary overloading or maintenance of the server.                                       |
+   | 503 Service Unavailable           | The request could not be processed by the server because the server is being maintained or overloaded.                                                  |
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
    | 504 Gateway Timeout               | The server was acting as a gateway or proxy and did not receive a timely response from the upstream server.                                             |
    +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+

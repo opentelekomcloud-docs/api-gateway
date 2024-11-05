@@ -1,6 +1,6 @@
-:original_name: ListBackendInstancesV2_1.html
+:original_name: ListBackendInstancesV2.html
 
-.. _ListBackendInstancesV2_1:
+.. _ListBackendInstancesV2:
 
 Querying Backend Servers of a VPC Channel
 =========================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the backend instances of a specified VPC channel.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -73,17 +78,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                     | Description                                          |
-   +===========+==========================================================================================+======================================================+
-   | size      | Integer                                                                                  | Length of the returned resource list.                |
-   +-----------+------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                     | Number of resources that match the query conditions. |
-   +-----------+------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | members   | Array of :ref:`VpcMemberInfo <listbackendinstancesv2_1__response_vpcmemberinfo>` objects | Cloud server list.                                   |
-   +-----------+------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+----------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                   | Description                                          |
+   +===========+========================================================================================+======================================================+
+   | size      | Integer                                                                                | Length of the returned resource list.                |
+   +-----------+----------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                   | Number of resources that match the query conditions. |
+   +-----------+----------------------------------------------------------------------------------------+------------------------------------------------------+
+   | members   | Array of :ref:`VpcMemberInfo <listbackendinstancesv2__response_vpcmemberinfo>` objects | Cloud server list.                                   |
+   +-----------+----------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listbackendinstancesv2_1__response_vpcmemberinfo:
+.. _listbackendinstancesv2__response_vpcmemberinfo:
 
 .. table:: **Table 5** VpcMemberInfo
 

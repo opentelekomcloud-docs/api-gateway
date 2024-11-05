@@ -1,6 +1,6 @@
-:original_name: DeleteGatewayResponseV2_1.html
+:original_name: DeleteGatewayResponseV2.html
 
-.. _DeleteGatewayResponseV2_1:
+.. _DeleteGatewayResponseV2:
 
 Deleting a Group Response
 =========================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete a group response of an API group.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

@@ -1,6 +1,6 @@
-:original_name: ListEnvironmentsV2_1.html
+:original_name: ListEnvironmentsV2.html
 
-.. _ListEnvironmentsV2_1:
+.. _ListEnvironmentsV2:
 
 Querying Environments
 =====================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query environments.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -63,17 +68,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+--------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                     | Description                                          |
-   +===========+==========================================================================+======================================================+
-   | size      | Integer                                                                  | Length of the returned resource list.                |
-   +-----------+--------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                     | Number of resources that match the query conditions. |
-   +-----------+--------------------------------------------------------------------------+------------------------------------------------------+
-   | envs      | Array of :ref:`EnvInfo <listenvironmentsv2_1__response_envinfo>` objects | Environment list.                                    |
-   +-----------+--------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                   | Description                                          |
+   +===========+========================================================================+======================================================+
+   | size      | Integer                                                                | Length of the returned resource list.                |
+   +-----------+------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                   | Number of resources that match the query conditions. |
+   +-----------+------------------------------------------------------------------------+------------------------------------------------------+
+   | envs      | Array of :ref:`EnvInfo <listenvironmentsv2__response_envinfo>` objects | Environment list.                                    |
+   +-----------+------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listenvironmentsv2_1__response_envinfo:
+.. _listenvironmentsv2__response_envinfo:
 
 .. table:: **Table 5** EnvInfo
 

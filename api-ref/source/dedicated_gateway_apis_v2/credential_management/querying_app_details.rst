@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfAppV2_1.html
+:original_name: ShowDetailsOfAppV2.html
 
-.. _ShowDetailsOfAppV2_1:
+.. _ShowDetailsOfAppV2:
 
 Querying App Details
 ====================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the details of an app.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

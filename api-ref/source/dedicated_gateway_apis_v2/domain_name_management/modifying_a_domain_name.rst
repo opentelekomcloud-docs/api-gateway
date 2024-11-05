@@ -1,6 +1,6 @@
-:original_name: UpdateDomainV2_1.html
+:original_name: UpdateDomainV2.html
 
-.. _UpdateDomainV2_1:
+.. _UpdateDomainV2:
 
 Modifying a Domain Name
 =======================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to modify the configuration of a domain name bound to an API group.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

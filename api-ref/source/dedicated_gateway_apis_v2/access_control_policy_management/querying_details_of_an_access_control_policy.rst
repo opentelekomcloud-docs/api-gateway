@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfAclPolicyV2_1.html
+:original_name: ShowDetailsOfAclPolicyV2.html
 
-.. _ShowDetailsOfAclPolicyV2_1:
+.. _ShowDetailsOfAclPolicyV2:
 
 Querying Details of an Access Control Policy
 ============================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the details of an access control policy.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

@@ -1,6 +1,6 @@
-:original_name: UpdateEnvironmentV2_1.html
+:original_name: UpdateEnvironmentV2.html
 
-.. _UpdateEnvironmentV2_1:
+.. _UpdateEnvironmentV2:
 
 Modifying an Environment
 ========================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to modify the information about an environment. Only the name and remark attributes of an environment can be modified.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

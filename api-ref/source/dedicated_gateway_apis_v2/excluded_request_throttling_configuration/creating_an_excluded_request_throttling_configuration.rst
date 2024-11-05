@@ -1,6 +1,6 @@
-:original_name: CreateSpecialThrottlingConfigurationV2_0.html
+:original_name: CreateSpecialThrottlingConfigurationV2.html
 
-.. _CreateSpecialThrottlingConfigurationV2_0:
+.. _CreateSpecialThrottlingConfigurationV2:
 
 Creating an Excluded Request Throttling Configuration
 =====================================================
@@ -13,6 +13,11 @@ A request throttling policy controls the maximum number of times an API can be a
 If necessary, you can create an excluded request throttling configuration to specify the threshold of API calls for a specific app. For example, if you set the API call threshold for all apps to 500 calls/minute, you can specify the API call threshold of app 1 as 800 calls/minute.
 
 You can add excluded apps or tenants to a request throttling policy.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -49,7 +54,7 @@ Request Parameters
    +=================+=================+=================+============================================================================================+
    | call_limits     | Yes             | Integer         | Maximum number of times an excluded object can access an API within the throttling period. |
    +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+
-   | object_id       | Yes             | String          | Excluded app ID or excluded account ID.                                                    |
+   | object_id       | Yes             | String          | Excluded app ID or account ID.                                                             |
    +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------+
    | object_type     | Yes             | String          | Excluded object type.                                                                      |
    |                 |                 |                 |                                                                                            |

@@ -1,6 +1,6 @@
-:original_name: BatchDeleteApiAclBindingV2_1.html
+:original_name: BatchDeleteApiAclBindingV2.html
 
-.. _BatchDeleteApiAclBindingV2_1:
+.. _BatchDeleteApiAclBindingV2:
 
 Unbinding Access Control Policies
 =================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to unbind multiple access control policies from APIs.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -59,15 +64,15 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   +---------------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-   | Parameter     | Type                                                                                                           | Description                                                            |
-   +===============+================================================================================================================+========================================================================+
-   | success_count | Integer                                                                                                        | Number of access control policies that have been successfully unbound. |
-   +---------------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-   | failure       | Array of :ref:`AclBindingBatchFailure <batchdeleteapiaclbindingv2_1__response_aclbindingbatchfailure>` objects | Error message and access control policies that fail to be unbound.     |
-   +---------------+----------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   +---------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   | Parameter     | Type                                                                                                         | Description                                                            |
+   +===============+==============================================================================================================+========================================================================+
+   | success_count | Integer                                                                                                      | Number of access control policies that have been successfully unbound. |
+   +---------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   | failure       | Array of :ref:`AclBindingBatchFailure <batchdeleteapiaclbindingv2__response_aclbindingbatchfailure>` objects | Error message and access control policies that fail to be unbound.     |
+   +---------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
 
-.. _batchdeleteapiaclbindingv2_1__response_aclbindingbatchfailure:
+.. _batchdeleteapiaclbindingv2__response_aclbindingbatchfailure:
 
 .. table:: **Table 6** AclBindingBatchFailure
 

@@ -1,6 +1,6 @@
-:original_name: DeleteAppCodeV2_1.html
+:original_name: DeleteAppCodeV2.html
 
-.. _DeleteAppCodeV2_1:
+.. _DeleteAppCodeV2:
 
 Deleting an AppCode
 ===================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete an AppCode. Deleted AppCodes cannot be used for simple authentication.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

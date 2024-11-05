@@ -1,6 +1,6 @@
-:original_name: ListFeaturesV2_1.html
+:original_name: ListFeaturesV2.html
 
-.. _ListFeaturesV2_1:
+.. _ListFeaturesV2:
 
 Querying Gateway Features
 =========================
@@ -11,6 +11,11 @@ Function
 This API is used to query the features of a gateway. If a gateway does not support the features listed in the following table, contact technical support to upgrade the gateway.
 
 For details about the supported features and configuration examples, see "Appendix" > "Supported Features" in this document.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -63,17 +68,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                         | Description                                          |
-   +===========+==============================================================================+======================================================+
-   | size      | Integer                                                                      | Length of the returned resource list.                |
-   +-----------+------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                         | Number of resources that match the query conditions. |
-   +-----------+------------------------------------------------------------------------------+------------------------------------------------------+
-   | features  | Array of :ref:`FeatureInfo <listfeaturesv2_1__response_featureinfo>` objects | Feature list.                                        |
-   +-----------+------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+----------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                       | Description                                          |
+   +===========+============================================================================+======================================================+
+   | size      | Integer                                                                    | Length of the returned resource list.                |
+   +-----------+----------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                       | Number of resources that match the query conditions. |
+   +-----------+----------------------------------------------------------------------------+------------------------------------------------------+
+   | features  | Array of :ref:`FeatureInfo <listfeaturesv2__response_featureinfo>` objects | Feature list.                                        |
+   +-----------+----------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listfeaturesv2_1__response_featureinfo:
+.. _listfeaturesv2__response_featureinfo:
 
 .. table:: **Table 5** FeatureInfo
 

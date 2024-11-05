@@ -1,6 +1,6 @@
-:original_name: UpdateGatewayResponseV2_1.html
+:original_name: UpdateGatewayResponseV2.html
 
-.. _UpdateGatewayResponseV2_1:
+.. _UpdateGatewayResponseV2:
 
 Modifying a Group Response
 ==========================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to modify a response of an API group.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -42,119 +47,148 @@ Request Parameters
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------------+-----------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type                                                                                | Description                                                                                |
-   +=================+=================+=====================================================================================+============================================================================================+
-   | name            | No              | String                                                                              | Response name.                                                                             |
-   +-----------------+-----------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-   | responses       | No              | Map<String,\ :ref:`ResponseInfo <updategatewayresponsev2_1__request_responseinfo>`> | Response type definition. key indicates the error type. Options of key:                    |
-   |                 |                 |                                                                                     |                                                                                            |
-   |                 |                 |                                                                                     | -  AUTH_FAILURE: Authentication failed.                                                    |
-   |                 |                 |                                                                                     | -  AUTH_HEADER_MISSING: The identity source is missing.                                    |
-   |                 |                 |                                                                                     | -  AUTHORIZER_FAILURE: Custom authentication failed.                                       |
-   |                 |                 |                                                                                     | -  AUTHORIZER_CONF_FAILURE: Custom authorizer error.                                       |
-   |                 |                 |                                                                                     | -  AUTHORIZER_IDENTITIES_FAILURE: The identity source of the custom authorizer is invalid. |
-   |                 |                 |                                                                                     | -  BACKEND_UNAVAILABLE: The backend is unavailable.                                        |
-   |                 |                 |                                                                                     | -  BACKEND_TIMEOUT: Backend timed out.                                                     |
-   |                 |                 |                                                                                     | -  THROTTLED: The request was rejected due to request throttling.                          |
-   |                 |                 |                                                                                     | -  UNAUTHORIZED: The app you are using has not been authorized to call the API.            |
-   |                 |                 |                                                                                     | -  ACCESS_DENIED: Access denied.                                                           |
-   |                 |                 |                                                                                     | -  NOT_FOUND: No API is found.                                                             |
-   |                 |                 |                                                                                     | -  REQUEST_PARAMETERS_FAILURE: Invalid request parameter.                                  |
-   |                 |                 |                                                                                     | -  DEFAULT_4XX: Default 4XX error occurred.                                                |
-   |                 |                 |                                                                                     | -  DEFAULT_5XX: Default 5XX error occurred.                                                |
-   |                 |                 |                                                                                     |                                                                                            |
-   |                 |                 |                                                                                     | Each error type is in JSON format.                                                         |
-   +-----------------+-----------------+-------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type                                                                              | Description                                                                                                                             |
+   +=================+=================+===================================================================================+=========================================================================================================================================+
+   | name            | Yes             | String                                                                            | Response name. Enter 1 to 64 characters. Only letters, digits, hyphens (-), and underscores (_) are allowed.                            |
+   +-----------------+-----------------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | responses       | No              | Map<String,\ :ref:`ResponseInfo <updategatewayresponsev2__request_responseinfo>`> | Response type definition. key indicates the error type. Options of key:                                                                 |
+   |                 |                 |                                                                                   |                                                                                                                                         |
+   |                 |                 |                                                                                   | -  AUTH_FAILURE: Authentication failed.                                                                                                 |
+   |                 |                 |                                                                                   | -  AUTH_HEADER_MISSING: The identity source is missing.                                                                                 |
+   |                 |                 |                                                                                   | -  AUTHORIZER_FAILURE: Custom authentication failed.                                                                                    |
+   |                 |                 |                                                                                   | -  AUTHORIZER_CONF_FAILURE: Custom authorizer error.                                                                                    |
+   |                 |                 |                                                                                   | -  AUTHORIZER_IDENTITIES_FAILURE: The identity source of the custom authorizer is invalid.                                              |
+   |                 |                 |                                                                                   | -  BACKEND_UNAVAILABLE: The backend is unavailable.                                                                                     |
+   |                 |                 |                                                                                   | -  BACKEND_TIMEOUT: Backend timed out.                                                                                                  |
+   |                 |                 |                                                                                   | -  THROTTLED: The request was rejected due to request throttling.                                                                       |
+   |                 |                 |                                                                                   | -  UNAUTHORIZED: The app you are using has not been authorized to call the API.                                                         |
+   |                 |                 |                                                                                   | -  ACCESS_DENIED: Access denied.                                                                                                        |
+   |                 |                 |                                                                                   | -  NOT_FOUND: No API is found.                                                                                                          |
+   |                 |                 |                                                                                   | -  REQUEST_PARAMETERS_FAILURE: Invalid request parameter.                                                                               |
+   |                 |                 |                                                                                   | -  DEFAULT_4XX: Default 4XX error occurred.                                                                                             |
+   |                 |                 |                                                                                   | -  DEFAULT_5XX: Default 5XX error occurred.                                                                                             |
+   |                 |                 |                                                                                   | -  THIRD_AUTH_FAILURE: Third-party authentication failed.                                                                               |
+   |                 |                 |                                                                                   | -  THIRD_AUTH_IDENTITIES_FAILURE: Identity source of the third-party authorizer is invalid.                                             |
+   |                 |                 |                                                                                   | -  THIRD_AUTH_CONF_FAILURE: Third-party authorizer configuration error.                                                                 |
+   |                 |                 |                                                                                   | -  ORCHESTRATION_PARAMETER_NOT_FOUND: No parameters are input to match the parameter orchestration rule, causing orchestration failure. |
+   |                 |                 |                                                                                   | -  ORCHESTRATION_FAILURE: Input parameters cannot match orchestration rules, causing orchestration failure.                             |
+   |                 |                 |                                                                                   |                                                                                                                                         |
+   |                 |                 |                                                                                   | Each error type is in JSON format.                                                                                                      |
+   +-----------------+-----------------+-----------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 
-.. _updategatewayresponsev2_1__request_responseinfo:
+.. _updategatewayresponsev2__request_responseinfo:
 
 .. table:: **Table 4** ResponseInfo
 
-   ========= ========= ======= =================================
-   Parameter Mandatory Type    Description
-   ========= ========= ======= =================================
-   status    No        Integer HTTP status code of the response.
-   body      No        String  Response body template.
-   ========= ========= ======= =================================
+   +-----------------+-----------------+--------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type                                                                                             | Description                                                                            |
+   +=================+=================+==================================================================================================+========================================================================================+
+   | status          | No              | Integer                                                                                          | HTTP status code of the response. The value ranges from 200 to 599, but cannot be 444. |
+   +-----------------+-----------------+--------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+   | body            | No              | String                                                                                           | Response body template.                                                                |
+   +-----------------+-----------------+--------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+   | headers         | No              | Array of :ref:`ResponseInfoHeader <updategatewayresponsev2__request_responseinfoheader>` objects | Custom response header.                                                                |
+   |                 |                 |                                                                                                  |                                                                                        |
+   |                 |                 |                                                                                                  | Array Length: **0 - 10**                                                               |
+   +-----------------+-----------------+--------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+
+.. _updategatewayresponsev2__request_responseinfoheader:
+
+.. table:: **Table 5** ResponseInfoHeader
+
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                         |
+   +=================+=================+=================+=====================================================================================================================+
+   | key             | No              | String          | Key of the custom group response header, which can contain 1 to 128 characters of letters, digits, and hyphens (-). |
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
+   | value           | No              | String          | Value of the custom group response header, which is a string of 1 to 1,024 characters.                              |
+   |                 |                 |                 |                                                                                                                     |
+   |                 |                 |                 | Minimum: **1**                                                                                                      |
+   |                 |                 |                 |                                                                                                                     |
+   |                 |                 |                 | Maximum: **1024**                                                                                                   |
+   +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
 
 **Status code: 200**
 
-.. table:: **Table 5** Response body parameters
+.. table:: **Table 6** Response body parameters
 
-   +-----------------------+----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-   | Parameter             | Type                                                                                         | Description                                                                                |
-   +=======================+==============================================================================================+============================================================================================+
-   | name                  | String                                                                                       | Response name.                                                                             |
-   +-----------------------+----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-   | responses             | Map<String,\ :ref:`ResponseInfoResp <updategatewayresponsev2_1__response_responseinforesp>`> | Response type definition. key indicates the error type. Options of key:                    |
-   |                       |                                                                                              |                                                                                            |
-   |                       |                                                                                              | -  AUTH_FAILURE: Authentication failed.                                                    |
-   |                       |                                                                                              | -  AUTH_HEADER_MISSING: The identity source is missing.                                    |
-   |                       |                                                                                              | -  AUTHORIZER_FAILURE: Custom authentication failed.                                       |
-   |                       |                                                                                              | -  AUTHORIZER_CONF_FAILURE: Custom authorizer error.                                       |
-   |                       |                                                                                              | -  AUTHORIZER_IDENTITIES_FAILURE: The identity source of the custom authorizer is invalid. |
-   |                       |                                                                                              | -  BACKEND_UNAVAILABLE: The backend is unavailable.                                        |
-   |                       |                                                                                              | -  BACKEND_TIMEOUT: Backend timed out.                                                     |
-   |                       |                                                                                              | -  THROTTLED: The request was rejected due to request throttling.                          |
-   |                       |                                                                                              | -  UNAUTHORIZED: The app you are using has not been authorized to call the API.            |
-   |                       |                                                                                              | -  ACCESS_DENIED: Access denied.                                                           |
-   |                       |                                                                                              | -  NOT_FOUND: No API is found.                                                             |
-   |                       |                                                                                              | -  REQUEST_PARAMETERS_FAILURE: Invalid request parameter.                                  |
-   |                       |                                                                                              | -  DEFAULT_4XX: Default 4XX error occurred.                                                |
-   |                       |                                                                                              | -  DEFAULT_5XX: Default 5XX error occurred.                                                |
-   |                       |                                                                                              |                                                                                            |
-   |                       |                                                                                              | Each error type is in JSON format.                                                         |
-   +-----------------------+----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-   | id                    | String                                                                                       | Response ID.                                                                               |
-   +-----------------------+----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-   | default               | Boolean                                                                                      | Indicates whether the group response is the default response.                              |
-   +-----------------------+----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-   | create_time           | String                                                                                       | Creation time.                                                                             |
-   +-----------------------+----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
-   | update_time           | String                                                                                       | Update time.                                                                               |
-   +-----------------------+----------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+   +-----------------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                                                                                       | Description                                                                                                                             |
+   +=======================+============================================================================================+=========================================================================================================================================+
+   | name                  | String                                                                                     | Response name.                                                                                                                          |
+   +-----------------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | responses             | Map<String,\ :ref:`ResponseInfoResp <updategatewayresponsev2__response_responseinforesp>`> | Response type definition. key indicates the error type. Options of key:                                                                 |
+   |                       |                                                                                            |                                                                                                                                         |
+   |                       |                                                                                            | -  AUTH_FAILURE: Authentication failed.                                                                                                 |
+   |                       |                                                                                            | -  AUTH_HEADER_MISSING: The identity source is missing.                                                                                 |
+   |                       |                                                                                            | -  AUTHORIZER_FAILURE: Custom authentication failed.                                                                                    |
+   |                       |                                                                                            | -  AUTHORIZER_CONF_FAILURE: Custom authorizer error.                                                                                    |
+   |                       |                                                                                            | -  AUTHORIZER_IDENTITIES_FAILURE: The identity source of the custom authorizer is invalid.                                              |
+   |                       |                                                                                            | -  BACKEND_UNAVAILABLE: The backend is unavailable.                                                                                     |
+   |                       |                                                                                            | -  BACKEND_TIMEOUT: Backend timed out.                                                                                                  |
+   |                       |                                                                                            | -  THROTTLED: The request was rejected due to request throttling.                                                                       |
+   |                       |                                                                                            | -  UNAUTHORIZED: The app you are using has not been authorized to call the API.                                                         |
+   |                       |                                                                                            | -  ACCESS_DENIED: Access denied.                                                                                                        |
+   |                       |                                                                                            | -  NOT_FOUND: No API is found.                                                                                                          |
+   |                       |                                                                                            | -  REQUEST_PARAMETERS_FAILURE: Invalid request parameter.                                                                               |
+   |                       |                                                                                            | -  DEFAULT_4XX: Default 4XX error occurred.                                                                                             |
+   |                       |                                                                                            | -  DEFAULT_5XX: Default 5XX error occurred.                                                                                             |
+   |                       |                                                                                            | -  THIRD_AUTH_FAILURE: Third-party authentication failed.                                                                               |
+   |                       |                                                                                            | -  THIRD_AUTH_IDENTITIES_FAILURE: Identity source of the third-party authorizer is invalid.                                             |
+   |                       |                                                                                            | -  THIRD_AUTH_CONF_FAILURE: Third-party authorizer configuration error.                                                                 |
+   |                       |                                                                                            | -  ORCHESTRATION_PARAMETER_NOT_FOUND: No parameters are input to match the parameter orchestration rule, causing orchestration failure. |
+   |                       |                                                                                            | -  ORCHESTRATION_FAILURE: Input parameters cannot match orchestration rules, causing orchestration failure.                             |
+   |                       |                                                                                            |                                                                                                                                         |
+   |                       |                                                                                            | Each error type is in JSON format.                                                                                                      |
+   +-----------------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | id                    | String                                                                                     | Response ID.                                                                                                                            |
+   +-----------------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | default               | Boolean                                                                                    | Indicates whether the group response is the default response.                                                                           |
+   +-----------------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | create_time           | String                                                                                     | Creation time.                                                                                                                          |
+   +-----------------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+   | update_time           | String                                                                                     | Update time.                                                                                                                            |
+   +-----------------------+--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 
-.. _updategatewayresponsev2_1__response_responseinforesp:
+.. _updategatewayresponsev2__response_responseinforesp:
 
-.. table:: **Table 6** ResponseInfoResp
+.. table:: **Table 7** ResponseInfoResp
 
-   +-----------+---------+---------------------------------------------------------+
-   | Parameter | Type    | Description                                             |
-   +===========+=========+=========================================================+
-   | status    | Integer | HTTP status code of the response.                       |
-   +-----------+---------+---------------------------------------------------------+
-   | body      | String  | Response body template.                                 |
-   +-----------+---------+---------------------------------------------------------+
-   | default   | Boolean | Indicates whether the response is the default response. |
-   +-----------+---------+---------------------------------------------------------+
+   +-----------------------+---------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+   | Parameter             | Type                                                                                              | Description                                                                            |
+   +=======================+===================================================================================================+========================================================================================+
+   | status                | Integer                                                                                           | HTTP status code of the response. The value ranges from 200 to 599, but cannot be 444. |
+   +-----------------------+---------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+   | body                  | String                                                                                            | Response body template.                                                                |
+   +-----------------------+---------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+   | headers               | Array of :ref:`ResponseInfoHeader <updategatewayresponsev2__response_responseinfoheader>` objects | Custom response header.                                                                |
+   |                       |                                                                                                   |                                                                                        |
+   |                       |                                                                                                   | Array Length: **0 - 10**                                                               |
+   +-----------------------+---------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+   | default               | Boolean                                                                                           | Indicates whether the response is the default response.                                |
+   +-----------------------+---------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+
+.. _updategatewayresponsev2__response_responseinfoheader:
+
+.. table:: **Table 8** ResponseInfoHeader
+
+   +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Type                  | Description                                                                                                         |
+   +=======================+=======================+=====================================================================================================================+
+   | key                   | String                | Key of the custom group response header, which can contain 1 to 128 characters of letters, digits, and hyphens (-). |
+   +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------+
+   | value                 | String                | Value of the custom group response header, which is a string of 1 to 1,024 characters.                              |
+   |                       |                       |                                                                                                                     |
+   |                       |                       | Minimum: **1**                                                                                                      |
+   |                       |                       |                                                                                                                     |
+   |                       |                       | Maximum: **1024**                                                                                                   |
+   +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------+
 
 **Status code: 400**
-
-.. table:: **Table 7** Response body parameters
-
-   ========== ====== ==============
-   Parameter  Type   Description
-   ========== ====== ==============
-   error_code String Error code.
-   error_msg  String Error message.
-   ========== ====== ==============
-
-**Status code: 401**
-
-.. table:: **Table 8** Response body parameters
-
-   ========== ====== ==============
-   Parameter  Type   Description
-   ========== ====== ==============
-   error_code String Error code.
-   error_msg  String Error message.
-   ========== ====== ==============
-
-**Status code: 403**
 
 .. table:: **Table 9** Response body parameters
 
@@ -165,7 +199,7 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
-**Status code: 404**
+**Status code: 401**
 
 .. table:: **Table 10** Response body parameters
 
@@ -176,9 +210,31 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
-**Status code: 500**
+**Status code: 403**
 
 .. table:: **Table 11** Response body parameters
+
+   ========== ====== ==============
+   Parameter  Type   Description
+   ========== ====== ==============
+   error_code String Error code.
+   error_msg  String Error message.
+   ========== ====== ==============
+
+**Status code: 404**
+
+.. table:: **Table 12** Response body parameters
+
+   ========== ====== ==============
+   Parameter  Type   Description
+   ========== ====== ==============
+   error_code String Error code.
+   error_msg  String Error message.
+   ========== ====== ==============
+
+**Status code: 500**
+
+.. table:: **Table 13** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -281,6 +337,21 @@ OK
          "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
          "default" : true,
          "status" : 401
+       },
+       "THIRD_AUTH_FAILURE" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 401
+       },
+       "THIRD_AUTH_IDENTITIES_FAILURE" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 401
+       },
+       "THIRD_AUTH_CONF_FAILURE" : {
+         "body" : "{\"error_code\":\"$context.error.code\",\"error_msg\":\"$context.error.message\",\"request_id\":\"$context.requestId\"}",
+         "default" : true,
+         "status" : 500
        }
      }
    }

@@ -1,6 +1,6 @@
-:original_name: DeleteApiV2_1.html
+:original_name: DeleteApiV2.html
 
-.. _DeleteApiV2_1:
+.. _DeleteApiV2:
 
 Deleting an API
 ===============
@@ -11,6 +11,11 @@ Function
 This API is used to delete an API.
 
 This operation will delete all related resources and binding relationships of the API, such as publication records, backend services, and app authorization information.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -76,9 +81,20 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
-**Status code: 500**
+**Status code: 409**
 
 .. table:: **Table 6** Response body parameters
+
+   ========== ====== ==================
+   Parameter  Type   Description
+   ========== ====== ==================
+   error_code String Error code.
+   error_msg  String Error description.
+   ========== ====== ==================
+
+**Status code: 500**
+
+.. table:: **Table 7** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -128,6 +144,17 @@ Not Found
      "error_msg" : "API 5f918d104dc84480a75166ba99efff21 does not exist"
    }
 
+**Status code: 409**
+
+Conflict
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.3416",
+     "error_msg" : "The API cannot be deleted because it has been published"
+   }
+
 **Status code: 500**
 
 Internal Server Error
@@ -149,6 +176,7 @@ Status Code Description
 401         Unauthorized
 403         Forbidden
 404         Not Found
+409         Conflict
 500         Internal Server Error
 =========== =====================
 

@@ -1,15 +1,15 @@
-:original_name: CustomAuthorizerManagement_1.html
+:original_name: CustomAuthorizerManagement.html
 
-.. _CustomAuthorizerManagement_1:
+.. _CustomAuthorizerManagement:
 
 Custom Authorizer Management
 ============================
 
--  :ref:`Creating a Custom Authorizer <createcustomauthorizerv2_1>`
--  :ref:`Modifying a Custom Authorizer <updatecustomauthorizerv2_1>`
--  :ref:`Deleting a Custom Authorizer <deletecustomauthorizerv2_1>`
--  :ref:`Querying Custom Authorizer Details <showdetailsofcustomauthorizersv2_1>`
--  :ref:`Querying Custom Authorizers <listcustomauthorizersv2_1>`
+-  :ref:`Creating a Custom Authorizer <createcustomauthorizerv2>`
+-  :ref:`Modifying a Custom Authorizer <updatecustomauthorizerv2>`
+-  :ref:`Deleting a Custom Authorizer <deletecustomauthorizerv2>`
+-  :ref:`Querying Custom Authorizer Details <showdetailsofcustomauthorizersv2>`
+-  :ref:`Querying Custom Authorizers <listcustomauthorizersv2>`
 
 .. toctree::
    :maxdepth: 1

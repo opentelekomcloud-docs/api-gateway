@@ -1,6 +1,6 @@
-:original_name: DeleteEnvironmentVariableV2_1.html
+:original_name: DeleteEnvironmentVariableV2.html
 
-.. _DeleteEnvironmentVariableV2_1:
+.. _DeleteEnvironmentVariableV2:
 
 Deleting a Variable
 ===================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete an environment variable.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

@@ -1,12 +1,12 @@
-:original_name: ApiImportExport_1.html
+:original_name: ApiImportExport.html
 
-.. _ApiImportExport_1:
+.. _ApiImportExport:
 
 API Import and Export
 =====================
 
--  :ref:`Exporting APIs <exportapidefinitionsv2_1>`
--  :ref:`Importing APIs <importapidefinitionsv2_1>`
+-  :ref:`Exporting APIs <exportapidefinitionsv2>`
+-  :ref:`Importing APIs <importapidefinitionsv2>`
 
 .. toctree::
    :maxdepth: 1

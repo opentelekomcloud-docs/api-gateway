@@ -1,6 +1,6 @@
-:original_name: ListSignatureKeysV2_1.html
+:original_name: ListSignatureKeysV2.html
 
-.. _ListSignatureKeysV2_1:
+.. _ListSignatureKeysV2:
 
 Querying Signature Keys
 =======================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query all the signature keys.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -67,17 +72,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                                | Description                                          |
-   +===========+=====================================================================================================+======================================================+
-   | size      | Integer                                                                                             | Length of the returned resource list.                |
-   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                                | Number of resources that match the query conditions. |
-   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | signs     | Array of :ref:`SignatureWithBindNum <listsignaturekeysv2_1__response_signaturewithbindnum>` objects | Signature key list.                                  |
-   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                              | Description                                          |
+   +===========+===================================================================================================+======================================================+
+   | size      | Integer                                                                                           | Length of the returned resource list.                |
+   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                              | Number of resources that match the query conditions. |
+   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | signs     | Array of :ref:`SignatureWithBindNum <listsignaturekeysv2__response_signaturewithbindnum>` objects | Signature key list.                                  |
+   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listsignaturekeysv2_1__response_signaturewithbindnum:
+.. _listsignaturekeysv2__response_signaturewithbindnum:
 
 .. table:: **Table 5** SignatureWithBindNum
 

@@ -1,6 +1,6 @@
-:original_name: UpdateSignatureKeyV2_1.html
+:original_name: UpdateSignatureKeyV2.html
 
-.. _UpdateSignatureKeyV2_1:
+.. _UpdateSignatureKeyV2:
 
 Modifying a Signature Key
 =========================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to modify the information about a signature key.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -225,9 +230,20 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
-**Status code: 500**
+**Status code: 412**
 
 .. table:: **Table 9** Response body parameters
+
+   ========== ====== ==================
+   Parameter  Type   Description
+   ========== ====== ==================
+   error_code String Error code.
+   error_msg  String Error description.
+   ========== ====== ==================
+
+**Status code: 500**
+
+.. table:: **Table 10** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -239,7 +255,7 @@ Response Parameters
 Example Requests
 ----------------
 
-Creating a signature key
+Modify the name of a specified signature key.
 
 .. code-block::
 
@@ -310,6 +326,17 @@ Not Found
      "error_msg" : "Signature key 0b0e8f456b8742218af75f945307173c does not exist"
    }
 
+**Status code: 412**
+
+PreconditionFailed
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.3548",
+     "error_msg" : "sign_type=public_key not supported by instance 6a29d4e9-69a0-412a-aabe-9898ec0903b0"
+   }
+
 **Status code: 500**
 
 Internal Server Error
@@ -332,6 +359,7 @@ Status Code Description
 401         Unauthorized
 403         Forbidden
 404         Not Found
+412         PreconditionFailed
 500         Internal Server Error
 =========== =====================
 

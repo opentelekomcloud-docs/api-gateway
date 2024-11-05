@@ -1,6 +1,6 @@
-:original_name: BatchDeleteAclV2_1.html
+:original_name: BatchDeleteAclV2.html
 
-.. _BatchDeleteAclV2_1:
+.. _BatchDeleteAclV2:
 
 Deleting Multiple Access Control Policies
 =========================================
@@ -11,6 +11,11 @@ Function
 This API is used to delete multiple access control policies.
 
 Access control policies bound to APIs cannot be deleted.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -61,15 +66,15 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   +---------------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-   | Parameter     | Type                                                                                                       | Description                                                            |
-   +===============+============================================================================================================+========================================================================+
-   | success_count | Integer                                                                                                    | Number of access control policies that have been successfully deleted. |
-   +---------------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
-   | failure       | Array of :ref:`AclBatchResultFailureResp <batchdeleteaclv2_1__response_aclbatchresultfailureresp>` objects | Error message and access control policies that fail to be deleted.     |
-   +---------------+------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   +---------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   | Parameter     | Type                                                                                                     | Description                                                            |
+   +===============+==========================================================================================================+========================================================================+
+   | success_count | Integer                                                                                                  | Number of access control policies that have been successfully deleted. |
+   +---------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+   | failure       | Array of :ref:`AclBatchResultFailureResp <batchdeleteaclv2__response_aclbatchresultfailureresp>` objects | Error message and access control policies that fail to be deleted.     |
+   +---------------+----------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
 
-.. _batchdeleteaclv2_1__response_aclbatchresultfailureresp:
+.. _batchdeleteaclv2__response_aclbatchresultfailureresp:
 
 .. table:: **Table 6** AclBatchResultFailureResp
 

@@ -1,18 +1,18 @@
-:original_name: GroupResponseManagement_1.html
+:original_name: GroupResponseManagement.html
 
-.. _GroupResponseManagement_1:
+.. _GroupResponseManagement:
 
 Group Response Management
 =========================
 
--  :ref:`Creating a Group Response <creategatewayresponsev2_1>`
--  :ref:`Querying Group Response Details <showdetailsofgatewayresponsev2_1>`
--  :ref:`Modifying a Group Response <updategatewayresponsev2_1>`
--  :ref:`Deleting a Group Response <deletegatewayresponsev2_1>`
--  :ref:`Querying the Response of an Error Type <showdetailsofgatewayresponsetypev2_1>`
--  :ref:`Modifying the Response of an Error Type <updategatewayresponsetypev2_1>`
--  :ref:`Deleting the Response of an Error Type <deletegatewayresponsetypev2_1>`
--  :ref:`Querying Group Responses <listgatewayresponsesv2_1>`
+-  :ref:`Creating a Group Response <creategatewayresponsev2>`
+-  :ref:`Querying Group Response Details <showdetailsofgatewayresponsev2>`
+-  :ref:`Modifying a Group Response <updategatewayresponsev2>`
+-  :ref:`Deleting a Group Response <deletegatewayresponsev2>`
+-  :ref:`Querying the Response of an Error Type <showdetailsofgatewayresponsetypev2>`
+-  :ref:`Modifying the Response of an Error Type <updategatewayresponsetypev2>`
+-  :ref:`Deleting the Response of an Error Type <deletegatewayresponsetypev2>`
+-  :ref:`Querying Group Responses <listgatewayresponsesv2>`
 
 .. toctree::
    :maxdepth: 1

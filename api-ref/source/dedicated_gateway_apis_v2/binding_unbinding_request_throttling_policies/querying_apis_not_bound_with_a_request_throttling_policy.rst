@@ -1,6 +1,6 @@
-:original_name: ListApisUnbindedToRequestThrottlingPolicyV2_1.html
+:original_name: ListApisUnbindedToRequestThrottlingPolicyV2.html
 
-.. _ListApisUnbindedToRequestThrottlingPolicyV2_1:
+.. _ListApisUnbindedToRequestThrottlingPolicyV2:
 
 Querying APIs Not Bound with a Request Throttling Policy
 ========================================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the self-developed APIs to which a request throttling policy has not been bound. Only published APIs will be displayed.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -71,17 +76,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                                            | Description                                          |
-   +===========+=================================================================================================================+======================================================+
-   | size      | Integer                                                                                                         | Length of the returned resource list.                |
-   +-----------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                                            | Number of resources that match the query conditions. |
-   +-----------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | apis      | Array of :ref:`ApiForThrottle <listapisunbindedtorequestthrottlingpolicyv2_1__response_apiforthrottle>` objects | API list.                                            |
-   +-----------+-----------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                                          | Description                                          |
+   +===========+===============================================================================================================+======================================================+
+   | size      | Integer                                                                                                       | Length of the returned resource list.                |
+   +-----------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                                          | Number of resources that match the query conditions. |
+   +-----------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | apis      | Array of :ref:`ApiForThrottle <listapisunbindedtorequestthrottlingpolicyv2__response_apiforthrottle>` objects | API list.                                            |
+   +-----------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listapisunbindedtorequestthrottlingpolicyv2_1__response_apiforthrottle:
+.. _listapisunbindedtorequestthrottlingpolicyv2__response_apiforthrottle:
 
 .. table:: **Table 5** ApiForThrottle
 

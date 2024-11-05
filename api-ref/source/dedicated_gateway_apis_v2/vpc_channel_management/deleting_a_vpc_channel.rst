@@ -1,6 +1,6 @@
-:original_name: DeleteVpcChannelV2_1.html
+:original_name: DeleteVpcChannelV2.html
 
-.. _DeleteVpcChannelV2_1:
+.. _DeleteVpcChannelV2:
 
 Deleting a VPC Channel
 ======================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete a VPC channel.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

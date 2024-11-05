@@ -1,6 +1,6 @@
-:original_name: DeleteBackendInstanceV2_1.html
+:original_name: DeleteBackendInstanceV2.html
 
-.. _DeleteBackendInstanceV2_1:
+.. _DeleteBackendInstanceV2:
 
 Removing a Backend Server
 =========================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete a backend instance from a specified VPC channel.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

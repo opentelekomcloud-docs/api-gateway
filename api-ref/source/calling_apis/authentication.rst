@@ -7,28 +7,11 @@ Authentication
 
 Requests for calling an API can be authenticated using either of the following methods:
 
--  Token-based authentication: Requests are authenticated using a token.
-
 -  AK/SK-based authentication: Requests are authenticated by encrypting the request body using an AK/SK pair. AK/SK-based authentication is recommended because it provides higher security than token-based authentication.
 
-Token-based Authentication
---------------------------
+-  Token-based authentication: Requests are authenticated using a token.
 
-.. note::
-
-   The validity period of a token is 24 hours. When using a token for authentication, cache it to prevent frequently calling the IAM API used to obtain a user token.
-
-A token specifies temporary permissions in a computer system. During API authentication using a token, the token is added to requests to get permissions for calling the API.
-
-:ref:`Making an API Request <apig-en-api-180713011>` describes the process of calling the API used to create an API group (dedicated gateways). After a token is obtained, the **X-Auth-Token** header field must be added to requests to specify the token when calling other APIs. For example, if the token is **ABCDEFJ....**, **X-Auth-Token: ABCDEFJ....** can be added to a request as follows:
-
-.. code-block::
-
-   POST https://{apig_endpoint}/v2/{project_id}/apigw/instances/{instance_id}/api-groups
-   Content-Type: application/json
-   X-Auth-Token: ABCDEFJ....
-
-.. _apig-api-190529268__en-us_topic_0121671869_section0390282152:
+.. _apig-api-190529268__en-us_topic_0172440411_en-us_topic_0121671869_section0390282152:
 
 AK/SK-based Authentication
 --------------------------
@@ -60,7 +43,7 @@ AK: access key ID, which is a unique identifier used in conjunction with a secre
    a. Register an account and log in to the management console.
    b. Hover over the username and choose **My Credentials** from the drop-down list.
 
-   c. Click the **Access Keys** tab.
+   c. Choose **Access Keys** from the navigation pane.
    d. Click **Create Access Key**.
    e. Enter the login password.
    f. Enter the verification code received by email or SMS message.
@@ -77,7 +60,7 @@ AK: access key ID, which is a unique identifier used in conjunction with a secre
 
 #. Download and decompress the demo project.
 
-#. .. _apig-api-190529268__en-us_topic_0121671869_li19564155663214:
+#. .. _apig-api-190529268__en-us_topic_0172440411_en-us_topic_0121671869_li19564155663214:
 
    Import the demo project to Eclipse.
 
@@ -101,11 +84,11 @@ AK: access key ID, which is a unique identifier used in conjunction with a secre
 
 #. Sign the request.
 
-   The request signing method is integrated in the JAR files imported in :ref:`3 <apig-api-190529268__en-us_topic_0121671869_li19564155663214>`. The request needs to be signed before it is sent. The signature will then be added as part of the HTTP header to the request.
+   The request signing method is integrated in the JAR files imported in :ref:`3 <apig-api-190529268__en-us_topic_0172440411_en-us_topic_0121671869_li19564155663214>`. The request needs to be signed before it is sent. The signature will then be added as part of the HTTP header to the request.
 
    The demo code is classified into the following classes to demonstrate signing and sending the HTTP request:
 
-   -  **AccessService**: An abstract class that merges the GET, POST, PUT, and DELETE methods into the access method.
+   -  **AccessService**: an abstract class that merges the GET, POST, PUT, and DELETE methods into the access method.
    -  **Demo**: Execution entry used to simulate the sending of GET, POST, PUT, and DELETE requests.
    -  **AccessServiceImpl**: Implements the access method, which contains the code required for communication with APIG.
 
@@ -115,9 +98,7 @@ AK: access key ID, which is a unique identifier used in conjunction with a secre
 
       Specify **region**, **serviceName**, **ak/sk**, and **url** as the actual values. In this demo, the URLs for accessing VPC resources are used.
 
-      To obtain the project ID in the URLs, see :ref:`Obtaining a Project ID <apig-api-180713009>`.
-
-      Obtain the endpoint from the enterprise administrator.
+      To obtain the project ID in the URLs, see :ref:`Obtaining a Project ID <apig-api-180713009>`. To obtain the endpoint, contact the enterprise administrator.
 
       .. code-block::
 
@@ -165,3 +146,49 @@ AK: access key ID, which is a unique identifier used in conjunction with a secre
       In the **Package Explorer** area on the left, right-click **Demo.java**, choose **Run AS** > **Java Application** from the shortcut menu to run the demo code.
 
       You can view the API call logs on the console.
+
+Token-based Authentication
+--------------------------
+
+.. note::
+
+   -  The validity period of a token is 24 hours. When using a token for authentication, cache it to prevent frequently calling the IAM API used to obtain a user token.
+   -  Ensure that the token is valid when you use it. Using a token that will soon expire may cause API calling failures.
+
+A token specifies temporary permissions in a computer system. During API authentication using a token, the token is added to requests to get permissions for calling the API.
+
+When calling an API to obtain a user token, you must set **auth.scope** in the request body to **project**.
+
+.. code-block::
+
+   {
+       "auth": {
+           "identity": {
+               "methods": [
+                   "password"
+               ],
+               "password": {
+                   "user": {
+                       "name": "username",
+                       "password": "********",
+                       "domain": {
+                           "name": "domainname"
+                       }
+                   }
+               }
+           },
+           "scope": {
+               "project": {
+                   "name": "xxxxxxxx"
+               }
+           }
+       }
+   }
+
+After a token is obtained, the **X-Auth-Token** header field must be added to requests to specify the token when calling other APIs. For example, if the token is **ABCDEFJ....**, **X-Auth-Token: ABCDEFJ....** can be added to a request as follows:
+
+.. code-block::
+
+   POST https://{apig_endpoint}/v2/{project_id}/v2/{project_id}/apigw/instances/{instance_id}/api-groups
+   Content-Type: application/json
+   X-Auth-Token: ABCDEFJ....

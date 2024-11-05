@@ -1,6 +1,6 @@
-:original_name: AssociateCertificateV2_1.html
+:original_name: AssociateCertificateV2.html
 
-.. _AssociateCertificateV2_1:
+.. _AssociateCertificateV2:
 
 Adding a Certificate to a Domain Name
 =====================================
@@ -11,6 +11,11 @@ Function
 When you create an API to be accessed through HTTPS, you must add an SSL certificate to the independent domain name that has been bound to the group the API belongs to.
 
 This API is used to add a certificate to a specific domain name.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

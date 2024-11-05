@@ -1,6 +1,6 @@
-:original_name: CreateAppCodeV2_1.html
+:original_name: CreateAppCodeV2.html
 
-.. _CreateAppCodeV2_1:
+.. _CreateAppCodeV2:
 
 Creating an AppCode
 ===================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to create an AppCode for an app for simple authentication.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

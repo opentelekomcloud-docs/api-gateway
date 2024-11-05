@@ -1,6 +1,6 @@
-:original_name: AssociateRequestThrottlingPolicyV2_1.html
+:original_name: AssociateRequestThrottlingPolicyV2.html
 
-.. _AssociateRequestThrottlingPolicyV2_1:
+.. _AssociateRequestThrottlingPolicyV2:
 
 Binding a Request Throttling Policy
 ===================================
@@ -13,6 +13,11 @@ The request throttling policy bound to an API will control access of all users t
 If the number of API calls within a specified period reaches the limit, subsequent access will be rejected, protecting the backend API from abnormal traffic and ensuring stable service running.
 
 This API is used to bind a request throttling policy to an API that has been published in an environment. You can bind different request throttling policies to an API in different environments, but can bind only one request throttling policy to the API in each environment.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -61,13 +66,13 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------+
-   | Parameter       | Type                                                                                                           | Description                                |
-   +=================+================================================================================================================+============================================+
-   | throttle_applys | Array of :ref:`ThrottleApiBinding <associaterequestthrottlingpolicyv2_1__response_throttleapibinding>` objects | Request throttling policy binding records. |
-   +-----------------+----------------------------------------------------------------------------------------------------------------+--------------------------------------------+
+   +-----------------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------+
+   | Parameter       | Type                                                                                                         | Description                                |
+   +=================+==============================================================================================================+============================================+
+   | throttle_applys | Array of :ref:`ThrottleApiBinding <associaterequestthrottlingpolicyv2__response_throttleapibinding>` objects | Request throttling policy binding records. |
+   +-----------------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------+
 
-.. _associaterequestthrottlingpolicyv2_1__response_throttleapibinding:
+.. _associaterequestthrottlingpolicyv2__response_throttleapibinding:
 
 .. table:: **Table 5** ThrottleApiBinding
 

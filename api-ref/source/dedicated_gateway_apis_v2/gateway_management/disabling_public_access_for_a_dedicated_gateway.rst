@@ -1,6 +1,6 @@
-:original_name: RemoveEngressEipV2_1.html
+:original_name: RemoveEngressEipV2.html
 
-.. _RemoveEngressEipV2_1:
+.. _RemoveEngressEipV2:
 
 Disabling Public Access for a Dedicated Gateway
 ===============================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to disable public access for a dedicated gateway.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

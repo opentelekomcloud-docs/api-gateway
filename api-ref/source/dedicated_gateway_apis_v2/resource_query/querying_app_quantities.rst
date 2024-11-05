@@ -1,6 +1,6 @@
-:original_name: ListAppQuantitiesV2_1.html
+:original_name: ListAppQuantitiesV2.html
 
-.. _ListAppQuantitiesV2_1:
+.. _ListAppQuantitiesV2:
 
 Querying App Quantities
 =======================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the number of apps that have been authorized to access APIs and the number of apps that have not been authorized to access any APIs.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

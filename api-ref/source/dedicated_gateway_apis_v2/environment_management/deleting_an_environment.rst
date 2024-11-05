@@ -1,6 +1,6 @@
-:original_name: DeleteEnvironmentV2_1.html
+:original_name: DeleteEnvironmentV2.html
 
-.. _DeleteEnvironmentV2_1:
+.. _DeleteEnvironmentV2:
 
 Deleting an Environment
 =======================
@@ -13,6 +13,11 @@ This API is used to delete an environment.
 This operation will cause the APIs published in the environment to become inaccessible to relevant apps and users. Ensure that you have notified users of the deletion, or confirm that the APIs can be removed from the deleted environment.
 
 You cannot delete environments where APIs have been published.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

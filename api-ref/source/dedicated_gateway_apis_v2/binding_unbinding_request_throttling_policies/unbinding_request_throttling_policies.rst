@@ -1,6 +1,6 @@
-:original_name: BatchDisassociateThrottlingPolicyV2_1.html
+:original_name: BatchDisassociateThrottlingPolicyV2.html
 
-.. _BatchDisassociateThrottlingPolicyV2_1:
+.. _BatchDisassociateThrottlingPolicyV2:
 
 Unbinding Request Throttling Policies
 =====================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to unbind request throttling policies from APIs.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -59,15 +64,15 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   +---------------+-----------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-   | Parameter     | Type                                                                                                                              | Description                                                                |
-   +===============+===================================================================================================================================+============================================================================+
-   | success_count | Integer                                                                                                                           | Number of request throttling policies that have been successfully unbound. |
-   +---------------+-----------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
-   | failure       | Array of :ref:`ThrottleBindingBatchFailure <batchdisassociatethrottlingpolicyv2_1__response_throttlebindingbatchfailure>` objects | Error message and request throttling policies that fail to be unbound.     |
-   +---------------+-----------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+   +---------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+   | Parameter     | Type                                                                                                                            | Description                                                                |
+   +===============+=================================================================================================================================+============================================================================+
+   | success_count | Integer                                                                                                                         | Number of request throttling policies that have been successfully unbound. |
+   +---------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
+   | failure       | Array of :ref:`ThrottleBindingBatchFailure <batchdisassociatethrottlingpolicyv2__response_throttlebindingbatchfailure>` objects | Error message and request throttling policies that fail to be unbound.     |
+   +---------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------+
 
-.. _batchdisassociatethrottlingpolicyv2_1__response_throttlebindingbatchfailure:
+.. _batchdisassociatethrottlingpolicyv2__response_throttlebindingbatchfailure:
 
 .. table:: **Table 6** ThrottleBindingBatchFailure
 

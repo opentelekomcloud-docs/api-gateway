@@ -1,6 +1,6 @@
-:original_name: CreateApiAclBindingV2_1.html
+:original_name: CreateApiAclBindingV2.html
 
-.. _CreateApiAclBindingV2_1:
+.. _CreateApiAclBindingV2:
 
 Binding an Access Control Policy to an API
 ==========================================
@@ -11,6 +11,11 @@ Function
 This API is used to bind an access control policy to a specified API.
 
 You can bind different access control policies to an API in different environments, but you can bind only one access control policy to the API in each environment.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -43,8 +48,8 @@ Request Parameters
    =========== ========= ================ ==========================
    Parameter   Mandatory Type             Description
    =========== ========= ================ ==========================
-   acl_id      No        String           Access control policy ID.
-   publish_ids No        Array of strings API publication record ID.
+   acl_id      Yes       String           Access control policy ID.
+   publish_ids Yes       Array of strings API publication record ID.
    =========== ========= ================ ==========================
 
 Response Parameters
@@ -54,13 +59,13 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +--------------+-------------------------------------------------------------------------------------------------+----------------------------------------+
-   | Parameter    | Type                                                                                            | Description                            |
-   +==============+=================================================================================================+========================================+
-   | acl_bindings | Array of :ref:`AclApiBindingInfo <createapiaclbindingv2_1__response_aclapibindinginfo>` objects | Access control policy binding records. |
-   +--------------+-------------------------------------------------------------------------------------------------+----------------------------------------+
+   +--------------+-----------------------------------------------------------------------------------------------+----------------------------------------+
+   | Parameter    | Type                                                                                          | Description                            |
+   +==============+===============================================================================================+========================================+
+   | acl_bindings | Array of :ref:`AclApiBindingInfo <createapiaclbindingv2__response_aclapibindinginfo>` objects | Access control policy binding records. |
+   +--------------+-----------------------------------------------------------------------------------------------+----------------------------------------+
 
-.. _createapiaclbindingv2_1__response_aclapibindinginfo:
+.. _createapiaclbindingv2__response_aclapibindinginfo:
 
 .. table:: **Table 5** AclApiBindingInfo
 

@@ -1,6 +1,6 @@
-:original_name: ListTagsV2_1.html
+:original_name: ListTagsV2.html
 
-.. _ListTagsV2_1:
+.. _ListTagsV2:
 
 Querying Tags
 =============
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query tags of a gateway.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

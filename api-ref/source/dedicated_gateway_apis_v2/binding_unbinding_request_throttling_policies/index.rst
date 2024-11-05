@@ -1,16 +1,16 @@
-:original_name: ThrottlingPolicyBinding_1.html
+:original_name: ThrottlingPolicyBinding.html
 
-.. _ThrottlingPolicyBinding_1:
+.. _ThrottlingPolicyBinding:
 
 Binding/Unbinding Request Throttling Policies
 =============================================
 
--  :ref:`Binding a Request Throttling Policy <associaterequestthrottlingpolicyv2_1>`
--  :ref:`Unbinding a Request Throttling Policy <disassociaterequestthrottlingpolicyv2_1>`
--  :ref:`Querying APIs Bound with a Request Throttling Policy <listapisbindedtorequestthrottlingpolicyv2_1>`
--  :ref:`Querying APIs Not Bound with a Request Throttling Policy <listapisunbindedtorequestthrottlingpolicyv2_1>`
--  :ref:`Querying Request Throttling Policies Bound to an API <listrequestthrottlingpoliciesbindedtoapiv2_1>`
--  :ref:`Unbinding Request Throttling Policies <batchdisassociatethrottlingpolicyv2_1>`
+-  :ref:`Binding a Request Throttling Policy <associaterequestthrottlingpolicyv2>`
+-  :ref:`Unbinding a Request Throttling Policy <disassociaterequestthrottlingpolicyv2>`
+-  :ref:`Querying APIs Bound with a Request Throttling Policy <listapisbindedtorequestthrottlingpolicyv2>`
+-  :ref:`Querying APIs Not Bound with a Request Throttling Policy <listapisunbindedtorequestthrottlingpolicyv2>`
+-  :ref:`Querying Request Throttling Policies Bound to an API <listrequestthrottlingpoliciesbindedtoapiv2>`
+-  :ref:`Unbinding Request Throttling Policies <batchdisassociatethrottlingpolicyv2>`
 
 .. toctree::
    :maxdepth: 1

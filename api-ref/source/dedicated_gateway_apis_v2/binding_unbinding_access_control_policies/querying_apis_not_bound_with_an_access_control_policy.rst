@@ -1,6 +1,6 @@
-:original_name: ListApisUnbindedToAclPolicyV2_1.html
+:original_name: ListApisUnbindedToAclPolicyV2.html
 
-.. _ListApisUnbindedToAclPolicyV2_1:
+.. _ListApisUnbindedToAclPolicyV2:
 
 Querying APIs Not Bound with an Access Control Policy
 =====================================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the published APIs to which an access control policy has not been bound.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -71,17 +76,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                                | Description                                          |
-   +===========+=====================================================================================================+======================================================+
-   | size      | Integer                                                                                             | Length of the returned resource list.                |
-   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                                | Number of resources that match the query conditions. |
-   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | apis      | Array of :ref:`UnbindApiForAcl <listapisunbindedtoaclpolicyv2_1__response_unbindapiforacl>` objects | API list.                                            |
-   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                              | Description                                          |
+   +===========+===================================================================================================+======================================================+
+   | size      | Integer                                                                                           | Length of the returned resource list.                |
+   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                              | Number of resources that match the query conditions. |
+   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | apis      | Array of :ref:`UnbindApiForAcl <listapisunbindedtoaclpolicyv2__response_unbindapiforacl>` objects | API list.                                            |
+   +-----------+---------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listapisunbindedtoaclpolicyv2_1__response_unbindapiforacl:
+.. _listapisunbindedtoaclpolicyv2__response_unbindapiforacl:
 
 .. table:: **Table 5** UnbindApiForAcl
 

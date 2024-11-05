@@ -1,6 +1,6 @@
-:original_name: CreateEnvironmentVariableV2_1.html
+:original_name: CreateEnvironmentVariableV2.html
 
-.. _CreateEnvironmentVariableV2_1:
+.. _CreateEnvironmentVariableV2:
 
 Creating a Variable
 ===================
@@ -23,6 +23,11 @@ Environment variables are defined for an API group and apply to all APIs in the 
    #. APIs that use environment variables cannot be debugged.
 
    #. You must enclose an environment variable in number signs (#) so that it can be replaced with the actual value of the environment in which the API is published. For example, if the URL of an API is https://#address#:8080 and the value of variable address is 192.168.1.5 in the RELEASE environment, the real URL of the API is https://192.168.1.5:8080 after publishing.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

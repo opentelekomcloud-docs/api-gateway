@@ -1,6 +1,6 @@
-:original_name: DisassociateCertificateV2_1.html
+:original_name: DisassociateCertificateV2.html
 
-.. _DisassociateCertificateV2_1:
+.. _DisassociateCertificateV2:
 
 Deleting the Certificate Bound to a Domain Name
 ===============================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete a certificate that is no longer needed or has expired.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

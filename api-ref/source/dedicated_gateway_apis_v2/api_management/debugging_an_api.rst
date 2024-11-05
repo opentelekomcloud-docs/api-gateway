@@ -1,6 +1,6 @@
-:original_name: DebugApiV2_1.html
+:original_name: DebugApiV2.html
 
-.. _DebugApiV2_1:
+.. _DebugApiV2:
 
 Debugging an API
 ================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to debug an API in a specified environment. The API caller must have the permissions required for accessing this API.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

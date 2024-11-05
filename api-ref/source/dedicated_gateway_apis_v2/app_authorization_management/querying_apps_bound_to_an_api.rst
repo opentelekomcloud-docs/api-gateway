@@ -1,6 +1,6 @@
-:original_name: ListAppsBindedToApiV2_1.html
+:original_name: ListAppsBindedToApiV2.html
 
-.. _ListAppsBindedToApiV2_1:
+.. _ListAppsBindedToApiV2:
 
 Querying Apps Bound to an API
 =============================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the apps that have been bound to a specified API.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -69,17 +74,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+-------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                | Description                                          |
-   +===========+=====================================================================================+======================================================+
-   | size      | Integer                                                                             | Length of the returned resource list.                |
-   +-----------+-------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                | Number of resources that match the query conditions. |
-   +-----------+-------------------------------------------------------------------------------------+------------------------------------------------------+
-   | auths     | Array of :ref:`ApiAuthInfo <listappsbindedtoapiv2_1__response_apiauthinfo>` objects | API list.                                            |
-   +-----------+-------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+-----------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                              | Description                                          |
+   +===========+===================================================================================+======================================================+
+   | size      | Integer                                                                           | Length of the returned resource list.                |
+   +-----------+-----------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                              | Number of resources that match the query conditions. |
+   +-----------+-----------------------------------------------------------------------------------+------------------------------------------------------+
+   | auths     | Array of :ref:`ApiAuthInfo <listappsbindedtoapiv2__response_apiauthinfo>` objects | API list.                                            |
+   +-----------+-----------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listappsbindedtoapiv2_1__response_apiauthinfo:
+.. _listappsbindedtoapiv2__response_apiauthinfo:
 
 .. table:: **Table 5** ApiAuthInfo
 

@@ -1,6 +1,6 @@
-:original_name: DeleteRequestThrottlingPolicyV2_1.html
+:original_name: DeleteRequestThrottlingPolicyV2.html
 
-.. _DeleteRequestThrottlingPolicyV2_1:
+.. _DeleteRequestThrottlingPolicyV2:
 
 Deleting a Request Throttling Policy
 ====================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete a request throttling policy and all binding relationships between the policy and APIs.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

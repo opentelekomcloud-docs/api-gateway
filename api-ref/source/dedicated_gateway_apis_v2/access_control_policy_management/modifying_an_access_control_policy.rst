@@ -1,6 +1,6 @@
-:original_name: UpdateAclStrategyV2_1.html
+:original_name: UpdateAclStrategyV2.html
 
-.. _UpdateAclStrategyV2_1:
+.. _UpdateAclStrategyV2:
 
 Modifying an Access Control Policy
 ==================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to modify an access control policy. Only attributes acl_name, acl_type, and acl_value can be modified.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

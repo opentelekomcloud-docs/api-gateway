@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfRequestThrottlingPolicyV2_1.html
+:original_name: ShowDetailsOfRequestThrottlingPolicyV2.html
 
-.. _ShowDetailsOfRequestThrottlingPolicyV2_1:
+.. _ShowDetailsOfRequestThrottlingPolicyV2:
 
 Querying Details of a Request Throttling Policy
 ===============================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the details of a request throttling policy.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

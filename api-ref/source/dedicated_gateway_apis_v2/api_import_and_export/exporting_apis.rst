@@ -1,6 +1,6 @@
-:original_name: ExportApiDefinitionsV2_1.html
+:original_name: ExportApiDefinitionsV2.html
 
-.. _ExportApiDefinitionsV2_1:
+.. _ExportApiDefinitionsV2:
 
 Exporting APIs
 ==============
@@ -8,7 +8,12 @@ Exporting APIs
 Function
 --------
 
-This API is used to export APIs in a specified API group. The content of the exported file complies with the Swagger standard. For details about the custom extended fields of APIG, see section "Importing and Exporting APIs: Extended Definition" in the Developer Guide.
+This API is used to export APIs in a specified API group. The content of the exported file complies with the Swagger standard. For details about the custom extended fields of APIG, see section "Extended Definition" in the User Guide.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -37,7 +42,6 @@ POST /v2/{project_id}/apigw/instances/{instance_id}/openapi/export
    |                 |                 |                 | Enumeration values: |
    |                 |                 |                 |                     |
    |                 |                 |                 | -  **2.0**          |
-   |                 |                 |                 |                     |
    |                 |                 |                 | -  **3.0**          |
    +-----------------+-----------------+-----------------+---------------------+
 
@@ -64,11 +68,8 @@ Request Parameters
    | define          | No              | String           | Definition scope of the APIs to be exported:                                                                                                                          |
    |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  spec: basic definitions, including only the frontend definitions.                                                                                                  |
-   |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  proxy: full definitions, including the frontend and backend definitions.                                                                                           |
-   |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  all: extended definitions, including the frontend and backend definitions as well as request throttling policies, access control policies, and custom authorizers. |
-   |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  dev: development definitions, including the frontend and backend definitions of APIs that have not been published.                                                 |
    |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | Default: **spec**                                                                                                                                                     |
@@ -76,11 +77,8 @@ Request Parameters
    |                 |                 |                  | Enumeration values:                                                                                                                                                   |
    |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  **spec**                                                                                                                                                           |
-   |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  **proxy**                                                                                                                                                          |
-   |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  **all**                                                                                                                                                            |
-   |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  **dev**                                                                                                                                                            |
    +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | type            | No              | String           | Format for exporting API definitions.                                                                                                                                 |
@@ -90,9 +88,7 @@ Request Parameters
    |                 |                 |                  | Enumeration values:                                                                                                                                                   |
    |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  **json**                                                                                                                                                           |
-   |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  **yaml**                                                                                                                                                           |
-   |                 |                 |                  |                                                                                                                                                                       |
    |                 |                 |                  | -  **yml**                                                                                                                                                            |
    +-----------------+-----------------+------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | version         | No              | String           | Version number of the APIs after exporting. The default value is the current date and time.                                                                           |

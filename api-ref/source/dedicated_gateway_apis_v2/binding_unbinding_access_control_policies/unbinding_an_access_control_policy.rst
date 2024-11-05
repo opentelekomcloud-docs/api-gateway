@@ -1,6 +1,6 @@
-:original_name: DeleteApiAclBindingV2_1.html
+:original_name: DeleteApiAclBindingV2.html
 
-.. _DeleteApiAclBindingV2_1:
+.. _DeleteApiAclBindingV2:
 
 Unbinding an Access Control Policy
 ==================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to unbind an access control policy from an API.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

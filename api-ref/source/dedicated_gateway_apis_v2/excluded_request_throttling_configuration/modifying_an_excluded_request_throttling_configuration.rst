@@ -1,6 +1,6 @@
-:original_name: UpdateSpecialThrottlingConfigurationV2_0.html
+:original_name: UpdateSpecialThrottlingConfigurationV2.html
 
-.. _UpdateSpecialThrottlingConfigurationV2_0:
+.. _UpdateSpecialThrottlingConfigurationV2:
 
 Modifying an Excluded Request Throttling Configuration
 ======================================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to modify an excluded configuration of a request throttling policy.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

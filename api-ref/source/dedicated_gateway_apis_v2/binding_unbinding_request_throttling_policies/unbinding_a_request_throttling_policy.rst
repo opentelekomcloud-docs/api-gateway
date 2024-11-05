@@ -1,6 +1,6 @@
-:original_name: DisassociateRequestThrottlingPolicyV2_1.html
+:original_name: DisassociateRequestThrottlingPolicyV2.html
 
-.. _DisassociateRequestThrottlingPolicyV2_1:
+.. _DisassociateRequestThrottlingPolicyV2:
 
 Unbinding a Request Throttling Policy
 =====================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to unbind a request throttling policy from an API.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
