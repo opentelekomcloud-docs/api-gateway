@@ -8,7 +8,7 @@ Why Doesn't Modification of the backend_timeout Parameter Take Effect?
 Problem Description
 -------------------
 
-Modification of the **backend_timeout** parameter in a dedicated gateway does not take effect.
+Modification of the **backend_timeout** parameter in gateways does not take effect.
 
 Possible Causes
 ---------------

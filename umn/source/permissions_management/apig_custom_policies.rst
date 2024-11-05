@@ -1,22 +1,18 @@
-:original_name: apig-custom-policy.html
+:original_name: apig_03_0051.html
 
-.. _apig-custom-policy:
+.. _apig_03_0051:
 
 APIG Custom Policies
 ====================
 
-Custom policies can be created to supplement the system-defined policies of APIG. For the actions that can be added to custom policies, see section "Permissions Policies and Supported Actions" in the *API Gateway API Reference*.
+Custom policies can be created to supplement the system-defined policies of APIG. For the actions that can be added to custom policies, see .
 
 You can create custom policies using one of the following methods:
 
 -  Visual editor: Select cloud services, actions, resources, and request conditions. This does not require knowledge of policy syntax.
 -  JSON: Edit JSON policies from scratch or based on an existing policy.
 
-For details, see section "Creating a Custom Policy" in the *Identity and Access Management User Guide*. The following section contains examples of common APIG custom policies.
-
-.. note::
-
-   Only dedicated API gateways support system-defined policies and custom policies.
+For operation details, see section "Creating a Custom Policy" in the *Identity and Access Management User Guide*. The following section contains examples of common APIG custom policies.
 
 Example Custom Policies
 -----------------------
@@ -49,13 +45,16 @@ Example Custom Policies
    .. code-block::
 
       {
-              "Version": "1.1",
-              "Statement": [
-                      {
-                              "Effect": "Deny",
-                              "Action": [
-                                      "apig:groups:create"
-                              ]
-                      }
-              ]
+          "Version": "1.1",
+          "Statement": [
+              {
+                  "Effect": "Allow",
+                  "Action": [
+                      "
+                           apig:apis:create
+                           apig:apis:debug
+                       "
+                  ]
+              }
+          ]
       }

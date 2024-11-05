@@ -1,110 +1,90 @@
-:original_name: en-us_topic_0080101678.html
+:original_name: apig_0080101678.html
 
-.. _en-us_topic_0080101678:
+.. _apig_0080101678:
 
 Creating an API
 ===============
 
-Create an API with the following steps:
+Procedure:
 
-#. :ref:`Setting Basic Information <en-us_topic_0080101678__en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section8731554122615>`
-#. :ref:`Defining API Request <en-us_topic_0080101678__en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section79773019167>`
-#. :ref:`Defining Backend Service <en-us_topic_0080101678__en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section16484051169>`
-#. :ref:`Defining Responses <en-us_topic_0080101678__en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section14735012301>`
+#. :ref:`Configuring Frontend Settings <apig_0080101678__en-us_topic_0000001174497011_en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section8731554122615>`
+#. :ref:`Configuring Backend Settings <apig_0080101678__en-us_topic_0000001174497011_en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section16484051169>`
 
-.. _en-us_topic_0080101678__en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section8731554122615:
+.. _apig_0080101678__en-us_topic_0000001174497011_en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section8731554122615:
 
-Setting Basic Information
--------------------------
+Configuring Frontend Settings
+-----------------------------
 
-#. In the navigation pane, choose **API Publishing** > **APIs**.
-#. Click **Create API** and set the basic information.
+#. In the navigation pane, choose **API Management** > **APIs**.
+#. Click **Create API** > **Create API** and configure the frontend.
 
-   .. table:: **Table 1** Setting basic information
+   .. table:: **Table 1** Frontend definition
 
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter                         | Description                                                                                                                                                       |
-      +===================================+===================================================================================================================================================================+
-      | Name                              | API name. It is recommended that you enter a name based on naming rules to facilitate search.                                                                     |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | API Group                         | By default, the group created in :ref:`Creating an API Group <apig-en-ug-180307003>` is selected.                                                                 |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Gateway Response                  | Select a response to be displayed if APIG fails to process an API request.                                                                                        |
-      |                                   |                                                                                                                                                                   |
-      |                                   | The default gateway response is **default**.                                                                                                                      |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Visibility                        | By default, **Public** is selected.                                                                                                                               |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Security Authentication           | API authentication mode. Set this parameter to **App**.                                                                                                           |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Simple Authentication             | If you enable this option, APIG verifies only the AppCode and the request signature does not need to be verified. For this example, enable simple authentication. |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Tag Name                          | Classification attribute used to quickly identify the API from other APIs.                                                                                        |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Description                       | Description of the API.                                                                                                                                           |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                                         |
+      +===================================+=====================================================================================================================================+
+      | Name                              | API name. It is recommended that you enter a name based on naming rules to facilitate search.                                       |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+      | Group                             | By default, the group created in :ref:`Creating an API Group <apig-ug-180307003>` is selected.                                      |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+      | URL                               | **Method**: Request method of the API. Set this parameter to **POST**.                                                              |
+      |                                   |                                                                                                                                     |
+      |                                   | **Protocol**: Set this parameter to **HTTPS**.                                                                                      |
+      |                                   |                                                                                                                                     |
+      |                                   | Subdomain name: The subdomain automatically allocated to the API group created in :ref:`Creating an API Group <apig-ug-180307003>`. |
+      |                                   |                                                                                                                                     |
+      |                                   | **Path**: Path for requesting the API.                                                                                              |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+      | Gateway Response                  | Select a response to be displayed if API Gateway fails to process an API request.                                                   |
+      |                                   |                                                                                                                                     |
+      |                                   | The default gateway response is **default**.                                                                                        |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+      | Matching                          | By default, **Exact match** is selected.                                                                                            |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+      | Tags                              | Classification attribute used to quickly identify the API from other APIs.                                                          |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Description of the API.                                                                                                             |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+
 
-#. Click **Next**.
+#. Configure security settings based on the following table.
 
-.. _en-us_topic_0080101678__en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section79773019167:
+   .. table:: **Table 2** API request definition
 
-Defining API Request
---------------------
-
-#. On the **Define API Request** page, set the request information.
-
-   .. table:: **Table 2** Parameters for defining API requests
-
-      +-------------+------------------------------------------------------------------------------------------------------------------------+
-      | Parameter   | Description                                                                                                            |
-      +=============+========================================================================================================================+
-      | Domain Name | The subdomain automatically allocated to the API group created in :ref:`Creating an API Group <apig-en-ug-180307003>`. |
-      +-------------+------------------------------------------------------------------------------------------------------------------------+
-      | Protocol    | Request protocol of the API. Set this parameter to **HTTPS**.                                                          |
-      +-------------+------------------------------------------------------------------------------------------------------------------------+
-      | Path        | The path for requesting the API.                                                                                       |
-      +-------------+------------------------------------------------------------------------------------------------------------------------+
-      | Matching    | By default, **Exact match** is selected.                                                                               |
-      +-------------+------------------------------------------------------------------------------------------------------------------------+
-      | Method      | Request method of the API. Set this parameter to **POST**.                                                             |
-      +-------------+------------------------------------------------------------------------------------------------------------------------+
-      | CORS        | For this example, disable this option.                                                                                 |
-      +-------------+------------------------------------------------------------------------------------------------------------------------+
+      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter             | Description                                                                                                                                                              |
+      +=======================+==========================================================================================================================================================================+
+      | Authentication Mode   | API authentication mode. Set this parameter to **App**.                                                                                                                  |
+      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Simple Authentication | If you enable this option, API Gateway verifies only the AppCode and the request signature does not need to be verified. For this example, enable simple authentication. |
+      +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. Click **Next**.
 
-.. _en-us_topic_0080101678__en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section16484051169:
+.. _apig_0080101678__en-us_topic_0000001174497011_en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section16484051169:
 
-Defining Backend Service
-------------------------
+Configuring Backend Settings
+----------------------------
 
-#. On the **Define Backend Request** page, set the backend service information.
-#. Select a backend service type. For this example, select **HTTP/HTTPS**.
+#. On the **Backend Configuration** page, set the backend service information.
+#. Select a backend service type. For this example, select **HTTP&HTTPS**.
 
-   .. table:: **Table 3** Parameters for defining an HTTP/HTTPS backend service
+   .. table:: **Table 3** HTTP&HTTPS backend service definition
 
-      +-----------------+----------------------------------------------------------------------------------------------------------------+
-      | Parameter       | Description                                                                                                    |
-      +=================+================================================================================================================+
-      | Protocol        | Set this parameter to **HTTP**.                                                                                |
-      +-----------------+----------------------------------------------------------------------------------------------------------------+
-      | Method          | Request method of the API. Set this parameter to **POST**.                                                     |
-      +-----------------+----------------------------------------------------------------------------------------------------------------+
-      | VPC Channel     | Determine whether the backend service will be accessed using a VPC channel. For this example, select **Skip**. |
-      +-----------------+----------------------------------------------------------------------------------------------------------------+
-      | Backend Address | Address of the backend service.                                                                                |
-      +-----------------+----------------------------------------------------------------------------------------------------------------+
-      | Path            | Path of the backend service.                                                                                   |
-      +-----------------+----------------------------------------------------------------------------------------------------------------+
-      | Timeout         | Backend service request timeout. Default value: 5000 ms.                                                       |
-      +-----------------+----------------------------------------------------------------------------------------------------------------+
-
-#. Click **Next**.
-
-.. _en-us_topic_0080101678__en-us_topic_0080101678_en-us_topic_0165566289_en-us_topic_0080101678_section14735012301:
-
-Defining Responses
-------------------
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                             |
+      +===================================+=========================================================================================================================+
+      | Load Balance Channel              | Determine whether the backend service will be accessed using a load balance channel. For this example, select **Skip**. |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+      | URL                               | **Method**: Request method of the API. Set this parameter to **POST**.                                                  |
+      |                                   |                                                                                                                         |
+      |                                   | **Protocol**: Set this parameter to **HTTP**.                                                                           |
+      |                                   |                                                                                                                         |
+      |                                   | **Backend Address**: Address of the backend service.                                                                    |
+      |                                   |                                                                                                                         |
+      |                                   | **Path**: Path of the backend service.                                                                                  |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+
+      | Timeout                           | Backend service request timeout. Default value: 5000 ms.                                                                |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------+
 
 #. On the **Define Response** page, set the responses.
 

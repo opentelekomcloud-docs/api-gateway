@@ -1,6 +1,6 @@
-:original_name: apig-zh-pd-180307004.html
+:original_name: apig-pd-180307004.html
 
-.. _apig-zh-pd-180307004:
+.. _apig-pd-180307004:
 
 Basic Concepts
 ==============
@@ -32,7 +32,7 @@ A variable that is manageable and specific to an environment. You can create var
 Request Throttling
 ------------------
 
-Controls the number of times APIs can be called by a user, an app, or an IP address during a specific period to protect backend services.
+Controls the number of times APIs can be called by a user, app (credential), or IP address during a specific period to protect backend services.
 
 Request throttling can be accurate to the minute and second.
 
@@ -41,8 +41,8 @@ Access Control
 
 Access control policies are one of the security measures provided by APIG. They allow or deny API access from specific IP addresses or accounts.
 
-App
----
+App (Credential)
+----------------
 
 An entity that requests for APIs. An app can be authorized to access multiple APIs, and multiple apps can be authorized to access the same API.
 
@@ -53,8 +53,8 @@ Consists of a key and secret, which are used by backend services to verify the i
 
 When an API bound with a signature key is called, API Gateway adds signature information to the API requests. The backend service of the API signs the requests in the same way, and verifies the identity of API Gateway by checking whether the signature is consistent with that in the **Authorization** header sent by API Gateway.
 
-VPC Channel
------------
+VPC Channel (Load Balance Channel)
+----------------------------------
 
 A method for accessing VPC resources from API Gateway, allowing you to selectively expose backend services deployed in VPCs to third-party users.
 

@@ -5,4 +5,7 @@
 How Do I Define Response Codes for an API?
 ==========================================
 
-API responses are defined by backend services (API providers). API Gateway (APIG) only transparently transmits responses to API callers.
+There are two types of responses:
+
+-  Gateway response codes: returned by the gateway for API requests that are throttled, denied, or failed in authentication. For details about these response codes, see section "Creating a Gateway Response" in the *API Gateway User Guide*.
+-  Backend service responses: defined by backend API services (API providers) and transparently transmitted by APIG.

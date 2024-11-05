@@ -1,6 +1,6 @@
-:original_name: apig-en-faq-180606013.html
+:original_name: apig-faq-180606013.html
 
-.. _apig-en-faq-180606013:
+.. _apig-faq-180606013:
 
 What Is the Maximum Size of an API Request Package?
 ===================================================

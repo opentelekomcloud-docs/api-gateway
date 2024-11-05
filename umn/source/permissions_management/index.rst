@@ -1,12 +1,12 @@
-:original_name: apig-ug-190529107.html
+:original_name: apig_03_0049.html
 
-.. _apig-ug-190529107:
+.. _apig_03_0049:
 
 Permissions Management
 ======================
 
--  :ref:`Creating a User and Granting APIG Permissions <apig-ug-190529109>`
--  :ref:`APIG Custom Policies <apig-custom-policy>`
+-  :ref:`Creating a User and Granting APIG Permissions <apig_03_0050>`
+-  :ref:`APIG Custom Policies <apig_03_0051>`
 
 .. toctree::
    :maxdepth: 1

@@ -1,19 +1,19 @@
-:original_name: apig-ug-cmccfaq.html
+:original_name: apig_03_0079.html
 
-.. _apig-ug-cmccfaq:
+.. _apig_03_0079:
 
 FAQs
 ====
 
--  :ref:`Common FAQs <apig-faq-190803>`
+-  :ref:`Common FAQs <index>`
 -  :ref:`API Creation <apig-faq-create>`
--  :ref:`API Calling <apig-en-faq-180919017>`
+-  :ref:`API Calling <apig-faq-180919017>`
 -  :ref:`API Authentication <apig-faq-auth>`
 -  :ref:`API Control Policies <apig-faq-0002>`
--  :ref:`API Publishing <apig-en-faq-180919016>`
+-  :ref:`API Publishing <apig-faq-180919016>`
 -  :ref:`API Import and Export <apig-faq-2005035>`
--  :ref:`API Security <apig-en-faq-180919015>`
--  :ref:`Other FAQs <apig-en-faq-180919014>`
+-  :ref:`API Security <apig-faq-180919015>`
+-  :ref:`Other FAQs <apig-faq-180919014>`
 
 .. toctree::
    :maxdepth: 1
