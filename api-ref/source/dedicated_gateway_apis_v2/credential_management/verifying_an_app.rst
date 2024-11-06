@@ -1,6 +1,6 @@
-:original_name: CheckAppV2_1.html
+:original_name: CheckAppV2.html
 
-.. _CheckAppV2_1:
+.. _CheckAppV2:
 
 Verifying an App
 ================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is provided for users (excluding app owner) to check whether an app exists. Only the basic information, such as ID, name, and remark, of the app is displayed.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

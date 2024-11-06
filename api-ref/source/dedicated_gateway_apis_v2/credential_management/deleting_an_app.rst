@@ -1,6 +1,6 @@
-:original_name: DeleteAppV2_1.html
+:original_name: DeleteAppV2.html
 
-.. _DeleteAppV2_1:
+.. _DeleteAppV2:
 
 Deleting an App
 ===============
@@ -11,6 +11,11 @@ Function
 This API is used to delete an app.
 
 Deleted apps cannot call APIs.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

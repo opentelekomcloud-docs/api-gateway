@@ -1,6 +1,6 @@
-:original_name: DeleteApiGroupV2_1.html
+:original_name: DeleteApiGroupV2.html
 
-.. _DeleteApiGroupV2_1:
+.. _DeleteApiGroupV2:
 
 Deleting an API Group
 =====================
@@ -13,6 +13,11 @@ This API is used to delete an API group.
 If the group to delete contains APIs, take the APIs offline and delete them.
 
 All resources (independent domain names and SSL certificates) directly or indirectly associated with the group will be deleted. The operation will also unbind the external domain names from the subdomain name based on the CNAME resolution mode.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -78,9 +83,20 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
-**Status code: 500**
+**Status code: 412**
 
 .. table:: **Table 6** Response body parameters
+
+   ========== ====== ==================
+   Parameter  Type   Description
+   ========== ====== ==================
+   error_code String Error code.
+   error_msg  String Error description.
+   ========== ====== ==================
+
+**Status code: 500**
+
+.. table:: **Table 7** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -130,6 +146,17 @@ Not Found
      "error_msg" : "API group c77f5e81d9cb4424bf704ef2b0ac7600 does not exist"
    }
 
+**Status code: 412**
+
+PreconditionFailed
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.3415",
+     "error_msg" : "The API group cannot be deleted because it contains APIs,id:47eaed4659db4e99ba2e1b642d5d1323"
+   }
+
 **Status code: 500**
 
 Internal Server Error
@@ -151,6 +178,7 @@ Status Code Description
 401         Unauthorized
 403         Forbidden
 404         Not Found
+412         PreconditionFailed
 500         Internal Server Error
 =========== =====================
 

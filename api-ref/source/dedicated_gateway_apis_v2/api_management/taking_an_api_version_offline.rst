@@ -1,6 +1,6 @@
-:original_name: DeleteApiByVersionIdV2_1.html
+:original_name: DeleteApiByVersionIdV2.html
 
-.. _DeleteApiByVersionIdV2_1:
+.. _DeleteApiByVersionIdV2:
 
 Taking an API Version Offline
 =============================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to remove an effective version of an API. The removed API cannot be called in the environment in which it took effect.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

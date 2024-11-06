@@ -1,16 +1,16 @@
-:original_name: AclPolicyManagement_1.html
+:original_name: AclPolicyManagement.html
 
-.. _AclPolicyManagement_1:
+.. _AclPolicyManagement:
 
 Access Control Policy Management
 ================================
 
--  :ref:`Creating an Access Control Policy <createaclstrategyv2_1>`
--  :ref:`Modifying an Access Control Policy <updateaclstrategyv2_1>`
--  :ref:`Deleting an Access Control Policy <deleteaclv2_1>`
--  :ref:`Deleting Multiple Access Control Policies <batchdeleteaclv2_1>`
--  :ref:`Querying Details of an Access Control Policy <showdetailsofaclpolicyv2_1>`
--  :ref:`Querying Access Control Policies <listaclstrategiesv2_1>`
+-  :ref:`Creating an Access Control Policy <createaclstrategyv2>`
+-  :ref:`Modifying an Access Control Policy <updateaclstrategyv2>`
+-  :ref:`Deleting an Access Control Policy <deleteaclv2>`
+-  :ref:`Deleting Multiple Access Control Policies <batchdeleteaclv2>`
+-  :ref:`Querying Details of an Access Control Policy <showdetailsofaclpolicyv2>`
+-  :ref:`Querying Access Control Policies <listaclstrategiesv2>`
 
 .. toctree::
    :maxdepth: 1

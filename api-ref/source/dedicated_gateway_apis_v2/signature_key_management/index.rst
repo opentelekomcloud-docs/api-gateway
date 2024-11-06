@@ -1,14 +1,14 @@
-:original_name: SignatureKeyManagement_1.html
+:original_name: SignatureKeyManagement.html
 
-.. _SignatureKeyManagement_1:
+.. _SignatureKeyManagement:
 
 Signature Key Management
 ========================
 
--  :ref:`Creating a Signature Key <createsignaturekeyv2_1>`
--  :ref:`Modifying a Signature Key <updatesignaturekeyv2_1>`
--  :ref:`Deleting a Signature Key <deletesignaturekeyv2_1>`
--  :ref:`Querying Signature Keys <listsignaturekeysv2_1>`
+-  :ref:`Creating a Signature Key <createsignaturekeyv2>`
+-  :ref:`Modifying a Signature Key <updatesignaturekeyv2>`
+-  :ref:`Deleting a Signature Key <deletesignaturekeyv2>`
+-  :ref:`Querying Signature Keys <listsignaturekeysv2>`
 
 .. toctree::
    :maxdepth: 1

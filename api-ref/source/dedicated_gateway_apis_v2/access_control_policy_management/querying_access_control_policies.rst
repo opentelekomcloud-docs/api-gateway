@@ -1,6 +1,6 @@
-:original_name: ListAclStrategiesV2_1.html
+:original_name: ListAclStrategiesV2.html
 
-.. _ListAclStrategiesV2_1:
+.. _ListAclStrategiesV2:
 
 Querying Access Control Policies
 ================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query all the access control policies.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -79,17 +84,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                                  | Description                                          |
-   +===========+=======================================================================================================+======================================================+
-   | size      | Integer                                                                                               | Length of the returned resource list.                |
-   +-----------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                                  | Number of resources that match the query conditions. |
-   +-----------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | acls      | Array of :ref:`ApiAclInfoWithBindNum <listaclstrategiesv2_1__response_apiaclinfowithbindnum>` objects | Access control policy list.                          |
-   +-----------+-------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                                | Description                                          |
+   +===========+=====================================================================================================+======================================================+
+   | size      | Integer                                                                                             | Length of the returned resource list.                |
+   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                                | Number of resources that match the query conditions. |
+   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | acls      | Array of :ref:`ApiAclInfoWithBindNum <listaclstrategiesv2__response_apiaclinfowithbindnum>` objects | Access control policy list.                          |
+   +-----------+-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listaclstrategiesv2_1__response_apiaclinfowithbindnum:
+.. _listaclstrategiesv2__response_apiaclinfowithbindnum:
 
 .. table:: **Table 5** ApiAclInfoWithBindNum
 

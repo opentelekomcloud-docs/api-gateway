@@ -1,6 +1,6 @@
-:original_name: DeleteSpecialThrottlingConfigurationV2_0.html
+:original_name: DeleteSpecialThrottlingConfigurationV2.html
 
-.. _DeleteSpecialThrottlingConfigurationV2_0:
+.. _DeleteSpecialThrottlingConfigurationV2:
 
 Deleting an Excluded Request Throttling Configuration
 =====================================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete an excluded configuration of a request throttling policy.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

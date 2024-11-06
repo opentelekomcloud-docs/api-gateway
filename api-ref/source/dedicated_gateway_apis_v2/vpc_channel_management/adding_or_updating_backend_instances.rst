@@ -1,6 +1,6 @@
-:original_name: AddingBackendInstancesV2_1.html
+:original_name: AddingBackendInstancesV2.html
 
-.. _AddingBackendInstancesV2_1:
+.. _AddingBackendInstancesV2:
 
 Adding or Updating Backend Instances
 ====================================
@@ -11,6 +11,11 @@ Function
 This API is used to add backend instances to a VPC channel.
 
 If a backend instance with the specified address already exists, the instance information is updated. If the request body contains multiple backend instance definitions with the same address, the first definition is used.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -42,13 +47,13 @@ Request Parameters
 
 .. table:: **Table 3** Request body parameters
 
-   +-----------+-----------+-------------------------------------------------------------------------------------+--------------------+
-   | Parameter | Mandatory | Type                                                                                | Description        |
-   +===========+===========+=====================================================================================+====================+
-   | members   | Yes       | Array of :ref:`MemberInfo <addingbackendinstancesv2_1__request_memberinfo>` objects | Backend instances. |
-   +-----------+-----------+-------------------------------------------------------------------------------------+--------------------+
+   +-----------+-----------+-----------------------------------------------------------------------------------+--------------------+
+   | Parameter | Mandatory | Type                                                                              | Description        |
+   +===========+===========+===================================================================================+====================+
+   | members   | Yes       | Array of :ref:`MemberInfo <addingbackendinstancesv2__request_memberinfo>` objects | Backend instances. |
+   +-----------+-----------+-----------------------------------------------------------------------------------+--------------------+
 
-.. _addingbackendinstancesv2_1__request_memberinfo:
+.. _addingbackendinstancesv2__request_memberinfo:
 
 .. table:: **Table 4** MemberInfo
 
@@ -117,17 +122,17 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   +-----------+--------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                       | Description                                          |
-   +===========+============================================================================================+======================================================+
-   | size      | Integer                                                                                    | Length of the returned resource list.                |
-   +-----------+--------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                       | Number of resources that match the query conditions. |
-   +-----------+--------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | members   | Array of :ref:`VpcMemberInfo <addingbackendinstancesv2_1__response_vpcmemberinfo>` objects | Cloud server list.                                   |
-   +-----------+--------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                     | Description                                          |
+   +===========+==========================================================================================+======================================================+
+   | size      | Integer                                                                                  | Length of the returned resource list.                |
+   +-----------+------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                     | Number of resources that match the query conditions. |
+   +-----------+------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | members   | Array of :ref:`VpcMemberInfo <addingbackendinstancesv2__response_vpcmemberinfo>` objects | Cloud server list.                                   |
+   +-----------+------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _addingbackendinstancesv2_1__response_vpcmemberinfo:
+.. _addingbackendinstancesv2__response_vpcmemberinfo:
 
 .. table:: **Table 6** VpcMemberInfo
 

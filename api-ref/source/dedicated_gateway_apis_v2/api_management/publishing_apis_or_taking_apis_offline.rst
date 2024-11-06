@@ -1,6 +1,6 @@
-:original_name: BatchPublishOrOfflineApiV2_1.html
+:original_name: BatchPublishOrOfflineApiV2.html
 
-.. _BatchPublishOrOfflineApiV2_1:
+.. _BatchPublishOrOfflineApiV2:
 
 Publishing APIs or Taking APIs Offline
 ======================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to publish multiple APIs in an environment or to remove multiple APIs from the environment in which they have been published.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -69,15 +74,15 @@ Response Parameters
 
 .. table:: **Table 5** Response body parameters
 
-   +-----------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------+
-   | Parameter | Type                                                                                       | Description                                                        |
-   +===========+============================================================================================+====================================================================+
-   | success   | Array of :ref:`PublishResp <batchpublishorofflineapiv2_1__response_publishresp>` objects   | Message for successful API publication or taking offline.          |
-   +-----------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------+
-   | failure   | Array of :ref:`BatchFailure <batchpublishorofflineapiv2_1__response_batchfailure>` objects | Error message and APIs that fail to be published or taken offline. |
-   +-----------+--------------------------------------------------------------------------------------------+--------------------------------------------------------------------+
+   +-----------+------------------------------------------------------------------------------------------+--------------------------------------------------------------------+
+   | Parameter | Type                                                                                     | Description                                                        |
+   +===========+==========================================================================================+====================================================================+
+   | success   | Array of :ref:`PublishResp <batchpublishorofflineapiv2__response_publishresp>` objects   | Message for successful API publication or taking offline.          |
+   +-----------+------------------------------------------------------------------------------------------+--------------------------------------------------------------------+
+   | failure   | Array of :ref:`BatchFailure <batchpublishorofflineapiv2__response_batchfailure>` objects | Error message and APIs that fail to be published or taken offline. |
+   +-----------+------------------------------------------------------------------------------------------+--------------------------------------------------------------------+
 
-.. _batchpublishorofflineapiv2_1__response_publishresp:
+.. _batchpublishorofflineapiv2__response_publishresp:
 
 .. table:: **Table 6** PublishResp
 
@@ -99,7 +104,7 @@ Response Parameters
    | version_id   | String | API version currently in use.                              |
    +--------------+--------+------------------------------------------------------------+
 
-.. _batchpublishorofflineapiv2_1__response_batchfailure:
+.. _batchpublishorofflineapiv2__response_batchfailure:
 
 .. table:: **Table 7** BatchFailure
 

@@ -1,6 +1,6 @@
-:original_name: DisassociateDomainV2_1.html
+:original_name: DisassociateDomainV2.html
 
-.. _DisassociateDomainV2_1:
+.. _DisassociateDomainV2:
 
 Unbinding a Domain Name
 =======================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to unbind a custom domain name from an API group.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

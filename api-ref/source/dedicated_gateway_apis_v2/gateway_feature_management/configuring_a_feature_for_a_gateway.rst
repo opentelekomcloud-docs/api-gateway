@@ -1,6 +1,6 @@
-:original_name: CreateFeatureV2_1.html
+:original_name: CreateFeatureV2.html
 
-.. _CreateFeatureV2_1:
+.. _CreateFeatureV2:
 
 Configuring a Feature for a Gateway
 ===================================
@@ -11,6 +11,11 @@ Function
 This API is used to configure a feature for a gateway.
 
 For details about the supported features and configuration examples, see "Appendix" > "Supported Features" in this document.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

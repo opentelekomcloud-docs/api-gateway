@@ -1,6 +1,6 @@
-:original_name: ListApisBindedToRequestThrottlingPolicyV2_1.html
+:original_name: ListApisBindedToRequestThrottlingPolicyV2.html
 
-.. _ListApisBindedToRequestThrottlingPolicyV2_1:
+.. _ListApisBindedToRequestThrottlingPolicyV2:
 
 Querying APIs Bound with a Request Throttling Policy
 ====================================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the APIs to which a specified request throttling policy has been bound.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -71,17 +76,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                                          | Description                                          |
-   +===========+===============================================================================================================+======================================================+
-   | size      | Integer                                                                                                       | Length of the returned resource list.                |
-   +-----------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                                          | Number of resources that match the query conditions. |
-   +-----------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | apis      | Array of :ref:`ApiForThrottle <listapisbindedtorequestthrottlingpolicyv2_1__response_apiforthrottle>` objects | API list.                                            |
-   +-----------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+-------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                                        | Description                                          |
+   +===========+=============================================================================================================+======================================================+
+   | size      | Integer                                                                                                     | Length of the returned resource list.                |
+   +-----------+-------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                                        | Number of resources that match the query conditions. |
+   +-----------+-------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | apis      | Array of :ref:`ApiForThrottle <listapisbindedtorequestthrottlingpolicyv2__response_apiforthrottle>` objects | API list.                                            |
+   +-----------+-------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listapisbindedtorequestthrottlingpolicyv2_1__response_apiforthrottle:
+.. _listapisbindedtorequestthrottlingpolicyv2__response_apiforthrottle:
 
 .. table:: **Table 5** ApiForThrottle
 

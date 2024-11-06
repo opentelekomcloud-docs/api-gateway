@@ -1,6 +1,6 @@
-:original_name: UpdateAppV2_1.html
+:original_name: UpdateAppV2.html
 
-.. _UpdateAppV2_1:
+.. _UpdateAppV2:
 
 Modifying an App
 ================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to modify the information about an app. Only the name and remark parameters can be modified. If the function of customizing keys and secrets is enabled, app_key and app_secret can also be modified.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

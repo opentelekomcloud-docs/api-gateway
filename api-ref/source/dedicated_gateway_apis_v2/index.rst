@@ -5,30 +5,37 @@
 Dedicated Gateway APIs (V2)
 ===========================
 
--  :ref:`API Group Management <apigroupmanagement_1>`
--  :ref:`Environment Management <envmanagement_1>`
--  :ref:`Environment Variable Management <envvariablemanagement_1>`
--  :ref:`Request Throttling Policy Management <throttlingpolicymanagement_1>`
--  :ref:`API Management <apimanagement_1>`
--  :ref:`Signature Key Management <signaturekeymanagement_1>`
--  :ref:`Binding/Unbinding Signature Keys <signaturekeybindingmanagement_1>`
--  :ref:`Binding/Unbinding Request Throttling Policies <throttlingpolicybinding_1>`
--  :ref:`Excluded Request Throttling Configuration <specialthrottlingsetting_0>`
--  :ref:`App Authorization Management <appauthoringmanagement_1>`
--  :ref:`Resource Query <resourcequery_1>`
--  :ref:`Domain Name Management <domainnamemanagement_1>`
--  :ref:`Access Control Policy Management <aclpolicymanagement_1>`
--  :ref:`Binding/Unbinding Access Control Policies <aclpolicybinding_1>`
--  :ref:`Custom Authorizer Management <customauthorizermanagement_1>`
--  :ref:`API Import and Export <apiimportexport_1>`
--  :ref:`VPC Channel Management <vpcchannelmanagement_1>`
--  :ref:`Monitoring Information Query <monitoringinfoquerying_1>`
--  :ref:`Group Response Management <groupresponsemanagement_1>`
--  :ref:`Tag Management <apigtagmanagement_1>`
--  :ref:`Gateway Feature Management <instancefeaturemanagement_1>`
--  :ref:`Configuration Management <configmanagement_1>`
--  :ref:`Gateway Management <apicinstancemanagement_1>`
--  :ref:`Credential Management <credentialmanagement_1>`
+-  :ref:`API Group Management <apigroupmanagement>`
+-  :ref:`Environment Management <envmanagement>`
+-  :ref:`Environment Variable Management <envvariablemanagement>`
+-  :ref:`Request Throttling Policy Management <throttlingpolicymanagement>`
+-  :ref:`API Management <apimanagement>`
+-  :ref:`Signature Key Management <signaturekeymanagement>`
+-  :ref:`Binding/Unbinding Signature Keys <signaturekeybindingmanagement>`
+-  :ref:`Binding/Unbinding Request Throttling Policies <throttlingpolicybinding>`
+-  :ref:`Excluded Request Throttling Configuration <specialthrottlingsetting>`
+-  :ref:`App Authorization Management <appauthoringmanagement>`
+-  :ref:`Resource Query <resourcequery>`
+-  :ref:`Domain Name Management <domainnamemanagement>`
+-  :ref:`Access Control Policy Management <aclpolicymanagement>`
+-  :ref:`Binding/Unbinding Access Control Policies <aclpolicybinding>`
+-  :ref:`Custom Authorizer Management <customauthorizermanagement>`
+-  :ref:`API Import and Export <apiimportexport>`
+-  :ref:`VPC Channel Management <vpcchannelmanagement>`
+-  :ref:`Monitoring Information Query <monitoringinfoquerying>`
+-  :ref:`Group Response Management <groupresponsemanagement>`
+-  :ref:`Tag Management <apigtagmanagement>`
+-  :ref:`Gateway Feature Management <instancefeaturemanagement>`
+-  :ref:`Configuration Management <configmanagement>`
+-  :ref:`Gateway Management <apicinstancemanagement>`
+-  :ref:`VPC Endpoint Management <vpcendpointsmanagement>`
+-  :ref:`Gateway Tag Management <gatewaytagmanagement>`
+-  :ref:`Microservice Center Management <microservicecentermanagement>`
+-  :ref:`SSL Certificate Management <sslcertificatemanagement>`
+-  :ref:`Plug-in Management <pluginmanagement>`
+-  :ref:`Credential Management <credentialmanagement>`
+-  :ref:`Credential Quota Management <credentialquotapoliciesmanagement>`
+-  :ref:`Asynchronous Task Management <asynchronoustaskmanagement>`
 
 .. toctree::
    :maxdepth: 1
@@ -57,4 +64,11 @@ Dedicated Gateway APIs (V2)
    gateway_feature_management/index
    configuration_management/index
    gateway_management/index
+   vpc_endpoint_management/index
+   gateway_tag_management/index
+   microservice_center_management/index
+   ssl_certificate_management/index
+   plug-in_management/index
    credential_management/index
+   credential_quota_management/index
+   asynchronous_task_management/index

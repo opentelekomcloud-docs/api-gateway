@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfInstanceProgressV2_1.html
+:original_name: ShowDetailsOfInstanceProgressV2.html
 
-.. _ShowDetailsOfInstanceProgressV2_1:
+.. _ShowDetailsOfInstanceProgressV2:
 
 Querying the Creation Progress of a Dedicated Gateway
 =====================================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the creation progress of a dedicated gateway.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -53,29 +58,21 @@ Response Parameters
    |                       |                       | Enumeration values:                                                                    |
    |                       |                       |                                                                                        |
    |                       |                       | -  **30**                                                                              |
-   |                       |                       |                                                                                        |
    |                       |                       | -  **50**                                                                              |
-   |                       |                       |                                                                                        |
    |                       |                       | -  **80**                                                                              |
-   |                       |                       |                                                                                        |
    |                       |                       | -  **90**                                                                              |
-   |                       |                       |                                                                                        |
    |                       |                       | -  **100**                                                                             |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------+
    | status                | String                | Gateway creation status.                                                               |
    |                       |                       |                                                                                        |
    |                       |                       | -  creating                                                                            |
-   |                       |                       |                                                                                        |
    |                       |                       | -  success                                                                             |
-   |                       |                       |                                                                                        |
    |                       |                       | -  failed                                                                              |
    |                       |                       |                                                                                        |
    |                       |                       | Enumeration values:                                                                    |
    |                       |                       |                                                                                        |
    |                       |                       | -  **creating**                                                                        |
-   |                       |                       |                                                                                        |
    |                       |                       | -  **success**                                                                         |
-   |                       |                       |                                                                                        |
    |                       |                       | -  **failed**                                                                          |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------+
    | error_code            | String                | Error code.                                                                            |

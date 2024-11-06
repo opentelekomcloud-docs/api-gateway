@@ -1,6 +1,6 @@
-:original_name: CreateEnvironmentV2_1.html
+:original_name: CreateEnvironmentV2.html
 
-.. _CreateEnvironmentV2_1:
+.. _CreateEnvironmentV2:
 
 Creating an Environment
 =======================
@@ -13,6 +13,11 @@ API providers can publish an API in different environments, such as the developm
 API information, such as the version, request address, and even request message, varies depending on the environment in which an API is published. For example, v1.0 of an API is published in the production environment, v1.1 in the test environment, and v1.2 in the development environment.
 
 APIG provides environment management, enabling you to access APIG in different scenarios at minimal costs.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

@@ -1,16 +1,16 @@
-:original_name: AclPolicyBinding_1.html
+:original_name: AclPolicyBinding.html
 
-.. _AclPolicyBinding_1:
+.. _AclPolicyBinding:
 
 Binding/Unbinding Access Control Policies
 =========================================
 
--  :ref:`Binding an Access Control Policy to an API <createapiaclbindingv2_1>`
--  :ref:`Unbinding an Access Control Policy <deleteapiaclbindingv2_1>`
--  :ref:`Unbinding Access Control Policies <batchdeleteapiaclbindingv2_1>`
--  :ref:`Querying APIs Bound with an Access Control Policy <listapisbindedtoaclpolicyv2_1>`
--  :ref:`Querying APIs Not Bound with an Access Control Policy <listapisunbindedtoaclpolicyv2_1>`
--  :ref:`Querying Access Control Policies Bound to an API <listaclpolicybindedtoapiv2_1>`
+-  :ref:`Binding an Access Control Policy to an API <createapiaclbindingv2>`
+-  :ref:`Unbinding an Access Control Policy <deleteapiaclbindingv2>`
+-  :ref:`Unbinding Access Control Policies <batchdeleteapiaclbindingv2>`
+-  :ref:`Querying APIs Bound with an Access Control Policy <listapisbindedtoaclpolicyv2>`
+-  :ref:`Querying APIs Not Bound with an Access Control Policy <listapisunbindedtoaclpolicyv2>`
+-  :ref:`Querying Access Control Policies Bound to an API <listaclpolicybindedtoapiv2>`
 
 .. toctree::
    :maxdepth: 1

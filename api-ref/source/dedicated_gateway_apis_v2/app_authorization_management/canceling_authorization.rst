@@ -1,6 +1,6 @@
-:original_name: CancelingAuthorizationV2_1.html
+:original_name: CancelingAuthorizationV2.html
 
-.. _CancelingAuthorizationV2_1:
+.. _CancelingAuthorizationV2:
 
 Canceling Authorization
 =======================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to cancel the authorization of an app for accessing an API. After this operation, the app can no longer call the API.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

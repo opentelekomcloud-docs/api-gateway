@@ -1,6 +1,6 @@
-:original_name: CreateRequestThrottlingPolicyV2_1.html
+:original_name: CreateRequestThrottlingPolicyV2.html
 
-.. _CreateRequestThrottlingPolicyV2_1:
+.. _CreateRequestThrottlingPolicyV2:
 
 Creating a Request Throttling Policy
 ====================================
@@ -9,6 +9,11 @@ Function
 --------
 
 After an API goes online, the system attaches a request throttling policy to it by default. The API provider can change the request throttling policy based on the service capabilities and load of the API. A request throttling policy restricts the maximum number of times an API can be called within a specified period.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

@@ -1,6 +1,6 @@
-:original_name: ListEnvironmentVariablesV2_1.html
+:original_name: ListEnvironmentVariablesV2.html
 
-.. _ListEnvironmentVariablesV2_1:
+.. _ListEnvironmentVariablesV2:
 
 Querying Environment Variables
 ==============================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query all environment variables under an API group.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -69,17 +74,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+--------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                             | Description                                          |
-   +===========+==================================================================================================+======================================================+
-   | size      | Integer                                                                                          | Length of the returned resource list.                |
-   +-----------+--------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                             | Number of resources that match the query conditions. |
-   +-----------+--------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | variables | Array of :ref:`EnvVariableInfo <listenvironmentvariablesv2_1__response_envvariableinfo>` objects | Environment variable list.                           |
-   +-----------+--------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                           | Description                                          |
+   +===========+================================================================================================+======================================================+
+   | size      | Integer                                                                                        | Length of the returned resource list.                |
+   +-----------+------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                           | Number of resources that match the query conditions. |
+   +-----------+------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | variables | Array of :ref:`EnvVariableInfo <listenvironmentvariablesv2__response_envvariableinfo>` objects | Environment variable list.                           |
+   +-----------+------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listenvironmentvariablesv2_1__response_envvariableinfo:
+.. _listenvironmentvariablesv2__response_envvariableinfo:
 
 .. table:: **Table 5** EnvVariableInfo
 

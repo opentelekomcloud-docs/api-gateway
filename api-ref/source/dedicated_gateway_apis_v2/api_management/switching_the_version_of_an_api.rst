@@ -1,6 +1,6 @@
-:original_name: ChangeApiVersionV2_1.html
+:original_name: ChangeApiVersionV2.html
 
-.. _ChangeApiVersionV2_1:
+.. _ChangeApiVersionV2:
 
 Switching the Version of an API
 ===============================
@@ -11,6 +11,11 @@ Function
 This API is used to switch the version of an API. A version is generated based on the current definition of an API when the API is published. The version records the definition and status of the API when it is published.
 
 You can switch between multiple versions of an API, but only one version of an API takes effect in the same environment.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -45,7 +50,7 @@ Request Parameters
    ========== ========= ====== ===============
    Parameter  Mandatory Type   Description
    ========== ========= ====== ===============
-   version_id No        String API version ID.
+   version_id Yes       String API version ID.
    ========== ========= ====== ===============
 
 Response Parameters

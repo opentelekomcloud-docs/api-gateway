@@ -1,6 +1,6 @@
-:original_name: CreateSignatureKeyV2_1.html
+:original_name: CreateSignatureKeyV2.html
 
-.. _CreateSignatureKeyV2_1:
+.. _CreateSignatureKeyV2:
 
 Creating a Signature Key
 ========================
@@ -10,9 +10,14 @@ Function
 
 It is a good practice to provide a protection mechanism for APIs to ensure access security. For example, authenticating API request sources and denying the access from unauthorized sources.
 
-A signature key is a protection mechanism in case.
+A signature key is a protection mechanism in this case.
 
 Create a signature key and bind it to an API. When requesting the API, APIG uses the signature key to encrypt request parameter data and generate a signature. The backend service of the API verifies requests by using the signature. Unauthorized requests will be denied to protect the API against attacks from unknown sources.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -54,11 +59,8 @@ Request Parameters
    | sign_type       | No              | String          | Signature key type.                                                                                                                                                                                                                                                                                                              |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  hmac                                                                                                                                                                                                                                                                                                                          |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  basic                                                                                                                                                                                                                                                                                                                         |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  public_key                                                                                                                                                                                                                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  aes                                                                                                                                                                                                                                                                                                                           |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | To use a basic signature key, ensure that your gateway version supports it. If your gateway does not support this type of signature key, contact technical support to upgrade your gateway.                                                                                                                                      |
@@ -70,31 +72,22 @@ Request Parameters
    |                 |                 |                 | Enumeration values:                                                                                                                                                                                                                                                                                                              |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  **hmac**                                                                                                                                                                                                                                                                                                                      |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  **basic**                                                                                                                                                                                                                                                                                                                     |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  **public_key**                                                                                                                                                                                                                                                                                                                |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  **aes**                                                                                                                                                                                                                                                                                                                       |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_key        | No              | String          | Signature key.                                                                                                                                                                                                                                                                                                                   |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  hmac: The value contains 8 to 32 characters, including letters, digits, underscores (_), and hyphens (-). It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                           |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  basic: The value contains 4 to 32 characters, including letters, digits, underscores (_), and hyphens (-). It must start with a letter. If not specified, a key is automatically generated.                                                                                                                                   |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  public_key: The value contains 8 to 512 characters, including letters, digits, and special characters ``(_-+/=).`` It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                                       |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  aes: The value contains 16 characters if the aes-128-cfb algorithm is used, or 32 characters if the aes-256-cfb algorithm is used. Letters, digits, and special characters (``_-!@#$%+/=``) are allowed. It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated. |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_secret     | No              | String          | Signature secret.                                                                                                                                                                                                                                                                                                                |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  hmac: The value contains 16 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  basic: The value contains 8 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  public_key: The value can contain 16 to 2048 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                             |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  aes: The value contains 16 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                                               |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_algorithm  | No              | String          | Signature algorithm. Specify a signature algorithm only when using an AES signature key. By default, no algorithm is used.                                                                                                                                                                                                       |
@@ -102,7 +95,6 @@ Request Parameters
    |                 |                 |                 | Enumeration values:                                                                                                                                                                                                                                                                                                              |
    |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  **aes-128-cfb**                                                                                                                                                                                                                                                                                                               |
-   |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                  |
    |                 |                 |                 | -  **aes-256-cfb**                                                                                                                                                                                                                                                                                                               |
    +-----------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -125,11 +117,8 @@ Response Parameters
    | sign_type             | String                | Signature key type.                                                                                                                                                                                                                                                                                                              |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  hmac                                                                                                                                                                                                                                                                                                                          |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  basic                                                                                                                                                                                                                                                                                                                         |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  public_key                                                                                                                                                                                                                                                                                                                    |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  aes                                                                                                                                                                                                                                                                                                                           |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | To use a basic signature key, ensure that your gateway version supports it. If your gateway does not support this type of signature key, contact technical support to upgrade your gateway.                                                                                                                                      |
@@ -141,31 +130,22 @@ Response Parameters
    |                       |                       | Enumeration values:                                                                                                                                                                                                                                                                                                              |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **hmac**                                                                                                                                                                                                                                                                                                                      |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **basic**                                                                                                                                                                                                                                                                                                                     |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **public_key**                                                                                                                                                                                                                                                                                                                |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **aes**                                                                                                                                                                                                                                                                                                                       |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_key              | String                | Signature key.                                                                                                                                                                                                                                                                                                                   |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  hmac: The value contains 8 to 32 characters, including letters, digits, underscores (_), and hyphens (-). It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                           |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  basic: The value contains 4 to 32 characters, including letters, digits, underscores (_), and hyphens (-). It must start with a letter. If not specified, a key is automatically generated.                                                                                                                                   |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  public_key: The value contains 8 to 512 characters, including letters, digits, and special characters ``(_-+/=).`` It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                                       |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  aes: The value contains 16 characters if the aes-128-cfb algorithm is used, or 32 characters if the aes-256-cfb algorithm is used. Letters, digits, and special characters (``_-!@#$%+/=``) are allowed. It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated. |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_secret           | String                | Signature secret.                                                                                                                                                                                                                                                                                                                |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  hmac: The value contains 16 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  basic: The value contains 8 to 64 characters. Letters, digits, and special characters ``(_-!@#$%)`` are allowed. It must start with a letter or digit. If not specified, a key is automatically generated.                                                                                                                    |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  public_key: The value can contain 16 to 2048 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                             |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  aes: The value contains 16 characters, including letters, digits, and special characters (``_-!@#$%+/=``). It must start with a letter, digit, plus sign (+), or slash (/). If not specified, a key is automatically generated.                                                                                               |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | sign_algorithm        | String                | Signature algorithm. Specify a signature algorithm only when using an AES signature key. By default, no algorithm is used.                                                                                                                                                                                                       |
@@ -173,7 +153,6 @@ Response Parameters
    |                       |                       | Enumeration values:                                                                                                                                                                                                                                                                                                              |
    |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **aes-128-cfb**                                                                                                                                                                                                                                                                                                               |
-   |                       |                       |                                                                                                                                                                                                                                                                                                                                  |
    |                       |                       | -  **aes-256-cfb**                                                                                                                                                                                                                                                                                                               |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | update_time           | String                | Update time.                                                                                                                                                                                                                                                                                                                     |
@@ -216,9 +195,31 @@ Response Parameters
    error_msg  String Error message.
    ========== ====== ==============
 
-**Status code: 500**
+**Status code: 404**
 
 .. table:: **Table 8** Response body parameters
+
+   ========== ====== ==================
+   Parameter  Type   Description
+   ========== ====== ==================
+   error_code String Error code.
+   error_msg  String Error description.
+   ========== ====== ==================
+
+**Status code: 412**
+
+.. table:: **Table 9** Response body parameters
+
+   ========== ====== ==================
+   Parameter  Type   Description
+   ========== ====== ==================
+   error_code String Error code.
+   error_msg  String Error description.
+   ========== ====== ==================
+
+**Status code: 500**
+
+.. table:: **Table 10** Response body parameters
 
    ========== ====== ==============
    Parameter  Type   Description
@@ -292,6 +293,28 @@ Forbidden
      "error_msg" : "No permissions to request this method"
    }
 
+**Status code: 404**
+
+Not Found
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.3030",
+     "error_msg" : "The instance does not exist;id:f0fa1789-3b76-433b-a787-9892951c620ec"
+   }
+
+**Status code: 412**
+
+PreconditionFailed
+
+.. code-block::
+
+   {
+     "error_code" : "APIG.3548",
+     "error_msg" : "sign_type=public_key not supported by instance 6a29d4e9-69a0-412a-aabe-9898ec0903b0"
+   }
+
 **Status code: 500**
 
 Internal Server Error
@@ -313,6 +336,8 @@ Status Code Description
 400         Bad Request
 401         Unauthorized
 403         Forbidden
+404         Not Found
+412         PreconditionFailed
 500         Internal Server Error
 =========== =====================
 

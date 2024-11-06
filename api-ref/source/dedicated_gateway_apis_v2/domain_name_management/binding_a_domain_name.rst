@@ -1,6 +1,6 @@
-:original_name: AssociateDomainV2_1.html
+:original_name: AssociateDomainV2.html
 
-.. _AssociateDomainV2_1:
+.. _AssociateDomainV2:
 
 Binding a Domain Name
 =====================
@@ -11,6 +11,11 @@ Function
 A user-defined domain name takes effect only after an A record set has been added. For details, see section "Adding an A Record Set" in the Domain Name Service User Guide.
 
 An API group can be bound with a maximum of five domain names. After you bind a domain name to an API group, APIs in the group can be called using the domain name.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

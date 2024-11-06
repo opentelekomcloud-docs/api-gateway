@@ -1,6 +1,6 @@
-:original_name: apig-en-api-180713204.html
+:original_name: apig-api-180713204.html
 
-.. _apig-en-api-180713204:
+.. _apig-api-180713204:
 
 Pagination Query
 ================

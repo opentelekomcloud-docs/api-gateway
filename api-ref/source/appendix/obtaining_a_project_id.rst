@@ -49,6 +49,6 @@ A project ID needs to be specified in the URLs of some APIs. Therefore, you need
 
 #. Hover the mouse pointer over the username, click the username, and choose **My Credentials** from the drop-down list.
 
-   On the **My Credentials** page, view project IDs in the project list.
+   On the **API Credentials** page, view project IDs in the project list.
 
    If there are multiple projects in one region, expand **Region** and view subproject IDs in the **Project ID** column.

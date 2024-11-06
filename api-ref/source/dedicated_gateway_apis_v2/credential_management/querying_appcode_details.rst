@@ -1,6 +1,6 @@
-:original_name: ShowDetailsOfAppCodeV2_1.html
+:original_name: ShowDetailsOfAppCodeV2.html
 
-.. _ShowDetailsOfAppCodeV2_1:
+.. _ShowDetailsOfAppCodeV2:
 
 Querying AppCode Details
 ========================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the details of an AppCode created for an app for simple authentication.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

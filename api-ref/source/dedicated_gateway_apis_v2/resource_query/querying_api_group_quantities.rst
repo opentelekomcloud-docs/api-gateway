@@ -1,6 +1,6 @@
-:original_name: ListApiGroupsQuantitiesV2_1.html
+:original_name: ListApiGroupsQuantitiesV2.html
 
-.. _ListApiGroupsQuantitiesV2_1:
+.. _ListApiGroupsQuantitiesV2:
 
 Querying API Group Quantities
 =============================
@@ -8,7 +8,12 @@ Querying API Group Quantities
 Function
 --------
 
-This API is used to query the number of API groups that have been listed on KooGallery and the number of API groups that have not been listed.
+This API is used to query the number of API groups.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

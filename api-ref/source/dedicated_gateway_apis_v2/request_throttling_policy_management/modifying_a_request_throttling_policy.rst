@@ -1,6 +1,6 @@
-:original_name: UpdateRequestThrottlingPolicyV2_1.html
+:original_name: UpdateRequestThrottlingPolicyV2.html
 
-.. _UpdateRequestThrottlingPolicyV2_1:
+.. _UpdateRequestThrottlingPolicyV2:
 
 Modifying a Request Throttling Policy
 =====================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to modify the information about a request throttling policy.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

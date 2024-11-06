@@ -1,6 +1,6 @@
-:original_name: ResettingAppSecretV2_1.html
+:original_name: ResettingAppSecretV2.html
 
-.. _ResettingAppSecretV2_1:
+.. _ResettingAppSecretV2:
 
 Resetting the AppSecret of an App
 =================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to reset the AppSecret of an app.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

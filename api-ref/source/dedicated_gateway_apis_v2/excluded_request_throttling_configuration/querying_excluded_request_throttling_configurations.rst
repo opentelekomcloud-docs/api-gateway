@@ -1,6 +1,6 @@
-:original_name: ListSpecialThrottlingConfigurationsV2_0.html
+:original_name: ListSpecialThrottlingConfigurationsV2.html
 
-.. _ListSpecialThrottlingConfigurationsV2_0:
+.. _ListSpecialThrottlingConfigurationsV2:
 
 Querying Excluded Request Throttling Configurations
 ===================================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query all excluded configurations of a request throttling policy.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -69,17 +74,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-------------------+---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter         | Type                                                                                                                | Description                                          |
-   +===================+=====================================================================================================================+======================================================+
-   | size              | Integer                                                                                                             | Length of the returned resource list.                |
-   +-------------------+---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total             | Long                                                                                                                | Number of resources that match the query conditions. |
-   +-------------------+---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | throttle_specials | Array of :ref:`ThrottleSpecialInfo <listspecialthrottlingconfigurationsv2_0__response_throttlespecialinfo>` objects | Excluded configuration list.                         |
-   +-------------------+---------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-------------------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter         | Type                                                                                                              | Description                                          |
+   +===================+===================================================================================================================+======================================================+
+   | size              | Integer                                                                                                           | Length of the returned resource list.                |
+   +-------------------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total             | Long                                                                                                              | Number of resources that match the query conditions. |
+   +-------------------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | throttle_specials | Array of :ref:`ThrottleSpecialInfo <listspecialthrottlingconfigurationsv2__response_throttlespecialinfo>` objects | Excluded configuration list.                         |
+   +-------------------+-------------------------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listspecialthrottlingconfigurationsv2_0__response_throttlespecialinfo:
+.. _listspecialthrottlingconfigurationsv2__response_throttlespecialinfo:
 
 .. table:: **Table 5** ThrottleSpecialInfo
 

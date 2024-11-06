@@ -1,6 +1,6 @@
-:original_name: ListLatelyGroupStatisticsV2_1.html
+:original_name: ListLatelyGroupStatisticsV2.html
 
-.. _ListLatelyGroupStatisticsV2_1:
+.. _ListLatelyGroupStatisticsV2:
 
 Querying API Calls Under an API Group in the Last One Hour
 ==========================================================
@@ -13,6 +13,11 @@ This API is used to query the total number of times all APIs in an API group are
 .. note::
 
    For security purposes, clear your operation records, including but not limited to records in the ~/.bash_history and /var/log/messages directories (if any), after running the curl command on the server to query information.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -55,21 +60,21 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +------------+---------------------------------------------------------------------------------------------------+------------------------------------+
-   | Parameter  | Type                                                                                              | Description                        |
-   +============+===================================================================================================+====================================+
-   | code       | String                                                                                            | Response code.                     |
-   +------------+---------------------------------------------------------------------------------------------------+------------------------------------+
-   | msg        | String                                                                                            | Response message.                  |
-   +------------+---------------------------------------------------------------------------------------------------+------------------------------------+
-   | start_time | Long                                                                                              | Timestamp (UTC) of the start time. |
-   +------------+---------------------------------------------------------------------------------------------------+------------------------------------+
-   | end_time   | Long                                                                                              | Timestamp (UTC) of the end time.   |
-   +------------+---------------------------------------------------------------------------------------------------+------------------------------------+
-   | list       | Array of :ref:`StatisticsGroup <listlatelygroupstatisticsv2_1__response_statisticsgroup>` objects | Statistic data.                    |
-   +------------+---------------------------------------------------------------------------------------------------+------------------------------------+
+   +------------+-------------------------------------------------------------------------------------------------+------------------------------------+
+   | Parameter  | Type                                                                                            | Description                        |
+   +============+=================================================================================================+====================================+
+   | code       | String                                                                                          | Response code.                     |
+   +------------+-------------------------------------------------------------------------------------------------+------------------------------------+
+   | msg        | String                                                                                          | Response message.                  |
+   +------------+-------------------------------------------------------------------------------------------------+------------------------------------+
+   | start_time | Long                                                                                            | Timestamp (UTC) of the start time. |
+   +------------+-------------------------------------------------------------------------------------------------+------------------------------------+
+   | end_time   | Long                                                                                            | Timestamp (UTC) of the end time.   |
+   +------------+-------------------------------------------------------------------------------------------------+------------------------------------+
+   | list       | Array of :ref:`StatisticsGroup <listlatelygroupstatisticsv2__response_statisticsgroup>` objects | Statistic data.                    |
+   +------------+-------------------------------------------------------------------------------------------------+------------------------------------+
 
-.. _listlatelygroupstatisticsv2_1__response_statisticsgroup:
+.. _listlatelygroupstatisticsv2__response_statisticsgroup:
 
 .. table:: **Table 5** StatisticsGroup
 

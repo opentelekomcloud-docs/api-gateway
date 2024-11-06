@@ -1,6 +1,6 @@
-:original_name: ListRequestThrottlingPolicyV2_1.html
+:original_name: ListRequestThrottlingPolicyV2.html
 
-.. _ListRequestThrottlingPolicyV2_1:
+.. _ListRequestThrottlingPolicyV2:
 
 Querying Request Throttling Policies
 ====================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query all the request throttling policies.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -67,17 +72,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                            | Description                                          |
-   +===========+=================================================================================================+======================================================+
-   | size      | Integer                                                                                         | Length of the returned resource list.                |
-   +-----------+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                            | Number of resources that match the query conditions. |
-   +-----------+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-   | throttles | Array of :ref:`ThrottlesInfo <listrequestthrottlingpolicyv2_1__response_throttlesinfo>` objects | Request throttling policy list.                      |
-   +-----------+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+-----------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                                          | Description                                          |
+   +===========+===============================================================================================+======================================================+
+   | size      | Integer                                                                                       | Length of the returned resource list.                |
+   +-----------+-----------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                                          | Number of resources that match the query conditions. |
+   +-----------+-----------------------------------------------------------------------------------------------+------------------------------------------------------+
+   | throttles | Array of :ref:`ThrottlesInfo <listrequestthrottlingpolicyv2__response_throttlesinfo>` objects | Request throttling policy list.                      |
+   +-----------+-----------------------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listrequestthrottlingpolicyv2_1__response_throttlesinfo:
+.. _listrequestthrottlingpolicyv2__response_throttlesinfo:
 
 .. table:: **Table 5** ThrottlesInfo
 

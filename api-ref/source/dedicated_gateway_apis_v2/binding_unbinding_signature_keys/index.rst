@@ -1,15 +1,15 @@
-:original_name: SignatureKeyBindingManagement_1.html
+:original_name: SignatureKeyBindingManagement.html
 
-.. _SignatureKeyBindingManagement_1:
+.. _SignatureKeyBindingManagement:
 
 Binding/Unbinding Signature Keys
 ================================
 
--  :ref:`Binding a Signature Key <associatesignaturekeyv2_1>`
--  :ref:`Unbinding a Signature Key <disassociatesignaturekeyv2_1>`
--  :ref:`Querying Signature Keys Bound to an API <listsignaturekeysbindedtoapiv2_1>`
--  :ref:`Querying APIs Not Bound with a Signature Key <listapisnotboundwithsignaturekeyv2_1>`
--  :ref:`Querying APIs Bound with a Signature Key <listapisbindedtosignaturekeyv2_1>`
+-  :ref:`Binding a Signature Key <associatesignaturekeyv2>`
+-  :ref:`Unbinding a Signature Key <disassociatesignaturekeyv2>`
+-  :ref:`Querying Signature Keys Bound to an API <listsignaturekeysbindedtoapiv2>`
+-  :ref:`Querying APIs Not Bound with a Signature Key <listapisnotboundwithsignaturekeyv2>`
+-  :ref:`Querying APIs Bound with a Signature Key <listapisbindedtosignaturekeyv2>`
 
 .. toctree::
    :maxdepth: 1

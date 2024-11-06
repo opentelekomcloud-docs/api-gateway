@@ -1,6 +1,6 @@
-:original_name: DeleteInstancesV2_1.html
+:original_name: DeleteInstancesV2.html
 
-.. _DeleteInstancesV2_1:
+.. _DeleteInstancesV2:
 
 Deleting a Dedicated Gateway
 ============================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete a dedicated gateway.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

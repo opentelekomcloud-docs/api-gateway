@@ -1,14 +1,14 @@
-:original_name: EnvManagement_1.html
+:original_name: EnvManagement.html
 
-.. _EnvManagement_1:
+.. _EnvManagement:
 
 Environment Management
 ======================
 
--  :ref:`Creating an Environment <createenvironmentv2_1>`
--  :ref:`Modifying an Environment <updateenvironmentv2_1>`
--  :ref:`Deleting an Environment <deleteenvironmentv2_1>`
--  :ref:`Querying Environments <listenvironmentsv2_1>`
+-  :ref:`Creating an Environment <createenvironmentv2>`
+-  :ref:`Modifying an Environment <updateenvironmentv2>`
+-  :ref:`Deleting an Environment <deleteenvironmentv2>`
+-  :ref:`Querying Environments <listenvironmentsv2>`
 
 .. toctree::
    :maxdepth: 1

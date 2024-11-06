@@ -5,11 +5,11 @@
 Appendix
 ========
 
--  :ref:`Pagination Query <apig-en-api-180713204>`
--  :ref:`Result Filtering <apig-en-api-180713205>`
--  :ref:`HTTP Status Codes <apig-en-api-180713206>`
+-  :ref:`Pagination Query <apig-api-180713204>`
+-  :ref:`Result Filtering <apig-api-180713205>`
+-  :ref:`HTTP Status Codes <apig-api-180713206>`
 -  :ref:`Error Codes <errorcode>`
--  :ref:`Supported Features <apig-api-20210402>`
+-  :ref:`Supported Features <apig-api-20200402>`
 -  :ref:`Obtaining a Project ID <apig-api-180713009>`
 -  :ref:`Obtaining an Account Name and Account ID <apig-api-180713005>`
 

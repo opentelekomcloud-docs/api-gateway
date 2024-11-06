@@ -1,6 +1,6 @@
-:original_name: CreateOrDeletePublishRecordForApiV2_1.html
+:original_name: CreateOrDeletePublishRecordForApiV2.html
 
-.. _CreateOrDeletePublishRecordForApiV2_1:
+.. _CreateOrDeletePublishRecordForApiV2:
 
 Publishing an API or Taking an API Offline
 ==========================================
@@ -13,6 +13,11 @@ This API is used to publish an API or take an API offline.
 An API can be called only in an environment where the API has been published. APIs that have not been published cannot be called.
 
 You can remove an API from an environment in which it has been published. After this operation, the API can no longer be called in the environment.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

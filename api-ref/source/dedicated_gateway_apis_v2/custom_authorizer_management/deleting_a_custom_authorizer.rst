@@ -1,6 +1,6 @@
-:original_name: DeleteCustomAuthorizerV2_1.html
+:original_name: DeleteCustomAuthorizerV2.html
 
-.. _DeleteCustomAuthorizerV2_1:
+.. _DeleteCustomAuthorizerV2:
 
 Deleting a Custom Authorizer
 ============================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to delete a custom authorizer.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---

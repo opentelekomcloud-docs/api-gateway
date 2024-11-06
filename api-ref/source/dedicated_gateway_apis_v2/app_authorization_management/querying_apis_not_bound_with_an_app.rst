@@ -1,6 +1,6 @@
-:original_name: ListApisUnbindedToAppV2_1.html
+:original_name: ListApisUnbindedToAppV2.html
 
-.. _ListApisUnbindedToAppV2_1:
+.. _ListApisUnbindedToAppV2:
 
 Querying APIs Not Bound with an App
 ===================================
@@ -9,6 +9,11 @@ Function
 --------
 
 This API is used to query the self-developed APIs to which an app has not been bound in a specified environment.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <apig-api-180713003>`.
 
 URI
 ---
@@ -71,17 +76,17 @@ Response Parameters
 
 .. table:: **Table 4** Response body parameters
 
-   +-----------+-------------------------------------------------------------------------------------+------------------------------------------------------+
-   | Parameter | Type                                                                                | Description                                          |
-   +===========+=====================================================================================+======================================================+
-   | size      | Integer                                                                             | Length of the returned resource list.                |
-   +-----------+-------------------------------------------------------------------------------------+------------------------------------------------------+
-   | total     | Long                                                                                | Number of resources that match the query conditions. |
-   +-----------+-------------------------------------------------------------------------------------+------------------------------------------------------+
-   | apis      | Array of :ref:`ApiOutline <listapisunbindedtoappv2_1__response_apioutline>` objects | API list.                                            |
-   +-----------+-------------------------------------------------------------------------------------+------------------------------------------------------+
+   +-----------+-----------------------------------------------------------------------------------+------------------------------------------------------+
+   | Parameter | Type                                                                              | Description                                          |
+   +===========+===================================================================================+======================================================+
+   | size      | Integer                                                                           | Length of the returned resource list.                |
+   +-----------+-----------------------------------------------------------------------------------+------------------------------------------------------+
+   | total     | Long                                                                              | Number of resources that match the query conditions. |
+   +-----------+-----------------------------------------------------------------------------------+------------------------------------------------------+
+   | apis      | Array of :ref:`ApiOutline <listapisunbindedtoappv2__response_apioutline>` objects | API list.                                            |
+   +-----------+-----------------------------------------------------------------------------------+------------------------------------------------------+
 
-.. _listapisunbindedtoappv2_1__response_apioutline:
+.. _listapisunbindedtoappv2__response_apioutline:
 
 .. table:: **Table 5** ApiOutline
 
