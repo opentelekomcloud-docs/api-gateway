@@ -1,6 +1,6 @@
-:original_name: apig-en-faq-180307009.html
+:original_name: apig-faq-180307009.html
 
-.. _apig-en-faq-180307009:
+.. _apig-faq-180307009:
 
 How Do I Ensure the Security of Backend Services Invoked by APIG?
 =================================================================

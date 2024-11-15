@@ -1,12 +1,11 @@
-:original_name: apig-en-ug-180307009.html
+:original_name: apig-ug-180307009.html
 
-.. _apig-en-ug-180307009:
+.. _apig-ug-180307009:
 
 Adding an AppCode for Simple Authentication
 ===========================================
 
-#. In the app list, click the app created in :ref:`Creating an App and Getting Authorized <apig-en-ug-180307010>` to go to the app details page.
-#. Click the **AppCodes** tab.
-#. Click **Add AppCode**.
+#. In the credential list, click the credential created in :ref:`Creating a Credential <apig-ug-180307010__en-us_topic_0000001128537190_section101812113415>` to go to the credential details page.
+#. Click **Add AppCode** in the **AppCodes** area.
 #. Select **Automatically generated**.
 #. Click **OK**.

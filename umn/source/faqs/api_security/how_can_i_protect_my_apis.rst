@@ -1,6 +1,6 @@
-:original_name: apig-en-faq-180307003.html
+:original_name: apig-faq-180307003.html
 
-.. _apig-en-faq-180307003:
+.. _apig-faq-180307003:
 
 How Can I Protect My APIs?
 ==========================

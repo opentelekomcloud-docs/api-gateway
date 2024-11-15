@@ -6,8 +6,8 @@ Request Throttling
 ==================
 
 -  :ref:`Can I Configure the Maximum Number of Concurrent Requests? <apig-faq-2005026>`
--  :ref:`Is the Restriction of 1000 Requests to a Subdomain Name Applied to Enterprise Accounts? <apig-faq-190627032>`
--  :ref:`Does APIG Has Bandwidth Limits? <apig-faq-19122002>`
+-  :ref:`Is the Restriction of 1000 Requests per Day to a Subdomain Name (Debugging Domain Name) Applied to Enterprise Accounts? <apig-faq-190627032>`
+-  :ref:`Does APIG Have Bandwidth Limits? <apig-faq-19122002>`
 -  :ref:`Why Doesn't a Request Throttling Policy Take Effect? <apig-faq-0001>`
 
 .. toctree::
@@ -15,6 +15,6 @@ Request Throttling
    :hidden: 
 
    can_i_configure_the_maximum_number_of_concurrent_requests
-   is_the_restriction_of_1000_requests_to_a_subdomain_name_applied_to_enterprise_accounts
-   does_apig_has_bandwidth_limits
+   is_the_restriction_of_1000_requests_per_day_to_a_subdomain_name_debugging_domain_name_applied_to_enterprise_accounts
+   does_apig_have_bandwidth_limits
    why_doesnt_a_request_throttling_policy_take_effect

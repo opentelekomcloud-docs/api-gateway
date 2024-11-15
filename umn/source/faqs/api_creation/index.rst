@@ -5,14 +5,13 @@
 API Creation
 ============
 
--  :ref:`Why Can't I Create APIs? <apig-faq-2005007>`
 -  :ref:`How Do I Define Response Codes for an API? <apig-faq-2005001>`
 -  :ref:`How Do I Specify the Host Port for a VPC Channel (or Load Balance Channel)? <apig-faq-2005002>`
 -  :ref:`How Do I Set the Backend Address If I Will Not Use a VPC Channel (or Load Balance Channel)? <apig-faq-2005004>`
 -  :ref:`How Can I Configure the Backend Service Address? <apig-faq-190627028>`
 -  :ref:`Can I Specify a Private Network Load Balancer Address for the Backend Service? <apig-faq-2005003>`
 -  :ref:`Can I Specify the Backend Address as a Subnet IP Address? <apig-faq-2005006>`
--  :ref:`Does APIG Support Multiple Backend Endpoints? <apig-en-faq-180606012>`
+-  :ref:`Does APIG Support Multiple Backend Endpoints? <apig-faq-180606012>`
 -  :ref:`What Should I Do After Applying for an Independent Domain Name? <apig-faq-2005009>`
 -  :ref:`Can I Bind Private Domain Names for API Access? <apig-faq-2005021>`
 -  :ref:`Why Does an API Failed to Be Called Across Domains? <apig-faq-190627027>`
@@ -21,7 +20,6 @@ API Creation
    :maxdepth: 1
    :hidden: 
 
-   why_cant_i_create_apis
    how_do_i_define_response_codes_for_an_api
    how_do_i_specify_the_host_port_for_a_vpc_channel_or_load_balance_channel
    how_do_i_set_the_backend_address_if_i_will_not_use_a_vpc_channel_or_load_balance_channel
