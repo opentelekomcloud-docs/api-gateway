@@ -109,8 +109,7 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'apig-dev-guide.tex',
-     u'API Gateway (APIG) - Developer Guide',
+     'apig-dev-guide.tex',u'API Gateway (APIG) - Developer Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
