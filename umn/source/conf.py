@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'apig-umn.tex',
-     u'API Gateway (APIG) - User Guide',
+    u'API Gateway (APIG) - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
