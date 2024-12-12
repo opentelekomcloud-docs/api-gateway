@@ -5,7 +5,7 @@
 Permissions Management
 ======================
 
-If you need to assign different permissions to employees in your enterprise to access your APIG resources, Identity and Access Management (IAM) is a good choice for fine-grained permissions management. IAM provides identity authentication, permissions management, and access control, helping you secure access to your resources.
+If you need to assign different permissions to personnel in your enterprise to access your APIG resources, Identity and Access Management (IAM) is a good choice for fine-grained permissions management. IAM provides identity authentication, permissions management, and access control, helping you securely access your resources.
 
 With IAM, you can use your account to create IAM users for your employees, and assign permissions to the employees to control their access to specific resources.
 
@@ -21,7 +21,7 @@ APIG is a project-level service deployed and accessed in specific physical regio
 You can grant permissions by using roles and policies.
 
 -  Roles: A type of coarse-grained authorization mechanism that defines permissions related to user responsibilities. This mechanism provides only a limited number of service-level roles for authorization. When using roles to grant permissions, you need to also assign other dependent roles for permissions to take effect. However, roles are not an ideal choice for fine-grained authorization and secure access control.
--  Policies: A type of fine-grained authorization mechanism that defines permissions required to perform operations on specific cloud resources under certain conditions. This mechanism allows for more flexible policy-based authorization and meets requirements for secure access control. For example, you can grant APIG users only the permissions for performing specific operations. Most policies define permissions based on APIs. For the API actions supported by APIG, see section "Permissions Policies and Supported Actions" in the *API Reference*.
+-  Policies: A fine-grained authorization strategy that defines permissions required to perform operations on specific cloud resources under certain conditions. This mechanism allows for more flexible policy-based authorization and meets requirements for secure access control. For example, you can grant APIG users only the permissions for performing specific operations. Most policies define permissions based on APIs. For the API actions supported by APIG, see section "Permissions Policies and Supported Actions" in the *API Reference*
 
 :ref:`Table 1 <apig-pd-190529006__en-us_topic_0172474100_table1934161212122>` lists all the system-defined roles and policies supported by APIG.
 
@@ -29,15 +29,15 @@ You can grant permissions by using roles and policies.
 
 .. table:: **Table 1** System-defined roles and policies supported by APIG
 
-   +---------------------+-------------------------------------------------------------------------------------------------------------+-----------------------+------------+
-   | Role/Policy Name    | Description                                                                                                 | Type                  | Dependency |
-   +=====================+=============================================================================================================+=======================+============+
-   | APIG Administrator  | Administrator permissions for APIG. Users granted these permissions can use all functions of API gateways.  | System-defined role   | None       |
-   +---------------------+-------------------------------------------------------------------------------------------------------------+-----------------------+------------+
-   | APIG FullAccess     | Full permissions for APIG. Users granted these permissions can use all functions of **dedicated** gateways. | System-defined policy | None       |
-   +---------------------+-------------------------------------------------------------------------------------------------------------+-----------------------+------------+
-   | APIG ReadOnlyAccess | Read-only permissions for APIG. Users granted these permissions can only view **dedicated** gateways.       | System-defined policy | None       |
-   +---------------------+-------------------------------------------------------------------------------------------------------------+-----------------------+------------+
+   +---------------------+-----------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Role/Policy Name    | Description                                                                                   | Type                  | Dependency                                                                                                                                                                           |
+   +=====================+===============================================================================================+=======================+======================================================================================================================================================================================+
+   | APIG Administrator  | Administrator permissions for APIG. Users with this permission can use all functions.         | System-defined role   | If a user needs to create, delete, or change resources of other services, the user must also be granted administrator permissions of the corresponding services in the same project. |
+   +---------------------+-----------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | APIG FullAccess     | Full permissions for APIG. Users granted these permissions can use all functions of gateways. | System-defined policy | None                                                                                                                                                                                 |
+   +---------------------+-----------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | APIG ReadOnlyAccess | Read-only permissions for APIG. Users granted these permissions can only view gateways.       | System-defined policy | None                                                                                                                                                                                 |
+   +---------------------+-----------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 You can view the content of the preceding roles and policies on the IAM console. For example, the content of the **APIG FullAccess** policy is as follows:
 

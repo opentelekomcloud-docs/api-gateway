@@ -1,6 +1,6 @@
-:original_name: apig-zh-pd-180307003.html
+:original_name: apig-pd-180307003.html
 
-.. _apig-zh-pd-180307003:
+.. _apig-pd-180307003:
 
 Application Scenarios
 =====================
@@ -19,5 +19,13 @@ An enterprise cannot develop without partners' capabilities, such as a third-par
 
 |image2|
 
+FunctionGraph Services Opening
+------------------------------
+
+APIG can also help you selectively expose serverless services (FunctionGraph services) to partners. FunctionGraph services are easier to develop, deploy, and maintain than traditional services. You can use FunctionGraph to quickly build backend service logic, and use APIG to expose service logic functions for linear concurrency expansion.
+
+|image3|
+
 .. |image1| image:: /_static/images/en-us_image_0168722756.png
 .. |image2| image:: /_static/images/en-us_image_0168722761.png
+.. |image3| image:: /_static/images/en-us_image_0168722767.png

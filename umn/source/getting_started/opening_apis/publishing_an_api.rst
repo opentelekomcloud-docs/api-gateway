@@ -1,11 +1,11 @@
-:original_name: apig-en-ug-180307005.html
+:original_name: apig-ug-180307005.html
 
-.. _apig-en-ug-180307005:
+.. _apig-ug-180307005:
 
 Publishing an API
 =================
 
-#. In the navigation pane, choose **API Publishing** > **APIs**.
-#. Locate the API created in :ref:`Creating an API <en-us_topic_0080101678>`, and click **Publish**.
+#. In the navigation pane, choose **API Management** > **APIs**.
+#. Locate the API created in :ref:`Creating an API <apig_0080101678>`, and click **Publish**.
 #. Select the environment where the API will be published.
-#. Click **Publish**.
+#. Click **OK**.

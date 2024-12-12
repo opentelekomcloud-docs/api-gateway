@@ -1,6 +1,6 @@
-:original_name: apig-en-faq-180307001.html
+:original_name: apig-faq-180307001.html
 
-.. _apig-en-faq-180307001:
+.. _apig-faq-180307001:
 
 What Are the Error Messages Returned by APIG Like?
 ==================================================

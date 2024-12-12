@@ -5,4 +5,6 @@
 Does APIG Support Custom Authentication?
 ========================================
 
-Yes. For details, see "Custom Authorizers" in the *User Guide*.
+Yes.
+
+For details, see section "Custom Authorizers" in the *API Gateway User Guide*.

@@ -1,20 +1,20 @@
-:original_name: apig-en-faq-180307008.html
+:original_name: apig-faq-180307008.html
 
-.. _apig-en-faq-180307008:
+.. _apig-faq-180307008:
 
 Can Applications Deployed in a VPC Call APIs?
 =============================================
 
-Yes, applications deployed in a VPC can call APIs by default. If domain name resolution fails, configure a DNS server on the current endpoint by following the instructions in :ref:`Configuring an Intranet DNS Server <apig-en-faq-180307008__en-us_topic_0089872475_section856622113118>`. After the configuration, applications deployed in the VPC can call APIs.
+Yes, applications deployed in a VPC can call APIs by default. If domain name resolution fails, configure a DNS server on the current endpoint by following the instructions in :ref:`Configuring an Intranet DNS Server <apig-faq-180307008__en-us_topic_0000001130933972_en-us_topic_0089872475_section856622113118>`. After the configuration, applications deployed in the VPC can call APIs.
 
-.. _apig-en-faq-180307008__en-us_topic_0089872475_section856622113118:
+.. _apig-faq-180307008__en-us_topic_0000001130933972_en-us_topic_0089872475_section856622113118:
 
 Configuring an Intranet DNS Server
 ----------------------------------
 
 To configure a DNS server, specify its IP address in the **/etc/resolv.conf** file.
 
-The IP address of the intranet DNS server depends on which region you are located in. Find the IP address of the intranet DNS server in your region from the private DNS server addresses mentioned in the *Domain Name Service FAQs*.
+The IP address of the intranet DNS server depends on which region you are located in. Find the IP address of the intranet DNS server in your region from the private DNS server addresses mentioned in "FAQs" of the *Domain Name Service User Guide*.
 
 Add an intranet DNS server with either of the following two methods:
 
@@ -38,17 +38,17 @@ Perform the following procedure to add a DNS server IP address to the subnet con
 
 #. Click the name of the ECS you want to use.
 
-#. .. _apig-en-faq-180307008__en-us_topic_0089872475_li16910204134212:
+#. .. _apig-faq-180307008__en-us_topic_0000001130933972_en-us_topic_0089872475_li16910204134212:
 
-   On the ECS details page, view the NIC information, and click |image2| to view the subnet name of the ECS.
+   On the **Network Interfaces** tab page, click |image2| to view the subnet name.
 
-#. On the ECS basic information page, view the VPC name of the ECS.
+#. On the **Summary** tab page, view the VPC name.
 
 #. Click the VPC name to visit the VPC console.
 
 #. Choose **Subnets** in the left navigation pane.
 
-#. Locate the subnet mentioned in :ref:`5 <apig-en-faq-180307008__en-us_topic_0089872475_li16910204134212>` and click the subnet name.
+#. Locate the subnet mentioned in :ref:`5 <apig-faq-180307008__en-us_topic_0000001130933972_en-us_topic_0089872475_li16910204134212>` and click the subnet name.
 
 #. Change the DNS server address of the subnet and click **OK**.
 

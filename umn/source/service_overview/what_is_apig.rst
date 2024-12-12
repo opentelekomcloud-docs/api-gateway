@@ -1,13 +1,13 @@
-:original_name: apig-ug-0017.html
+:original_name: apig_0080101651.html
 
-.. _apig-ug-0017:
+.. _apig_0080101651:
 
 What Is APIG?
 =============
 
-API Gateway (APIG) is a high-performance, high-availability, and high-security API hosting service that helps you build, manage, and deploy APIs at any scale. With just a few clicks, you can integrate internal systems, and selectively expose capabilities with minimal costs and risks.
+API Gateway (APIG) is your fully managed API hosting service. With APIG, you can build, manage, and deploy APIs at any scale to package your capabilities. With just a few clicks, you can integrate internal systems, monetize service capabilities, and selectively expose capabilities with minimal costs and risks. APIG helps you monetize service capabilities and reduce R&D investment, and enables you to focus on core enterprise services to improve operational efficiency.
 
--  To monetize your service and data capabilities, you can open them up by creating APIs in APIG. Then you can provide the APIs for API callers using offline channels.
+-  To monetize your capabilities (services and data), you can open them up by creating APIs in APIG. Then you can provide the APIs for API callers using offline channels.
 -  You can also obtain open APIs from APIG to reduce your development time and costs.
 
 
@@ -23,10 +23,6 @@ Product Functions
 
    The lifecycle of an API involves creating, publishing, removing, and deleting the API. API lifecycle management enables you to quickly and efficiently expose service capabilities.
 
--  **Cloud native gateway**
-
-   APIG integrates traffic ingress (Kubernetes Ingress) and microservice governance (Kubernetes Gateway API) in one gateway, improving performance, simplifying the architecture, and reducing deployment and O&M costs.
-
 -  **Built-in debugging tool**
 
    With the built-in debugging tool, you can debug APIs using different HTTP headers and request bodies. This tool simplifies the API development process and reduces the API development and maintenance costs.
@@ -39,27 +35,27 @@ Product Functions
 
    Environment variables are manageable and specific to environments. Variables of an API will be replaced by the values of the variables in the environment where the API will be published. You can create variables in different environments to call different backend services using the same API.
 
--  **Request throttling**
+-  **Refined request throttling**
 
-   -  For different services and users, you can control the request frequency at which an API can be called by a user, an app, and an IP address. This ensures that backend services can run stably.
+   -  For different service demands and user levels, you can control the frequency at which an API can be called by a user, app (credential), or IP address, ensuring that backend services can run stably.
+   -  Configure different request throttling limits with API path, query, and header parameters.
    -  The throttling can be accurate to the second, minute, hour, or day.
-   -  Excluded apps and tenants can be configured to limit the number of API calls from specific apps and tenants, respectively.
+   -  Set throttling limits for excluded applications (credentials) and tenants.
 
--  **Monitoring and alarm**
+-  **Monitoring and alarms**
 
    APIG provides visualized, real-time API monitoring, and displays multiple metrics, including number of requests, invocation latency, and number of errors. The metrics help you understand the API usage, allowing you to identify potential service risks.
 
--  **Access control**
+-  **Security**
 
-   Access control policies are one of the security measures provided by APIG. They allow or deny API access from specific IP addresses or accounts.
+   -  Domain name access can be authenticated with TLS 1.1 and TLS 1.2. mTLS two-way authentication is supported.
+   -  Access control policies limit API access from specific IP addresses or accounts. You can blacklist or whitelist certain IP addresses and accounts to access your APIs.
+   -  Circuit breaker policies protect your backend services through degradation if they are abnormal.
+   -  Identity authentication can be based on AK/SK, function-based custom authorizers, and tokens. APIG verifies your backend services via certificates and is verified by your backend services through signature keys.
 
--  **VPC channels**
+-  **VPC channels (load balance channels)**
 
-   VPC channels can be created for accessing resources in Virtual Private Clouds (VPCs) and exposing capabilities of backend services deployed in VPCs. A VPC channel forwards API requests to different servers for load balancing.
-
--  **Signature keys**
-
-   A signature key consists of a key and secret, and takes effect only after being bound to APIs. Signature keys are used by backend services to verify the identity of APIG and ensure secure access.
+   Virtual Private Cloud (VPC) channels (load balance channels) can be created for accessing resources in VPCs and exposing backend services deployed in VPCs. VPC channels balance API requests to backend services.
 
 -  **Mock response**
 

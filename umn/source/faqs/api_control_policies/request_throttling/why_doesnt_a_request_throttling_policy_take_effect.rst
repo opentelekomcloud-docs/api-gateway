@@ -13,6 +13,6 @@ Why Doesn't a Request Throttling Policy Take Effect?
 
    Check whether the API bound with the policy uses app or IAM authentication.
 
--  App request limit of the policy does not take effect.
+-  App (credential) request limit of the policy does not take effect.
 
    Check whether the API bound with the policy uses app authentication.
