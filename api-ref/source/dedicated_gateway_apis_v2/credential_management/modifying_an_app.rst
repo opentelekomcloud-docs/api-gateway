@@ -60,7 +60,7 @@ Request Parameters
 Response Parameters
 -------------------
 
-**Status code: 201**
+**Status code: 200**
 
 .. table:: **Table 4** Response body parameters
 
@@ -76,7 +76,6 @@ Response Parameters
    | creator               | String                | Creator of the app.                                                 |
    |                       |                       |                                                                     |
    |                       |                       | -  USER: The app is created by an API user.                         |
-   |                       |                       |                                                                     |
    |                       |                       | -  MARKET: The app is allocated by KooGallery.                      |
    |                       |                       |                                                                     |
    |                       |                       | The value MARKET is currently not supported.                        |
@@ -84,7 +83,6 @@ Response Parameters
    |                       |                       | Enumeration values:                                                 |
    |                       |                       |                                                                     |
    |                       |                       | -  **USER**                                                         |
-   |                       |                       |                                                                     |
    |                       |                       | -  **MARKET**                                                       |
    +-----------------------+-----------------------+---------------------------------------------------------------------+
    | update_time           | String                | Update time.                                                        |
@@ -106,7 +104,6 @@ Response Parameters
    | app_type              | String                | App type.                                                           |
    |                       |                       |                                                                     |
    |                       |                       | -  apig: APIG app, which is not recommended.                        |
-   |                       |                       |                                                                     |
    |                       |                       | -  roma: ROMA integration application.                              |
    |                       |                       |                                                                     |
    |                       |                       | The default value is apig. Other types are not supported currently. |
@@ -114,13 +111,11 @@ Response Parameters
    |                       |                       | Enumeration values:                                                 |
    |                       |                       |                                                                     |
    |                       |                       | -  **apig**                                                         |
-   |                       |                       |                                                                     |
    |                       |                       | -  **roma**                                                         |
    +-----------------------+-----------------------+---------------------------------------------------------------------+
    | roma_app_type         | String                | ROMA application type.                                              |
    |                       |                       |                                                                     |
    |                       |                       | -  subscription: subscription application                           |
-   |                       |                       |                                                                     |
    |                       |                       | -  integration: integration application                             |
    |                       |                       |                                                                     |
    |                       |                       | Currently, this parameter is not supported.                         |
@@ -196,7 +191,7 @@ Modifying an app
 Example Responses
 -----------------
 
-**Status code: 201**
+**Status code: 200**
 
 OK
 
@@ -276,7 +271,7 @@ Status Codes
 =========== =====================
 Status Code Description
 =========== =====================
-201         OK
+200         OK
 400         Bad Request
 401         Unauthorized
 403         Forbidden
