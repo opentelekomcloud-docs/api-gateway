@@ -109,7 +109,7 @@ Example Requests
 Example Responses
 -----------------
 
-**Status code: 200**
+**Status code: 202**
 
 ACCEPTED
 
@@ -160,7 +160,7 @@ Status Codes
 =========== =====================
 Status Code Description
 =========== =====================
-200         ACCEPTED
+202         ACCEPTED
 401         Unauthorized
 403         Forbidden
 500         Internal Server Error

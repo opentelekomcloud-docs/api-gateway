@@ -8,7 +8,7 @@ Creating an Environment
 Function
 --------
 
-API providers can publish an API in different environments, such as the development, test, and production environments.
+API poviders can publish an API in different environments, such as the development, test, and production environments
 
 API information, such as the version, request address, and even request message, varies depending on the environment in which an API is published. For example, v1.0 of an API is published in the production environment, v1.1 in the test environment, and v1.2 in the development environment.
 

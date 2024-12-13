@@ -73,16 +73,16 @@ Response Parameters
    +-----------------------+-----------------------+----------------------------------------------------------------------+
    | total                 | Long                  | Number of resources that match the query conditions.                 |
    +-----------------------+-----------------------+----------------------------------------------------------------------+
-   | features              | Array of strings      | Supported features:                                                  |
+   | features              | Array of strings      | Supported features (built-in and no need to configure):              |
    |                       |                       |                                                                      |
-   |                       |                       | -  "resize_huge_flavor"                                              |
-   |                       |                       | -  "health_check_in_instance_etcd"                                   |
-   |                       |                       | -  "shubao_support_add_node"                                         |
-   |                       |                       | -  "upgrade_uninterrupted"                                           |
-   |                       |                       | -  "shubao_support_pp2"                                              |
-   |                       |                       | -  "shubao_support_full_pp2"                                         |
-   |                       |                       | -  "etcd_cert_update"                                                |
-   |                       |                       | -  "scc_material_update"                                             |
+   |                       |                       | -  "resize_huge_flavor": Change to higher specifications             |
+   |                       |                       | -  "health_check_in_instance_etcd": Health check                     |
+   |                       |                       | -  "shubao_support_add_node": Capacity expansion                     |
+   |                       |                       | -  "upgrade_uninterrupted": Upgrade without service interruption.    |
+   |                       |                       | -  "shubao_support_pp2": PP2                                         |
+   |                       |                       | -  "shubao_support_full_pp2": IPv6 PP2                               |
+   |                       |                       | -  "etcd_cert_update": etcd_cert update                              |
+   |                       |                       | -  "scc_material_update": scc_material update                        |
    |                       |                       |                                                                      |
    |                       |                       | Features not displayed in the list are not supported by the gateway. |
    +-----------------------+-----------------------+----------------------------------------------------------------------+
