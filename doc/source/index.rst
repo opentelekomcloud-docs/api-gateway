@@ -6,6 +6,7 @@ API Gateway (APIG) is a high-performance, high-availability, and high-security A
    :class: container-sbv
 
    .. service_card::
+      :environment: internal
       :service_type: apig
       :umn: This document provides detailed operation guidance of API Gateway service to help you learn and use this ervice.
       :api-ref: This document introduces API reference provided by API Gateway service and describes functions and parameters of each API.
