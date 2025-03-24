@@ -8,7 +8,7 @@ Creating a Credential Quota
 Function
 --------
 
-Creating a Credential Quota
+This API is used to create a credential quota.
 
 Calling Method
 --------------

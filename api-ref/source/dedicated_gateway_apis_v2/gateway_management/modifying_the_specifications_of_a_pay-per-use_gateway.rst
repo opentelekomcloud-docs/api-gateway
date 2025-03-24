@@ -8,7 +8,7 @@ Modifying the Specifications of a Pay-Per-Use Gateway
 Function
 --------
 
-This API is used to creat a specification change order of a pay-per-use gateway.
+This API is used to create a specification change order of a pay-per-use gateway.
 
 Calling Method
 --------------

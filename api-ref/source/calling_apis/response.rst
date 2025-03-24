@@ -22,7 +22,7 @@ Similar to a request, a response also has a header, for example, **Content-Type*
 For example, when calling the API used to create an API group (dedicated gateways), the response headers are shown below.
 
 
-.. figure:: /_static/images/en-us_image_0000001892790552.png
+.. figure:: /_static/images/en-us_image_0000002155592549.png
    :alt: **Figure 1** Response headers for creating an API group
 
    **Figure 1** Response headers for creating an API group

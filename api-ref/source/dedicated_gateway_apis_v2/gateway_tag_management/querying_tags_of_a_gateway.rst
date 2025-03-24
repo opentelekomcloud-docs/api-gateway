@@ -144,7 +144,7 @@ OK
      "resource_name" : "apig_instance",
      "tags" : [ {
        "key" : "test-key",
-       "value" : "test-vaue"
+       "value" : "test-value"
      } ]
    }
 
