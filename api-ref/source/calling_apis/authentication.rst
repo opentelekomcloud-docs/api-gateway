@@ -18,11 +18,8 @@ AK/SK-based Authentication
 
 An AK/SK is used to verify the identity of a request sender. In AK/SK-based authentication, a signature needs to be obtained and then added to requests.
 
-.. note::
-
-   AK: access key ID, which is a unique identifier used in conjunction with a secret access key to sign requests cryptographically.
-
-   SK: secret access key used in conjunction with an AK to sign requests cryptographically. It identifies a request sender and prevents the request from being modified.
+-  AK: access key ID, which is a unique identifier used with a secret access key to sign requests cryptographically.
+-  SK: secret access key used in conjunction with an AK to sign requests cryptographically. It identifies a request sender and prevents the request from being modified.
 
 The following uses a demo project to show how to sign a request and use an HTTP client to send an HTTPS request.
 
@@ -30,10 +27,10 @@ Download the demo project at https://github.com/api-gate-way/SdkDemo.
 
 If you do not need the demo, obtain the APIG signing SDK from technical support personnel.
 
-AK: access key ID, which is a unique identifier used in conjunction with a secret access key to sign requests cryptographically.
+Decompress the downloaded package and reference the obtained JAR file as a dependency.
 
 
-.. figure:: /_static/images/en-us_image_0173593322.png
+.. figure:: /_static/images/en-us_image_0000002155592541.png
    :alt: **Figure 1** Adding the APIG signing SDK
 
    **Figure 1** Adding the APIG signing SDK
@@ -52,11 +49,7 @@ AK: access key ID, which is a unique identifier used in conjunction with a secre
 
          For users created in IAM that have not bound any email address or mobile number, only the login password needs to be entered.
 
-   g. Click **OK** to download the access key.
-
-      .. note::
-
-         Keep the access key secure.
+   g. Click **OK** to download the access key. **Keep the access key secure.**
 
 #. Download and decompress the demo project.
 
@@ -65,19 +58,19 @@ AK: access key ID, which is a unique identifier used in conjunction with a secre
    Import the demo project to Eclipse.
 
 
-   .. figure:: /_static/images/en-us_image_0173593323.png
+   .. figure:: /_static/images/en-us_image_0000002120352414.png
       :alt: **Figure 2** Selecting Existing Projects into Workspace
 
       **Figure 2** Selecting Existing Projects into Workspace
 
 
-   .. figure:: /_static/images/en-us_image_0173593324.png
+   .. figure:: /_static/images/en-us_image_0000002120194306.png
       :alt: **Figure 3** Selecting the demo project
 
       **Figure 3** Selecting the demo project
 
 
-   .. figure:: /_static/images/en-us_image_0173593326.png
+   .. figure:: /_static/images/en-us_image_0000002155714161.png
       :alt: **Figure 4** Structure of the demo project
 
       **Figure 4** Structure of the demo project
@@ -150,7 +143,7 @@ AK: access key ID, which is a unique identifier used in conjunction with a secre
 Token-based Authentication
 --------------------------
 
-.. note::
+.. important::
 
    -  The validity period of a token is 24 hours. When using a token for authentication, cache it to prevent frequently calling the IAM API used to obtain a user token.
    -  Ensure that the token is valid when you use it. Using a token that will soon expire may cause API calling failures.
@@ -185,10 +178,10 @@ When calling an API to obtain a user token, you must set **auth.scope** in the r
        }
    }
 
-After a token is obtained, the **X-Auth-Token** header field must be added to requests to specify the token when calling other APIs. For example, if the token is **ABCDEFJ....**, **X-Auth-Token: ABCDEFJ....** can be added to a request as follows:
+After a token is obtained, the **X-Auth-Token** header field must be added to requests to specify the token when calling other APIs. For example, if the token is **ABCDEFG....**, **X-Auth-Token: ABCDEFG....** can be added to a request as follows:
 
 .. code-block::
 
    POST https://{apig_endpoint}/v2/{project_id}/v2/{project_id}/apigw/instances/{instance_id}/api-groups
    Content-Type: application/json
-   X-Auth-Token: ABCDEFJ....
+   X-Auth-Token: ABCDEFG....

@@ -84,7 +84,7 @@ For the API used to create an API group, you can obtain the request parameters a
 -  **name**: API group name
 -  **remark**: API group description
 
-.. code-block:: text
+.. code-block::
 
    POST https://{apig_endpoint}/v2/{project_id}/v2/{project_id}/apigw/instances/{instance_id}/api-groups
    Content-Type: application/json
