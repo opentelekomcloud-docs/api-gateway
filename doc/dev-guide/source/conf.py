@@ -34,7 +34,7 @@ otcdocs_repo_name = 'opentelekomcloud-docs/api-gateway'
 otcdocs_doc_environment = 'public'
 otcdocs_doc_link = '/api-gateway/dev-guide/'
 otcdocs_doc_title = 'Developer Guide'
-otcdocs_doc_type = 'dev'
+otcdocs_doc_type = 'dev-guide'
 otcdocs_service_category = 'application'
 otcdocs_service_title = 'API Gateway (APIG)'
 otcdocs_service_type = 'apig'
@@ -113,7 +113,8 @@ html_copy_source = False
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
     ('index',
-     'apig-dev-guide.tex',u'API Gateway (APIG) - Developer Guide',
+     'apig-dev-guide.tex',
+    u'API Gateway (APIG) - Developer Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
