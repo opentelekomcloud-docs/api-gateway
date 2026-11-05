@@ -26,6 +26,6 @@ APIG can also help you selectively expose serverless services (FunctionGraph ser
 
 |image3|
 
-.. |image1| image:: /_static/images/en-us_image_0168722756.png
-.. |image2| image:: /_static/images/en-us_image_0168722761.png
-.. |image3| image:: /_static/images/en-us_image_0168722767.png
+.. |image1| image:: /_static/images/en-us_image_0000002238488769.png
+.. |image2| image:: /_static/images/en-us_image_0000002203408634.png
+.. |image3| image:: /_static/images/en-us_image_0000002203568422.png

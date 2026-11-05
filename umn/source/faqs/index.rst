@@ -6,25 +6,23 @@ FAQs
 ====
 
 -  :ref:`Common FAQs <index>`
--  :ref:`API Creation <apig-faq-create>`
--  :ref:`API Calling <apig-faq-180919017>`
+-  :ref:`Product Consulting FAQs <apig-faq-180919014>`
+-  :ref:`Opening APIs <apig-faq-create>`
+-  :ref:`Publishing an API <apig-faq-180919016>`
+-  :ref:`Calling APIs <apig-faq-180919017>`
 -  :ref:`API Authentication <apig-faq-auth>`
--  :ref:`API Control Policies <apig-faq-0002>`
--  :ref:`API Publishing <apig-faq-180919016>`
--  :ref:`API Import and Export <apig-faq-2005035>`
--  :ref:`API Security <apig-faq-180919015>`
--  :ref:`Other FAQs <apig-faq-180919014>`
+-  :ref:`API Policies <apig-faq-0002>`
+-  :ref:`Importing and Exporting APIs <apig-faq-2005035>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
    common_faqs
-   api_creation/index
-   api_calling/index
+   product_consulting_faqs/index
+   opening_apis/index
+   publishing_an_api/index
+   calling_apis/index
    api_authentication/index
-   api_control_policies/index
-   api_publishing/index
-   api_import_and_export/index
-   api_security/index
-   other_faqs/index
+   api_policies/index
+   importing_and_exporting_apis/index
