@@ -11,6 +11,8 @@ With IAM, you can use your account to create IAM users for your employees, and a
 
 If your account does not require individual IAM users for permissions management, skip this chapter.
 
+IAM is free of charge. You pay only for the resources in your account.
+
 APIG Permissions
 ----------------
 
@@ -68,8 +70,19 @@ You can view the content of the preceding roles and policies on the IAM console.
        ]
    }
 
+Role/Policy Dependencies of the APIG Console
+--------------------------------------------
+
+.. table:: **Table 2** Role/Policy dependencies of the APIG console
+
+   +----------------------------------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+   | Console Function                       | Dependent Service      | Role/Policy Required                                                                                                               |
+   +========================================+========================+====================================================================================================================================+
+   | Query an LTS structuring configuration | Log Tank Service (LTS) | To query LTS structuring configurations, an IAM user must be granted the APIG FullAccess and **lts:structConfig:get** permissions. |
+   +----------------------------------------+------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+
 Related Documents
 -----------------
 
--  Section "Service Overview" in the *Identity and Access Management User Guide*
--  Section "Creating a User and Granting Permissions" in the *API Gateway User Guide*
+-  `IAM Service Overview <https://docs.otc.t-systems.com/en-us/usermanual/iam/iam_01_0026.html>`__
+-  `Creating a User and Granting APIG Permissions <https://docs.otc.t-systems.com/en-us/usermanual/apig/apig_03_0050.html>`__

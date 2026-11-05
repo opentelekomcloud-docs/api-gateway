@@ -5,40 +5,35 @@
 Common FAQs
 ===========
 
-API Creation
+Opening APIs
 ------------
 
--  :ref:`How Do I Set the Backend Address If I Will Not Use a VPC Channel (or Load Balance Channel)? <apig-faq-2005004>`
--  :ref:`How Can I Configure the Backend Service Address? <apig-faq-190627028>`
 -  :ref:`Can I Specify a Private Network Load Balancer Address for the Backend Service? <apig-faq-2005003>`
 -  :ref:`Can I Specify the Backend Address as a Subnet IP Address? <apig-faq-2005006>`
 -  :ref:`Can I Bind Private Domain Names for API Access? <apig-faq-2005021>`
 
-API Calling
------------
+Calling APIs
+------------
 
 -  :ref:`What Are the Possible Causes for an API Calling Failure? <apig-faq-2005010>`
--  :ref:`What Should I Do If an Error Code Is Returned During API Calling? <apig-faq-2005012>`
--  :ref:`What Should I Do If "The API does not exist or has not been published in the environment." Is Displayed? <apig-faq-19123002>`
--  :ref:`Why Am I Seeing the Message "No backend available"? <apig-faq-181016018>`
--  :ref:`What Are the Possible Causes If the Message "Backend unavailable" or "Backend timeout" Is Displayed? <apig_0087908599>`
+-  :ref:`Why Am I Seeing the Error Message "The API does not exist or has not been published in the environment" When I Call an API? <apig-faq-19123002>`
+-  :ref:`Why Am I Seeing the Error Message "No backend available" When I Call an API? <apig-faq-181016018>`
+-  :ref:`Why Am I Seeing the Error Message "Backend unavailable" or "Backend timeout" When I Invoke the Backend Service? <apig_0087908599>`
 
 API Authentication
 ------------------
 
--  :ref:`Does APIG Support HTTPS Two-Way Authentication? <apig-faq-2005013>`
--  :ref:`How Do I Call an API That Does Not Require Authentication? <apig-faq-2005020>`
+-  :ref:`Does APIG Support Two-Way Authentication? <apig-faq-2005013>`
 
-API Control Policies
---------------------
+API Policies
+------------
 
 -  :ref:`Can I Configure the Maximum Number of Concurrent Requests? <apig-faq-2005026>`
 -  :ref:`Does APIG Have Bandwidth Limits? <apig-faq-19122002>`
 -  :ref:`How Do I Provide an Open API to Specific Users? <apig-faq-2005008>`
--  :ref:`How Do I Exclude a Specific IP Address for Identity Authentication of an API? <apig-faq-2005023>`
 
-API Import and Export
----------------------
+Importing and Exporting APIs
+----------------------------
 
--  :ref:`Why Does API Import Fail? <apig-faq-2005024>`
--  :ref:`Does APIG Provide a Template for Importing APIs from Swagger Files? <apig-faq-2005025>`
+-  :ref:`What Are the Possible Causes of an API Import Failure? <apig-faq-2005024>`
+-  :ref:`Is There a Template for Importing APIs Using a Swagger File? <apig-faq-2005025>`

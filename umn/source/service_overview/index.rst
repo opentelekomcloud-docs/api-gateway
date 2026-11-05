@@ -8,10 +8,11 @@ Service Overview
 -  :ref:`What Is APIG? <apig_0080101651>`
 -  :ref:`Product Advantages <apig-pd-180307002>`
 -  :ref:`Application Scenarios <apig-pd-180307003>`
+-  :ref:`Product Functions <apig_01_0012>`
 -  :ref:`Specifications <apig-specifications>`
 -  :ref:`Notes and Constraints <apig-pd-180307005>`
 -  :ref:`Permissions Management <apig-pd-190529006>`
--  :ref:`Basic Concepts <apig-pd-180307004>`
+-  :ref:`Basic Concepts <apig_01_0013>`
 
 .. toctree::
    :maxdepth: 1
@@ -20,6 +21,7 @@ Service Overview
    what_is_apig
    product_advantages
    application_scenarios
+   product_functions
    specifications
    notes_and_constraints
    permissions_management
