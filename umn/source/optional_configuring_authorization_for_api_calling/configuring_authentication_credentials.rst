@@ -83,6 +83,8 @@ APIG can authenticate the identity and call the associated API based on the key/
 
 7. On the **APIs** tab, select the target API and choose **More** > **Authorize Credentials**.
 
+   Alternatively, choose **API Management** > **APIs**, locate the target API, and choose **More** > **Authorize Credentials**. You can also select multiple APIs and click **Authorize Credentials** above the list.
+
 8. Click **Select Credentials**.
 
 9. Select an environment, search for and select desired credentials, and click **OK**. The authorized credentials are displayed on the **Authorize Credentials** page.

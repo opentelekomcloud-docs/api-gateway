@@ -29,6 +29,8 @@ Cloning APIs
 
 5. On the **APIs** tab, choose **More** > **Clone**.
 
+   Alternatively, choose **API Management** > **APIs**, locate the target API, and choose **More** > **Clone** in the same row.
+
 6. Set the API name and path based on the following table.
 
    .. table:: **Table 1** Parameters for API cloning

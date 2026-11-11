@@ -5,7 +5,7 @@
 Customizing Gateway Inbound Ports
 =================================
 
-APIG supports inbound port customization for gateways so that clients can access different backend services through different ports.
+If different service teams need to provide their own APIs through the same API gateway and require port-level isolation, you can customize inbound ports. APIG supports inbound port customization for gateways so that clients can access different backend services through different ports.
 
 Constraints
 -----------
@@ -23,11 +23,23 @@ Customizing Gateway Inbound Ports
 
 #. Click **Access Console** or the name of the target gateway.
 
-#. On the **Custom Inbound Ports** tab page, click **Add Inbound Port**.
+#. On the **Inbound Port** tab page, click **Add Inbound Port**.
 
    Select a request protocol and enter the inbound port number based on the actual service requirements.
 
+   .. table:: **Table 1** Inbound port configuration
+
+      +------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter        | Description                                                                                                                                                                                               |
+      +==================+===========================================================================================================================================================================================================+
+      | Request Protocol | Request protocol for accessing a gateway. Both HTTP and HTTPS are supported. Select HTTPS for services that require high data transmission security. HTTPS must be used together with an SSL certificate. |
+      +------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Inbound Port     | Port number for accessing a gateway. Range: 1024 to 49151.                                                                                                                                                |
+      +------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 #. Click **OK**.
+
+   In the port list, if the new inbound port and its status are displayed as normal, the port is successfully created.
 
 Related Documents
 -----------------
