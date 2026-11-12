@@ -98,3 +98,4 @@ Related Documents
 -----------------
 
 -  After the API is imported and :ref:`published <apig_03_0014>`, the API caller can :ref:`call the API <apig_03_0046>`. For the API that needs App authentication, perform the operations described in :ref:`(Optional) Configuring Authorization for API Calling <apig_03_0129>` before calling the API.
+-  You can also perform the operations described in :ref:`Importing APIs through an API Design File <apig_03_0067>`.

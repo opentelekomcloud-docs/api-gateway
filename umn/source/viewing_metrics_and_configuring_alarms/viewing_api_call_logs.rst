@@ -173,3 +173,10 @@ Fields in access logs are separated using spaces. The following table describes 
    +-----------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | 54                    | function_urn               | Function URN.                                                                                                                                                                            |
    +-----------------------+----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Related Documents
+-----------------
+
+-  For details about the monitoring metrics supported by APIG, see :ref:`Monitoring Metrics <apig_03_0032>`.
+-  If a metric is abnormal, you can configure alarm rules to receive notifications in a timely manner. For details, see :ref:`Configuring an Alarm Rule <apig_03_0033>`.
+-  For details about how to view APIG metrics, see :ref:`Viewing Metrics <apig_03_0034>`.

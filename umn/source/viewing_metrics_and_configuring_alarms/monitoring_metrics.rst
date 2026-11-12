@@ -113,3 +113,11 @@ Dimension
    |                                   |                                                                                                                       |
    |                                   | To obtain the value, call the API for querying APIs and extract it from the response parameters.                      |
    +-----------------------------------+-----------------------------------------------------------------------------------------------------------------------+
+
+Helpful Links
+-------------
+
+-  If a metric is abnormal, you can configure alarm rules to receive notifications in a timely manner. For details, see :ref:`Configuring an Alarm Rule <apig_03_0033>`.
+
+-  For details about how to view APIG metrics, see :ref:`Viewing Metrics <apig_03_0034>`.
+-  For details about how to view API calls, see :ref:`Viewing API Call Logs <apig_03_0042>`.

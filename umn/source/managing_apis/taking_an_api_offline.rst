@@ -34,7 +34,9 @@ Taking an API Offline
    -  To take one API offline, select the API, and click **Take Offline** in the upper right.
    -  To take multiple APIs (<= 1000) offline, click **Batch**, select the APIs, and click the Take Offline icon.
 
-#. Select the environment from which you want to take the API offline, and click **Yes**.
+   Alternatively, choose **API Management** > **APIs**, locate the target API, and choose **More** > **Take Offline**. You can also select multiple APIs and click **Take Offline** above the list.
+
+#. Select the environment from which you want to take the API offline, and click **OK**.
 
    After the API is taken offline, a red exclamation mark appears in the upper left corner of the **Publish Latest Version** button.
 

@@ -5,7 +5,7 @@
 Viewing or Modifying API Information
 ====================================
 
-In the API list, you can view or edit all APIs in the current gateway, including their environments, request methods, and request paths.
+You may need to view the running status and monitoring data of an API, or modify the frontend and backend configurations of an API. You can manage all APIs in the current gateway in a centralized manner.
 
 
 Viewing or Modifying API Information
@@ -18,4 +18,9 @@ Viewing or Modifying API Information
 4. Click the name of the target API.
 
    -  You can view the monitoring, frontend configuration, and backend configuration.
-   -  You can modify, publish, debug, authorize, delete, and clone an API, and take an API offline.
+   -  You can modify, publish, debug, authorize, delete, and clone an API, and take an API offline. (Deleted APIs cannot be recovered. Before deleting an API, ensure that the API has been taken offline and has no traffic.)
+
+Related Documents
+-----------------
+
+-  For details about how to publish, take offline, debug, and authorize an API, see :ref:`Publishing an API <apig_03_0014>`, :ref:`Taking an API Offline <apig_03_0070>`, :ref:`Debugging an API <apig_03_0012>`, and :ref:`Binding/Authorizing Credentials to APIs <apig_03_0056__section179331518155613>`.

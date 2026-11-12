@@ -24,7 +24,15 @@ Publishing an API
 
 4. Click a group name to go to the **Group Information** page.
 
-5. On the **APIs** tab, select the target API and click **Publish Latest Version**.
+5. On the **APIs** page, publish the API.
+
+   -  Single publish: Select the API to be published and click **Publish Latest Version**.
+   -  Batch publish: Click **Batch**, select the APIs to be published, and click the publish icon.
+
+   You can also choose **API Management** > **APIs** to publish an API.
+
+   -  Single publish: Click **Publish** in the row containing the API you want to publish.
+   -  Batch publish: Select the APIs to be published and click **Publish** above the list.
 
 6. Select the environment where the API will be published, and enter a description.
 
@@ -33,7 +41,7 @@ Publishing an API
 
 7. Click **OK**. After the API is published, the red exclamation mark (!) in the upper left corner of the **Publish Latest Version** button disappears.
 
-   You can remove APIs that you do not need from the environments where the APIs have been published. This operation will cause the API to be inaccessible in the specified environment. Ensure that you have notified users who use the API before removing it.
+   You can remove APIs that you do not need from the environments where the APIs have been published. This operation will cause the API to be inaccessible in the specified environment. Ensure that you have notified users who use the API before taking it offline.
 
 Viewing Publication History
 ---------------------------
@@ -46,7 +54,7 @@ Viewing Publication History
 
    The **View Details** dialog box displays the basic information, frontend and backend request information, input and constant parameters, parameter mappings, and example responses of the API.
 
-#. To roll back the API to a historical version, click **Switch Version** in the row containing the target version, and click **Yes**.
+#. To roll back the API to a historical version, click **Switch to This Version** in the row containing the target version, and click **OK**.
 
    If "current version" is displayed next to the target version, the rollback was successful.
 

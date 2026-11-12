@@ -32,6 +32,8 @@ Debugging an API
 
 5. On the **APIs** tab, select the target API and click **Debug**.
 
+   Alternatively, choose **API Management** > **APIs**, locate the target API, and choose **More** > **Debug** in the same row.
+
 6. Configure the URL and request parameters of the API.
 
    Select a request method, protocol, and domain name, and set request parameters.

@@ -34,7 +34,7 @@ Creating a Request Throttling Policy
       +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter                         | Description                                                                                                                                                                                                                                                                               |
       +===================================+===========================================================================================================================================================================================================================================================================================+
-      | Name                              | Request throttling policy name. It can contain 3 to 64 characters and must start with a letter. Only letters, digits, and underscores (_) are allowed.                                                                                                                                    |
+      | Policy Name                       | Request throttling policy name. It can contain 3 to 64 characters and must start with a letter. Only letters, digits, and underscores (_) are allowed.                                                                                                                                    |
       +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Type                              | API-based or API-shared request throttling.                                                                                                                                                                                                                                               |
       |                                   |                                                                                                                                                                                                                                                                                           |
@@ -116,6 +116,8 @@ If you want to throttle requests for a credential, you can add an excluded crede
       Excluded credential thresholds take precedence over the value of **Max. Credential Requests**.
 
       For example, a request throttling policy has been configured, with **Max. API Requests** being **10**, **Max. Credential Requests** being **3**, **Period** being 1 minute, and two excluded credentials (max. **2** API requests for credential A and max. **4** API requests for credential B). If the request throttling policy is bound to an API, credential A and B can access the API 2 and 4 times within 1 minute, respectively.
+
+#. Click **OK**.
 
 .. _apig_03_0025__section716172420290:
 
